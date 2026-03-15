@@ -1,0 +1,240 @@
+import Header from '../../components/Header';
+import Footer from '../../components/Footer';
+import { cn, getChipClasses } from '../../utils/classNames';
+import { CaseStudyPager } from '../../components/case-study/CaseStudyPager';
+
+type ImageItem = {
+  src: string;
+  alt: string;
+};
+
+type ImageGroup = {
+  title: string;
+  note?: string;
+  images: ImageItem[];
+};
+
+const processGroups: ImageGroup[] = [
+  {
+    title: 'Sistema visual',
+    note: 'Tokens, componentes y piezas UI del proyecto.',
+    images: [
+      { src: '/assets/projects/trick-tales/colores.png', alt: 'Colores' },
+      { src: '/assets/projects/trick-tales/tipografias.png', alt: 'Tipografías' },
+      { src: '/assets/projects/trick-tales/iconos.png', alt: 'Iconos' },
+      { src: '/assets/projects/trick-tales/botones.png', alt: 'Botones' },
+      { src: '/assets/projects/trick-tales/cards.png', alt: 'Cards' },
+      { src: '/assets/projects/trick-tales/sombras-y-bordes.png', alt: 'Sombras y bordes' }
+    ]
+  },
+  {
+    title: 'Arquitectura y wireframes',
+    note: 'Estructura y secuencia de pantallas del flujo inicial.',
+    images: [
+      { src: '/assets/projects/trick-tales/arquitectura-informacion.png', alt: 'Arquitectura de información' },
+      { src: '/assets/projects/trick-tales/w1---splash.png', alt: 'Wireframe splash' },
+      { src: '/assets/projects/trick-tales/w2---onboarding-2.png', alt: 'Wireframe onboarding 2' },
+      { src: '/assets/projects/trick-tales/w3---onboarding-3.png', alt: 'Wireframe onboarding 3' },
+      { src: '/assets/projects/trick-tales/w4---onboarding-4.png', alt: 'Wireframe onboarding 4' },
+      { src: '/assets/projects/trick-tales/w5---onboarding-5.png', alt: 'Wireframe onboarding 5' },
+      { src: '/assets/projects/trick-tales/w6---onboarding-6.png', alt: 'Wireframe onboarding 6' }
+    ]
+  }
+];
+
+const finalScreenGroups: ImageGroup[] = [
+  {
+    title: 'Onboarding y acceso',
+    images: [
+      { src: '/assets/projects/trick-tales/splash.png', alt: 'Splash' },
+      { src: '/assets/projects/trick-tales/onboard-1.png', alt: 'Onboarding 1' },
+      { src: '/assets/projects/trick-tales/onboard-2.png', alt: 'Onboarding 2' },
+      { src: '/assets/projects/trick-tales/onboard-3.png', alt: 'Onboarding 3' },
+      { src: '/assets/projects/trick-tales/onboard-4.png', alt: 'Onboarding 4' },
+      { src: '/assets/projects/trick-tales/onboard-5.png', alt: 'Onboarding 5' },
+      { src: '/assets/projects/trick-tales/onboard-6.png', alt: 'Onboarding 6' }
+    ]
+  },
+  {
+    title: 'Entrenamiento y salud',
+    images: [
+      { src: '/assets/projects/trick-tales/entrenamiento.png', alt: 'Entrenamiento principal' },
+      { src: '/assets/projects/trick-tales/entrenamiento-1.png', alt: 'Entrenamiento detalle 1' },
+      { src: '/assets/projects/trick-tales/entrenamiento-2.png', alt: 'Entrenamiento detalle 2' },
+      { src: '/assets/projects/trick-tales/salud.png', alt: 'Salud principal' },
+      { src: '/assets/projects/trick-tales/salud-1.png', alt: 'Salud detalle' },
+      { src: '/assets/projects/trick-tales/peso.png', alt: 'Peso' },
+      { src: '/assets/projects/trick-tales/peso-1.png', alt: 'Peso detalle' },
+      { src: '/assets/projects/trick-tales/nuevo-pesaje.png', alt: 'Nuevo pesaje' },
+      { src: '/assets/projects/trick-tales/feedback-peso.png', alt: 'Feedback peso' }
+    ]
+  },
+  {
+    title: 'Gestión diaria',
+    images: [
+      { src: '/assets/projects/trick-tales/mis-mascotas.png', alt: 'Mis mascotas' },
+      { src: '/assets/projects/trick-tales/perfil-de-mascota.png', alt: 'Perfil de mascota' },
+      { src: '/assets/projects/trick-tales/mis-citas.png', alt: 'Mis citas' },
+      { src: '/assets/projects/trick-tales/ver-cita.png', alt: 'Ver cita' },
+      { src: '/assets/projects/trick-tales/medicamentos-y-vacunas.png', alt: 'Medicamentos y vacunas' },
+      { src: '/assets/projects/trick-tales/agregar-cita.png', alt: 'Agregar cita' },
+      { src: '/assets/projects/trick-tales/agregar-medicamento.png', alt: 'Agregar medicamento' },
+      { src: '/assets/projects/trick-tales/agregar-vacuna.png', alt: 'Agregar vacuna' },
+      { src: '/assets/projects/trick-tales/feedback-vacuna.png', alt: 'Feedback vacuna' }
+    ]
+  }
+];
+
+function HorizontalImageGroup({ title, note, images }: ImageGroup) {
+  return (
+    <article className="rounded-2xl border border-primary-300/30 bg-[#ffffff5c] backdrop-blur-sm p-4 md:p-6">
+      <div className="mb-4">
+        <h3 className="font-serif text-2xl md:text-3xl font-bold text-dark">{title}</h3>
+        {note ? <p className="mt-1 text-base md:text-lg text-dark/75 leading-relaxed">{note}</p> : null}
+      </div>
+
+      <div className="overflow-x-auto pb-1">
+        <div className="flex items-start gap-4 w-max min-w-full">
+          {images.map((image) => (
+            <img
+              key={image.src}
+              src={image.src}
+              alt={image.alt}
+              className="w-auto h-auto max-h-[620px] object-contain rounded-lg"
+              loading="lazy"
+            />
+          ))}
+        </div>
+      </div>
+    </article>
+  );
+}
+
+export function TrickTalesCaseStudy() {
+  return (
+    <div
+      className="min-h-screen"
+      style={{
+        background:
+          'linear-gradient(120deg, #f2e8f0 0%, #ede6eb 8%, #e8dce8 10%, #d4c4d4 24%, #b8d4c0 45%, #a8d8b0 70%, #b0deb8 85%, #f0e8f0 100%)',
+        backgroundAttachment: 'fixed'
+      }}
+    >
+      <Header />
+
+      <section
+        className={cn(
+          'relative',
+          'pt-32 pb-16 lg:pt-40 lg:pb-24',
+          'px-4 lg:px-6',
+          'bg-transparent',
+          'overflow-hidden'
+        )}
+      >
+        <div className={cn('relative z-10', 'max-w-7xl mx-auto', 'px-4 lg:px-6')}>
+          <div className={cn('flex flex-col gap-4 lg:gap-8', 'text-left', 'max-w-4xl')}>
+            <p className={cn('text-sm font-semibold uppercase tracking-widest', 'text-dark/60')}>
+              UX/UI DESIGN
+            </p>
+
+            <h1 className={cn('font-serif', 'text-4xl md:text-5xl lg:text-6xl', 'font-normal leading-[1.02]', 'text-dark')}>
+              Trick Tales
+            </h1>
+
+            <div className={cn('flex flex-col gap-2 lg:gap-6', 'max-w-3xl')}>
+              <p className="heading-subtitle">Case study UX/UI app.</p>
+              <p className={cn('text-lg md:text-xl', 'leading-[1.6]', 'text-dark/75', 'max-w-3xl')}>
+                Proyecto colaborativo orientado a acompañar a dueños primerizos desde onboarding hasta seguimiento diario, con foco en experiencia móvil, arquitectura de información y sistema visual.
+              </p>
+            </div>
+
+            <div className={cn('flex flex-wrap gap-2 lg:gap-3', 'pt-2 lg:pt-4')}>
+              {['Figma', 'UX Research', 'Arquitectura de información', 'UI System'].map((skill) => (
+                <span key={skill} className={getChipClasses()}>
+                  {skill}
+                </span>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-12 lg:py-16 px-4 lg:px-6 bg-transparent">
+        <div className="max-w-5xl mx-auto">
+          <img
+            src="/assets/projects/trick-tales/trick-tales_cover.jpg"
+            alt="Trick Tales cover"
+            className="w-full h-auto object-contain rounded-2xl shadow-lg"
+          />
+        </div>
+      </section>
+
+      <section className="py-16 lg:py-20 px-4 lg:px-6 bg-transparent">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-6">
+          <div className="rounded-2xl border border-primary-300/30 bg-[#ffffff5c] backdrop-blur-sm p-6">
+            <h2 className="font-serif text-2xl font-bold text-dark mb-3">Reto</h2>
+            <p className="text-dark/75 leading-relaxed">Unificar salud, citas, vacunas y entrenamiento en una experiencia clara y constante.</p>
+          </div>
+          <div className="rounded-2xl border border-primary-300/30 bg-[#ffffff5c] backdrop-blur-sm p-6">
+            <h2 className="font-serif text-2xl font-bold text-dark mb-3">Objetivo</h2>
+            <p className="text-dark/75 leading-relaxed">Priorizar pantallas finales sin perder claridad de flujo ni consistencia del sistema visual.</p>
+          </div>
+          <div className="rounded-2xl border border-primary-300/30 bg-[#ffffff5c] backdrop-blur-sm p-6">
+            <h2 className="font-serif text-2xl font-bold text-dark mb-3">Enfoque</h2>
+            <p className="text-dark/75 leading-relaxed">Organizar por bloques de uso y componentes reutilizables para escalar funcionalidades.</p>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-16 lg:py-20 px-4 lg:px-6 bg-transparent">
+        <div className="max-w-7xl mx-auto space-y-8">
+          <h2 className="font-serif text-3xl md:text-4xl font-bold text-dark">Sistema visual, arquitectura y wireframes</h2>
+          <p className="text-lg text-dark/75 max-w-4xl">
+            Se agrupa el material de estilo y proceso en scroll horizontal para mantener lectura continua y comparación rápida entre piezas.
+          </p>
+          {processGroups.map((group) => (
+            <HorizontalImageGroup key={group.title} {...group} />
+          ))}
+        </div>
+      </section>
+
+      <section className="py-16 lg:py-20 px-4 lg:px-6 bg-transparent">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="font-serif text-3xl md:text-4xl font-bold text-dark mb-6">Resultado</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="rounded-2xl border border-primary-300/30 bg-[#ffffff5c] backdrop-blur-sm p-6">
+              <h3 className="text-xl font-bold text-dark mb-2">Fortaleza</h3>
+              <p className="text-dark/75">Amplio set de pantallas finales.</p>
+            </div>
+            <div className="rounded-2xl border border-primary-300/30 bg-[#ffffff5c] backdrop-blur-sm p-6">
+              <h3 className="text-xl font-bold text-dark mb-2">Proceso</h3>
+              <p className="text-dark/75">Arquitectura y sistema visual documentables.</p>
+            </div>
+            <div className="rounded-2xl border border-primary-300/30 bg-[#ffffff5c] backdrop-blur-sm p-6">
+              <h3 className="text-xl font-bold text-dark mb-2">Valor del caso</h3>
+              <p className="text-dark/75">Narrativa completa de producto y evolución.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-16 lg:py-20 px-4 lg:px-6 bg-transparent">
+        <div className="max-w-7xl mx-auto space-y-8">
+          <h2 className="font-serif text-3xl md:text-4xl font-bold text-dark">Pantallas finales</h2>
+          {finalScreenGroups.map((group) => (
+            <HorizontalImageGroup key={group.title} {...group} />
+          ))}
+        </div>
+      </section>
+
+      <CaseStudyPager
+        previousLabel="Volver a proyectos"
+        previousHref="/proyectos"
+        nextLabel="ALIEN BIOBLITZ"
+        nextHref="/proyectos/alien-csi-bioblitz"
+      />
+
+      <Footer />
+    </div>
+  );
+}

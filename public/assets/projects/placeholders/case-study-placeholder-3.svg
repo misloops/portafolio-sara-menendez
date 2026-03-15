@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000" role="img" aria-labelledby="title desc">
+  <title id="title">Placeholder de seccion visual</title>
+  <desc id="desc">Sustituto visual para capturas pendientes en case studies.</desc>
+  <defs>
+    <linearGradient id="bg3" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#f5f3ff"/>
+      <stop offset="100%" stop-color="#ede9fe"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="1000" fill="url(#bg3)"/>
+  <rect x="120" y="120" width="1360" height="760" rx="26" fill="#ffffff" stroke="#ddd6fe" stroke-width="4"/>
+  <text x="800" y="450" font-family="Arial, Helvetica, sans-serif" font-size="54" fill="#312e81" text-anchor="middle">Visual pendiente</text>
+  <text x="800" y="525" font-family="Arial, Helvetica, sans-serif" font-size="30" fill="#4c1d95" text-anchor="middle">Se reemplazara por captura final</text>
+  <text x="800" y="585" font-family="Arial, Helvetica, sans-serif" font-size="24" fill="#6d28d9" text-anchor="middle">Mantiene el espacio y la estructura editorial</text>
+</svg>

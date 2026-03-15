@@ -1,0 +1,318 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..156,400;0,9..156,500;0,9..156,600;0,9..156,700;1,9..156,400&display=swap');
+@import './assets/fonts.css';
+
+@import "tailwindcss";
+
+:root {
+  --space-8: 8px;
+  --space-16: 16px;
+  --space-24: 24px;
+  --space-32: 32px;
+  --space-40: 40px;
+
+  --ui-text: #302e2e;
+  --ui-line-soft: #d8ded8;
+  --ui-hover-soft: #e3e8e3;
+
+  --chip-bg: #eef1ee;
+  --chip-border: #d5dbd4;
+
+  --btn-primary-bg: #98c29b;
+  --btn-primary-bg-hover: #8bb58e;
+  --btn-primary-border: #7fab86;
+
+  --canvas-gradient-home: linear-gradient(120deg, #f2e8f0 0%, #ede6eb 8%, #e8dce8 10%, #d4c4d4 24%, #b8d4c0 45%, #a8d8b0 70%, #b0deb8 85%, #f0e8f0 100%);
+}
+
+/* ===== Image Optimization ===== */
+img {
+  image-rendering: crisp-edges;
+  image-rendering: -webkit-optimize-contrast;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ===== Typography Improvements ===== */
+html {
+  font-family: 'Gilroy', 'DM Sans', system-ui, sans-serif;
+}
+
+body, p, span, li, a, button, input, textarea {
+  font-family: 'Gilroy', 'DM Sans', system-ui, sans-serif;
+}
+
+body {
+  font-size: 16px;
+  line-height: 1.6;
+  background: var(--canvas-gradient-home);
+  background-attachment: fixed;
+  color: #302e2e;
+}
+
+h1 {
+  font-family: 'DM Serif Display', Georgia, serif;
+  font-size: clamp(2.5rem, 8vw, 4.5rem);
+  line-height: 1.1;
+  font-weight: 400;
+  letter-spacing: 0;
+  font-kerning: normal;
+  text-rendering: optimizeLegibility;
+}
+
+h2 {
+  font-family: 'DM Serif Display', Georgia, serif;
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 400;
+  letter-spacing: 0;
+  font-kerning: normal;
+  text-rendering: optimizeLegibility;
+}
+
+h3 {
+  font-family: 'DM Serif Display', Georgia, serif;
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  font-weight: 400;
+  letter-spacing: 0;
+  font-kerning: normal;
+  text-rendering: optimizeLegibility;
+}
+
+h4, h5, h6 {
+  font-family: 'Gilroy', 'DM Sans', system-ui, sans-serif;
+  font-weight: 600;
+}
+
+p {
+  font-size: 1.0625rem;
+  color: #302e2e;
+  line-height: 1.7;
+}
+
+/* Stronger text rule to avoid residual gray copy */
+.text-dark\/60,
+.text-dark\/65,
+.text-dark\/70,
+.text-dark\/80 {
+  color: #302e2e !important;
+}
+
+.text-neutral-600,
+.text-neutral-700,
+.text-gray-600,
+.text-gray-700,
+.text-gray-800,
+.text-gray-900 {
+  color: #302e2e !important;
+}
+
+/* Fallback gradients so they always render even if theme tokens fail to hot-reload */
+.bg-gradient-hero {
+  background-image: linear-gradient(135deg, #eff7f1 0%, #d7ebdd 48%, #b8d4c9 100%);
+}
+
+.bg-gradient-services {
+  background-image: linear-gradient(135deg, #f2f8f3 0%, #deeee3 100%);
+}
+
+.bg-gradient-projects {
+  background-image: linear-gradient(135deg, #edf5ef 0%, #d2e4d8 100%);
+}
+
+.bg-gradient-casestudy {
+  background-image: linear-gradient(135deg, #e4f0e7 0%, #c6dccd 100%);
+}
+
+.bg-gradient-contact {
+  background-image: linear-gradient(135deg, #e8f2ea 0%, #c9dfd0 100%);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@layer utilities {
+  .animate-fadeIn {
+    animation: fadeIn 0.5s ease-in-out;
+  }
+
+  .animate-slideUp {
+    animation: slideUp 0.5s ease-out;
+  }
+
+  .animate-slideIn {
+    animation: slideIn 0.5s ease-out;
+  }
+
+  .truncate-2 {
+    display: -webkit-box;
+    line-clamp: 2;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .truncate-3 {
+    display: -webkit-box;
+    line-clamp: 3;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .line-clamp-2 {
+    display: -webkit-box;
+    line-clamp: 2;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .flex-between {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .flex-start {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+
+  .center-flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .center-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Scrollbar Hide Utility */
+.scrollbar-hide {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;     /* Firefox */
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none; /* Chrome, Safari and Opera */
+}
+
+/* Navigation Styles */
+.nav-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--ui-text);
+  text-decoration: none;
+  transition: color 0.2s ease;
+  position: relative;
+}
+
+.nav-link:hover {
+  color: #9C7C9C;
+}
+
+.nav-link.active {
+  color: #2b2a2a;
+}
+
+.nav-link:focus-visible {
+  outline: 2px solid #98c29b;
+  outline-offset: 2px;
+}
+
+/* Logo Styles */
+.logo-text {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.logo-subtitle {
+  color: #f97316;
+  font-weight: 500;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Hero Title Gradient */
+.text-gradient-hero {
+  background: linear-gradient(135deg, #9a7b9a 0%, #8a8a8a 35%, #7a9a7a 60%, #6a8a6a 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Heading Subtitle - DM Serif Display Italic */
+.heading-subtitle {
+  font-family: 'DM Serif Display', Georgia, serif;
+  font-size: 2rem;   /* 32px */
+  font-style: italic;
+  font-weight: 400;
+  line-height: 2.75rem;  /* 44px */
+  color: rgb(48, 46, 46);  /* #302e2e sin transparencia */
+}
