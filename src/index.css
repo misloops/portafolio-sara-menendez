@@ -316,3 +316,126 @@ html {
   line-height: 2.75rem;  /* 44px */
   color: rgb(48, 46, 46);  /* #302e2e sin transparencia */
 }
+
+/* Mobile guardrails: typography + spacing */
+@media (max-width: 767px) {
+  html,
+  body {
+    font-family: 'Gilroy', 'DM Sans', system-ui, sans-serif;
+    font-size: 16px;
+    line-height: 28px;
+    font-weight: 400;
+  }
+
+  p,
+  span,
+  li,
+  a,
+  button,
+  input,
+  textarea {
+    font-family: 'Gilroy', 'DM Sans', system-ui, sans-serif;
+    font-size: 16px;
+    line-height: 28px;
+    font-weight: 400;
+  }
+
+  /* Keep mobile spacing at 24px max for common Tailwind utility tokens */
+  [class~='gap-6'],
+  [class~='gap-8'],
+  [class~='gap-10'],
+  [class~='gap-12'],
+  [class~='gap-16'] {
+    gap: 24px !important;
+  }
+
+  [class~='p-6'],
+  [class~='p-8'],
+  [class~='p-10'],
+  [class~='p-12'],
+  [class~='p-16'],
+  [class~='px-6'],
+  [class~='px-8'],
+  [class~='px-10'],
+  [class~='px-12'],
+  [class~='px-16'],
+  [class~='py-6'],
+  [class~='py-8'],
+  [class~='py-10'],
+  [class~='py-12'],
+  [class~='py-16'] {
+    padding: 24px !important;
+  }
+
+  [class~='pt-6'],
+  [class~='pt-8'],
+  [class~='pt-10'],
+  [class~='pt-12'],
+  [class~='pt-16'] {
+    padding-top: 24px !important;
+  }
+
+  [class~='pr-6'],
+  [class~='pr-8'],
+  [class~='pr-10'],
+  [class~='pr-12'],
+  [class~='pr-16'] {
+    padding-right: 24px !important;
+  }
+
+  [class~='pb-6'],
+  [class~='pb-8'],
+  [class~='pb-10'],
+  [class~='pb-12'],
+  [class~='pb-16'] {
+    padding-bottom: 24px !important;
+  }
+
+  [class~='pl-6'],
+  [class~='pl-8'],
+  [class~='pl-10'],
+  [class~='pl-12'],
+  [class~='pl-16'] {
+    padding-left: 24px !important;
+  }
+
+  [class~='m-6'],
+  [class~='m-8'],
+  [class~='m-10'],
+  [class~='m-12'],
+  [class~='m-16'] {
+    margin: 24px !important;
+  }
+
+  [class~='mt-6'],
+  [class~='mt-8'],
+  [class~='mt-10'],
+  [class~='mt-12'],
+  [class~='mt-16'] {
+    margin-top: 24px !important;
+  }
+
+  [class~='mr-6'],
+  [class~='mr-8'],
+  [class~='mr-10'],
+  [class~='mr-12'],
+  [class~='mr-16'] {
+    margin-right: 24px !important;
+  }
+
+  [class~='mb-6'],
+  [class~='mb-8'],
+  [class~='mb-10'],
+  [class~='mb-12'],
+  [class~='mb-16'] {
+    margin-bottom: 24px !important;
+  }
+
+  [class~='ml-6'],
+  [class~='ml-8'],
+  [class~='ml-10'],
+  [class~='ml-12'],
+  [class~='ml-16'] {
+    margin-left: 24px !important;
+  }
+}

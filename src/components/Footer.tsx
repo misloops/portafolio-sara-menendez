@@ -1,4 +1,5 @@
 import { cn } from '../utils/classNames';
+import Logo from './Logo';
 
 function Footer() {
   const currentYear = new Date().getFullYear();
@@ -19,17 +20,7 @@ function Footer() {
         )}>
           {/* Brand */}
           <div>
-            <h3 className={cn(
-              'font-sans',
-              'text-2xl md:text-2xl lg:text-3xl font-bold mb-3',
-              'text-dark'
-            )}
-            style={{
-              fontFamily: 'Gilroy, Poppins, sans-serif',
-              fontWeight: 700,
-            }}>
-              Sara Menéndez
-            </h3>
+            <Logo className="mb-3" imageClassName="h-10 w-auto max-w-none object-contain" />
             <p className={cn(
               'text-base text-dark/70',
               'leading-relaxed'
@@ -148,7 +139,7 @@ function Footer() {
           <p className={cn(
             'text-dark/60 text-sm font-medium'
           )}>
-            © {currentYear} Sara Menéndez. Todos los derechos reservados.
+            © {currentYear}. Todos los derechos reservados.
           </p>
           <div className={cn(
             'flex gap-8 text-sm'

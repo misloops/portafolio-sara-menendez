@@ -55,7 +55,7 @@ function Header({ onNavigate, activeSection }: HeaderProps) {
       )}>
         {/* Logo */}
         <div className="flex-shrink-0">
-          <Logo />
+          <Logo imageClassName="h-10 w-auto max-w-none object-contain" />
         </div>
 
         <div className="hidden md:flex items-center gap-4 lg:gap-6">

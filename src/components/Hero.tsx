@@ -14,7 +14,7 @@ function Hero({ onActionClick }: HeroProps) {
   return (
     <section className={cn(
       'relative',
-      'pt-32 pb-16 lg:pt-40 lg:pb-24',
+      'pt-24 pb-16 lg:pt-40 lg:pb-24',
       'px-4 lg:px-6',
       'bg-transparent',
       'overflow-hidden'

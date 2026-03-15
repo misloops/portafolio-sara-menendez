@@ -1,5 +1,5 @@
 import { cn, getChipClasses } from '../utils/classNames';
-import profileImage from '../assets/portrait/unnamed-1.jpg';
+import profilePlaceholderIcon from '../assets/icons/1757370620719.jpg';
 
 /**
  * AboutMe Component
@@ -30,20 +30,15 @@ function AboutMe() {
           {/* Left: Image */}
           <div className={cn(
             'md:col-span-4',
-            'flex items-start justify-center'
+            'flex items-center justify-center md:justify-start md:pt-2'
           )}>
-            <div className={cn(
-              'w-full max-w-xs lg:max-w-sm aspect-[4/5] rounded-2xl overflow-hidden',
-              'border border-[#dde6dd] shadow-[0_12px_32px_rgba(48,46,46,0.12)]',
-              'bg-[#f5f8f5]'
-            )}>
-              <img
-                src={profileImage}
-                alt="Retrato de Sara Menendez"
-                className="w-full h-full object-cover object-top"
-                loading="lazy"
-              />
-            </div>
+            <img
+              src={profilePlaceholderIcon}
+              alt="Icono"
+              className="w-[92px] h-[92px] sm:w-[104px] sm:h-[104px] md:w-[120px] md:h-[120px] lg:w-[132px] lg:h-[132px] object-cover rounded-[22px] md:rounded-full"
+              style={{ imageRendering: 'auto' }}
+              loading="lazy"
+            />
           </div>
 
           {/* Right: Bio & Expertise */}

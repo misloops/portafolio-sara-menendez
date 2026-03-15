@@ -1,20 +1,27 @@
 import { cn } from '../utils/classNames';
+import logoSaraMenendez from '../assets/icons/Logo_negro.svg';
 
-function Logo() {
+interface LogoProps {
+  className?: string;
+  imageClassName?: string;
+}
+
+function Logo({ className, imageClassName }: LogoProps) {
   return (
     <a
       href="/"
-      style={{
-        fontFamily: 'Gilroy, Poppins, sans-serif',
-        fontWeight: 700,
-      }}
       className={cn(
-        'text-2xl md:text-2xl lg:text-3xl',
-        'text-dark',
-        'hover:text-primary-500 transition-colors'
+        'inline-flex items-center overflow-visible',
+        'transition-opacity duration-200 hover:opacity-80',
+        className
       )}
+      aria-label="Ir al inicio"
     >
-      Sara Menéndez
+      <img
+        src={logoSaraMenendez}
+        alt="Sara Menéndez"
+        className={cn('block h-10 w-auto max-w-none object-contain', imageClassName)}
+      />
     </a>
   );
 }
