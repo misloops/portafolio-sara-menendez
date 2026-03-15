@@ -33,14 +33,14 @@ function AboutMe() {
             'flex items-start justify-center'
           )}>
             <div className={cn(
-              'w-full max-w-xs aspect-square rounded-2xl overflow-hidden',
+              'w-full max-w-xs lg:max-w-sm aspect-[4/5] rounded-2xl overflow-hidden',
               'border border-[#dde6dd] shadow-[0_12px_32px_rgba(48,46,46,0.12)]',
               'bg-[#f5f8f5]'
             )}>
               <img
                 src={profileImage}
                 alt="Retrato de Sara Menendez"
-                className="w-full h-full object-cover object-center"
+                className="w-full h-full object-cover object-top"
                 loading="lazy"
               />
             </div>
