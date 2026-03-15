@@ -1,4 +1,5 @@
 import { cn, getChipClasses } from '../utils/classNames';
+import profileImage from '../assets/portrait/unnamed-1.jpg';
 
 /**
  * AboutMe Component
@@ -32,12 +33,16 @@ function AboutMe() {
             'flex items-start justify-center'
           )}>
             <div className={cn(
-              'w-full max-w-xs aspect-square rounded-lg',
-              'bg-gradient-to-br from-primary-100 to-secondary-100',
-              'flex items-center justify-center',
-              'text-6xl'
+              'w-full max-w-xs aspect-square rounded-2xl overflow-hidden',
+              'border border-[#dde6dd] shadow-[0_12px_32px_rgba(48,46,46,0.12)]',
+              'bg-[#f5f8f5]'
             )}>
-              👋
+              <img
+                src={profileImage}
+                alt="Retrato de Sara Menendez"
+                className="w-full h-full object-cover object-center"
+                loading="lazy"
+              />
             </div>
           </div>
 
