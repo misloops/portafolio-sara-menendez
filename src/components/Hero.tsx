@@ -39,7 +39,7 @@ function Hero({ onActionClick }: HeroProps) {
           )}>
             <span className="text-gradient-hero font-bold">Diseño Web</span>
             <br />
-            Estructura, estrategia y desarrollo con criterio
+            Creo experiencias web con identidad, usabilidad y criterio estético
           </h1>
 
           {/* Supporting copy - Improved intro */}
@@ -65,7 +65,7 @@ function Hero({ onActionClick }: HeroProps) {
             'flex flex-wrap gap-2 lg:gap-3',
             'pt-2 lg:pt-4'
           )}>
-            {['Drupal', 'Diseño UX/UI', 'Web Manager', 'WordPress', 'Figma', 'React'].map((skill) => (
+            {['Web Manager', 'Diseño UX/UI', 'WordPress', 'Drupal', 'Figma'].map((skill) => (
               <span
                 key={skill}
                 className={getChipClasses()}

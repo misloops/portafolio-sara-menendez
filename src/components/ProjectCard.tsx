@@ -13,17 +13,27 @@ interface ProjectCardProps extends Omit<Project, 'category' | 'status'> {
  */
 function ProjectCard({
   title,
+  meta,
   description,
   image,
   tags,
   slug,
   externalUrl,
+  imageFit = 'contain',
+  imagePosition = 'center',
+  imagePaddingClassName = 'p-4',
   isLink = true
 }: ProjectCardProps) {
+  const hasInternalLink = Boolean(slug);
+  const hasExternalLink = Boolean(externalUrl);
+  const hasDualLinks = hasInternalLink && hasExternalLink;
+  const imageFitClass = imageFit === 'cover' ? 'object-cover' : 'object-contain';
+  const imagePositionClass = imagePosition === 'top' ? 'object-top' : imagePosition === 'bottom' ? 'object-bottom' : 'object-center';
   
   const cardContent = (
     <article className={cn(
-      'flex flex-col h-full group cursor-pointer p-4 lg:p-4 rounded-2xl',
+      'flex flex-col h-full group p-4 lg:p-4 rounded-2xl',
+      hasInternalLink || hasExternalLink ? 'cursor-pointer' : 'cursor-default',
       getCardClasses()
     )}>
       {/* Image Container Header - 220-240px height with padding */}
@@ -42,7 +52,10 @@ function ProjectCard({
               loading="lazy"
               decoding="async"
               className={cn(
-                'w-full h-full object-contain p-4',
+                'w-full h-full',
+                imageFitClass,
+                imagePositionClass,
+                imagePaddingClassName,
                 'group-hover:scale-105 transition-transform duration-300'
               )}
               style={{
@@ -76,6 +89,12 @@ function ProjectCard({
           {title}
         </h3>
 
+        {meta ? (
+          <p className="text-sm md:text-base text-dark/70 leading-relaxed -mt-1">
+            {meta}
+          </p>
+        ) : null}
+
         {/* Description - 14-16px, body */}
         <p className={cn(
           'text-sm md:text-base',
@@ -102,29 +121,52 @@ function ProjectCard({
         </div>
 
         {/* CTA Link - Always visible */}
-        <div className={cn(
-          'mt-4 pt-4 lg:mt-6 lg:pt-6 border-t border-[#dde2dd]',
-          'flex items-center justify-between'
-        )}>
-          <span className={cn(
-            'text-xs font-semibold uppercase tracking-widest',
-            'text-dark/60',
-            'group-hover:text-primary-500 transition-colors'
+        {hasDualLinks ? (
+          <div className={cn('mt-4 pt-4 lg:mt-6 lg:pt-6 border-t border-[#dde2dd]', 'flex items-center gap-6')}>
+            <Link
+              to={`/proyectos/${slug}`}
+              className="text-xs font-semibold uppercase tracking-widest text-dark/60 hover:text-primary-500 transition-colors"
+            >
+              Ver proyecto
+            </Link>
+            <a
+              href={externalUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-xs font-semibold uppercase tracking-widest text-dark/60 hover:text-primary-500 transition-colors"
+            >
+              Ver online
+            </a>
+          </div>
+        ) : (
+          <div className={cn(
+            'mt-4 pt-4 lg:mt-6 lg:pt-6 border-t border-[#dde2dd]',
+            'flex items-center justify-between'
           )}>
-            {slug ? 'Ver proyecto' : externalUrl ? 'Ver online' : 'En preparación'}
-          </span>
-          <svg className={cn(
-            'w-4 h-4',
-            'text-dark/40',
-            'group-hover:text-primary-500 transition-colors',
-            'group-hover:translate-x-1'
-          )} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-          </svg>
-        </div>
+            <span className={cn(
+              'text-xs font-semibold uppercase tracking-widest',
+              'text-dark/60',
+              'group-hover:text-primary-500 transition-colors'
+            )}>
+              {slug ? 'Ver proyecto' : externalUrl ? 'Ver online' : 'En preparación'}
+            </span>
+            <svg className={cn(
+              'w-4 h-4',
+              'text-dark/40',
+              'group-hover:text-primary-500 transition-colors',
+              'group-hover:translate-x-1'
+            )} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+            </svg>
+          </div>
+        )}
       </div>
     </article>
   );
+
+  if (hasDualLinks) {
+    return <div>{cardContent}</div>;
+  }
 
   // Render as router link for case studies
   if (isLink && slug) {

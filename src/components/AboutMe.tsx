@@ -1,4 +1,4 @@
-import { cn, getChipClasses } from '../utils/classNames';
+import { cn, getButtonClasses } from '../utils/classNames';
 import profilePlaceholderIcon from '../assets/icons/1757370620719.jpg';
 
 /**
@@ -7,12 +7,6 @@ import profilePlaceholderIcon from '../assets/icons/1757370620719.jpg';
  * Positioned after projects, before contact CTA
  */
 function AboutMe() {
-  const expertise = [
-    'Diseño Web',
-    'Diseño UX/UI',
-    'Web Manager'
-  ];
-
   return (
     <section id="sobre-mi" className={cn(
       'py-16 lg:py-28',
@@ -23,19 +17,21 @@ function AboutMe() {
         'max-w-7xl mx-auto'
       )}>
         <div className={cn(
-          'grid grid-cols-1 md:grid-cols-12 gap-6 lg:gap-10',
-          'max-w-7xl mx-auto'
+          'grid grid-cols-1 md:grid-cols-12',
+          'gap-[40px]',
+          'max-w-5xl mx-auto',
+          'items-start'
         )}>
           
           {/* Left: Image */}
           <div className={cn(
             'md:col-span-4',
-            'flex items-center justify-center md:justify-start md:pt-2'
+            'flex items-start justify-center md:justify-end'
           )}>
             <img
               src={profilePlaceholderIcon}
               alt="Icono"
-              className="w-[92px] h-[92px] sm:w-[104px] sm:h-[104px] md:w-[120px] md:h-[120px] lg:w-[132px] lg:h-[132px] object-cover rounded-[22px] md:rounded-full"
+              className="w-[96px] h-[96px] sm:w-[100px] sm:h-[100px] md:w-[100px] md:h-[100px] lg:w-[100px] lg:h-[100px] object-cover rounded-[22px] md:rounded-full"
               style={{ imageRendering: 'auto' }}
               loading="lazy"
             />
@@ -62,44 +58,35 @@ function AboutMe() {
               'max-w-xl leading-relaxed'
             )}>
               <p>
-                Soy diseñadora y desarrolladora frontend apasionada por crear productos digitales que combinan forma y función. Con más de una década en el campo, he trabajado con startups y empresas consolidadas para llevar ideas de concepto a realidad.
+                ¡Hola! Soy Sara, diseñadora web y especialista en UX/UI con formación en Historia del Arte y un sólido recorrido en mediación cultural. Mi carrera comenzó en museos y espacios culturales (MNCARS, librerías como La Central y Fnac), donde aprendí a valorar la importancia. Con el tiempo llevé esa experiencia al entorno digital: primero como freelance y más tarde como Webmaster Manager en Grupo Planeta (EAE Business School), uniendo diseño visual, usabilidad y estrategia digital.
               </p>
               <p>
-                Mi enfoque híbrido—diseñar pensando en la implementación, codificar cuidando la experiencia—ayuda a los equipos a entregar mejores productos, más rápido.
+                Hoy combino mi bagaje humanístico con mi experiencia técnica en diseño web (WordPress, Drupal, Prestashop, Figma, Framer), creando proyectos que no solo funcionan, sino que transmiten identidad, coherencia y sentido.
               </p>
             </div>
 
-            {/* Expertise Tags */}
-            <div className={cn(
-              'flex flex-wrap gap-2 lg:gap-6 mb-8'
-            )}>
-              {expertise.map((skill) => (
-                <span
-                  key={skill}
-                  className={getChipClasses()}
-                >
-                  {skill}
-                </span>
-              ))}
-            </div>
+            {/* Action Buttons */}
+            <div className="flex flex-col sm:flex-row gap-2 lg:gap-6 w-fit">
+              <a
+                href="/docs/CV_SARA_MENENDEZ_WEB_ES.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={cn(
+                  'inline-flex items-center justify-center gap-2',
+                  'px-4 py-2 text-base min-h-10 lg:px-6 lg:py-3',
+                  'font-semibold rounded-xl',
+                  'bg-[#c3dcc5] text-[#302e2e]',
+                  'hover:bg-[#a8d0ab] hover:text-[#302e2e]',
+                  'transition-all duration-200 ease-out'
+                )}
+              >
+                Ver mi CV
+              </a>
 
-            {/* Ver CV Button */}
-            <a
-              href="/docs/CV_SARA_MENENDEZ_WEB_ES.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-              className={cn(
-                'inline-flex items-center justify-center gap-2',
-                'px-4 py-2 text-base min-h-10 lg:px-6 lg:py-3',
-                'font-semibold rounded-xl',
-                'bg-[#c3dcc5] text-[#302e2e]',
-                'hover:bg-[#a8d0ab] hover:text-[#302e2e]',
-                'transition-all duration-200 ease-out',
-                'w-fit'
-              )}
-            >
-              Ver mi CV
-            </a>
+              <a href="/contacto" className={getButtonClasses('primary')}>
+                Contáctame
+              </a>
+            </div>
           </div>
         </div>
 

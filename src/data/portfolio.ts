@@ -8,12 +8,16 @@ export type Service = {
 
 export type Project = {
   title: string;
+  meta?: string;
   description: string;
   image: string;
   tags: string[];
   category: string;
   slug?: string;
   externalUrl?: string;
+  imageFit?: 'contain' | 'cover';
+  imagePosition?: 'center' | 'top' | 'bottom';
+  imagePaddingClassName?: string;
   status?: string;
 };
 
@@ -59,12 +63,16 @@ export const projects: Project[] = [
   },
   {
     title: 'EAE Business School',
+    meta: '(Grupo Planeta) Barcelona 2023 - 2025',
     description: 'Web corporativa educativa en Drupal. Unificación visual, optimización de navegación y rediseño de fichas de programa para incrementar la captación de leads. +40% conversión.',
     image: '/assets/projects/eae-business-school/EAE-BUSINESS_COVER.jpg',
-    tags: ['Drupal', 'Diseño UX / UI', 'Web Manager'],
+    tags: ['Web Manager', 'Web Specialist', 'Drupal'],
     category: 'Case study',
     slug: 'eae-business-school',
     externalUrl: 'https://www.eaebarcelona.com/es/',
+    imageFit: 'cover',
+    imagePosition: 'top',
+    imagePaddingClassName: 'p-4',
     status: 'Live'
   },
   {

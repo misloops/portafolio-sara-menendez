@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { useState, useMemo } from 'react';
-import { cn, getChipClasses } from '../utils/classNames';
+import { cn, getButtonClasses, getChipClasses } from '../utils/classNames';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import ProjectCard from '../components/ProjectCard';
@@ -151,15 +151,7 @@ function ProjectsPage() {
           <div className="flex flex-col sm:flex-row gap-2 lg:gap-6 justify-center">
             <a
               href="/contacto"
-              className={cn(
-                'inline-flex items-center justify-center rounded-xl border',
-                'px-4 py-2 lg:px-6 lg:py-3 min-h-10 text-base font-semibold',
-                'bg-[#98c29b] text-[#302e2e] border-[#7fab86]',
-                'shadow-[0_6px_18px_rgba(83,130,93,0.18)]',
-                'hover:bg-[#8bb58e] hover:border-[#729f7a] hover:shadow-[0_10px_26px_rgba(83,130,93,0.22)]',
-                'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[#98c29b]/60',
-                'active:translate-y-[1px] transition-all duration-200 ease-out'
-              )}
+              className={getButtonClasses('primary')}
             >
               Conectemos
             </a>
