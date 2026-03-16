@@ -35,8 +35,7 @@ function ProjectCard({
       'flex flex-col h-full p-4 lg:p-4 rounded-2xl',
       hasInternalLink || hasExternalLink ? 'cursor-pointer' : 'cursor-default',
       getCardClasses(),
-      'transition-all duration-300',
-      hasInternalLink || hasExternalLink ? 'group-hover:bg-[#98c29b]' : ''
+      'transition-all duration-300'
     )}>
       {/* Image Container Header - 220-240px height with padding */}
       <div className={cn(
@@ -127,7 +126,8 @@ function ProjectCard({
         <div className={cn(
           'mt-4 pt-4 lg:mt-6 lg:pt-6 border-t border-[#dde2dd]',
           'flex items-center justify-between',
-          'group-hover:border-[#c3b7c3] transition-colors duration-300'
+          'group',
+          'hover:border-[#c3b7c3] transition-colors duration-300'
         )}>
           <span className={cn(
             'text-xs font-semibold uppercase tracking-widest',

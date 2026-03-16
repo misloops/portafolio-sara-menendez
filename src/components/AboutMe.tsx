@@ -25,8 +25,8 @@ function AboutMe() {
           
           {/* Left: Image */}
           <div className={cn(
-            'hidden md:flex md:col-span-4',
-            'items-center justify-center md:justify-end w-fit'
+            'col-span-12 md:col-span-4',
+            'flex items-center justify-center md:justify-end w-full md:w-fit'
           )}>
             <img
               src={profilePlaceholderIcon}
