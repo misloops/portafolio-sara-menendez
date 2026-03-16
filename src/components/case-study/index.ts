@@ -27,4 +27,7 @@
 export { CaseStudyHero } from './CaseStudyHero';
 export type { CaseStudyHeroProps, HeroStat } from './CaseStudyHero';
 export { CaseStudySection } from './CaseStudySection';
+export { CaseStudyPager } from './CaseStudyPager';
 export { CaseStudyNotFound } from './CaseStudyNotFound';
+export { HorizontalImageGallery } from './HorizontalImageGallery';
+export type { ImageItem, ImageGroup } from './HorizontalImageGallery';

@@ -83,7 +83,14 @@ function AboutMe() {
                 Ver mi CV
               </a>
 
-              <a href="/contacto" className={getButtonClasses('primary')}>
+              <a
+                href="/contacto"
+                className={cn(
+                  getButtonClasses('primary'),
+                  'bg-[#98c29b] text-[#302e2e] border-[#7fab86]',
+                  'hover:bg-black hover:text-[#98c29b] hover:border-black'
+                )}
+              >
                 Contáctame
               </a>
             </div>

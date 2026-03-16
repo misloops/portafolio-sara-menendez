@@ -342,18 +342,109 @@ export function PortfolioCaseStudy() {
 
           <div className="mb-12">
             <h3 className="text-xl font-serif font-bold text-dark mb-6">Tipografía</h3>
-            <div className="space-y-4">
-              <div>
-                <p className="font-serif text-4xl text-dark mb-2">Serif Heading (DM Serif Display)</p>
-                <p className="text-sm text-dark/60">Tamaños: 48px mobile → 84px desktop</p>
+            
+            {/* Justificación */}
+            <div className="mb-8 p-6 rounded-lg bg-white/50 backdrop-blur-sm border border-primary-300/20">
+              <p className="text-lg text-dark/75 leading-relaxed mb-3">
+                Se eligieron dos tipografías complementarias: <strong>DM Serif Display</strong> para headings (marca y jerarquía) y <strong>Gilroy</strong> para body (claridad y versatilidad). Esta combinación refleja la dualidad del proyecto: diseño refinado + desarrollo accesible.
+              </p>
+              <p className="text-sm text-dark/60">
+                La escala tipográfica respeta los estándares WCAG AA en contraste y tamaño mínimo, asegurando legibilidad en todos los dispositivos.
+              </p>
+            </div>
+
+            {/* Jerarquía Visual */}
+            <div className="space-y-6">
+              {/* H1 - Headings */}
+              <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                <div>
+                  <h4 className="text-sm font-semibold uppercase tracking-widest text-dark/60 mb-3">H1 - Headings</h4>
+                  <h1 className="font-serif text-3xl md:text-4xl lg:text-5xl font-bold text-dark mb-2">Mi Portafolio 2026</h1>
+                  <div className="space-y-1 text-xs text-dark/60 font-mono">
+                    <p>DM Serif Display — Bold</p>
+                    <p>Mobile: 40px | Tablet: 48px | Desktop: 56px</p>
+                    <p>Line-height: 1.1</p>
+                  </div>
+                </div>
+
+                {/* H2 - Section Titles */}
+                <div>
+                  <h4 className="text-sm font-semibold uppercase tracking-widest text-dark/60 mb-3">H2 - Secciones</h4>
+                  <h2 className="font-serif text-2xl md:text-3xl font-bold text-dark mb-2">Design System</h2>
+                  <div className="space-y-1 text-xs text-dark/60 font-mono">
+                    <p>DM Serif Display — Bold</p>
+                    <p>Mobile: 32px | Tablet: 36px | Desktop: 40px</p>
+                    <p>Line-height: 1.2</p>
+                  </div>
+                </div>
+
+                {/* H3 - Subsections */}
+                <div>
+                  <h4 className="text-sm font-semibold uppercase tracking-widest text-dark/60 mb-3">H3 - Subsecciones</h4>
+                  <h3 className="text-xl font-serif font-bold text-dark mb-2">Paleta de Colores</h3>
+                  <div className="space-y-1 text-xs text-dark/60 font-mono">
+                    <p>DM Serif Display — Bold</p>
+                    <p>Mobile: 24px | Tablet: 28px | Desktop: 32px</p>
+                    <p>Line-height: 1.3</p>
+                  </div>
+                </div>
               </div>
-              <div>
-                <p className="text-2xl text-dark mb-2">Body Text (Gilroy)</p>
-                <p className="text-sm text-dark/60">16px - 20px según contexto</p>
+
+              {/* Body Text */}
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 pt-6 border-t border-dark/10">
+                <div className="bg-gradient-to-br from-primary-100/20 to-secondary-100/20 rounded-lg p-6 border border-primary-300/30">
+                  <p className="text-base md:text-lg text-dark/75 leading-relaxed mb-3">
+                    Este es texto body en Gilroy Regular. Se utiliza para párrafos largos, descripciones de proyectos, y cualquier contenido editorial. La altura de línea (1.7x) asegura legibilidad cómoda.
+                  </p>
+                  <div className="space-y-1 text-xs text-dark/60 font-mono">
+                    <p>Gilroy — Regular</p>
+                    <p>Mobile: 15px / 25px | Tablet: 16px / 27px | Desktop: 17px / 29px</p>
+                  </div>
+                </div>
+
+                <div className="bg-gradient-to-br from-primary-100/20 to-secondary-100/20 rounded-lg p-6 border border-primary-300/30">
+                  <p className="text-base md:text-lg font-medium text-dark/85 leading-relaxed mb-3">
+                    Este texto usa Gilroy Medium para resaltar puntos clave dentro del body. Se aplica en leads, primeras líneas, o énfasis editorial sin usar bold completo.
+                  </p>
+                  <div className="space-y-1 text-xs text-dark/60 font-mono">
+                    <p>Gilroy — Medium</p>
+                    <p>Mobile: 16px / 27px | Tablet: 17px / 29px | Desktop: 18px / 30px</p>
+                  </div>
+                </div>
               </div>
-              <div>
-                <p className="heading-subtitle">Italic Subtitle (32px, Gilroy Italic)</p>
-                <p className="text-sm text-dark/60">Highlighting key messaging</p>
+
+              {/* Data/Caption */}
+              <div className="bg-gradient-to-br from-secondary-100/20 to-primary-100/20 rounded-lg p-6 border border-primary-300/30">
+                <p className="text-sm text-dark/60 leading-relaxed mb-2">
+                  Texto data en Gilroy Regular para captions, labels, y meta-information. Menor tamaño pero mantiene buena lectura incluso en mobile.
+                </p>
+                <div className="space-y-1 text-xs text-dark/60 font-mono">
+                  <p>Gilroy — Regular | Opacity: 60%</p>
+                  <p>Mobile: 14px | Tablet: 15px | Desktop: 16px</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Casos de Uso */}
+            <div className="mt-8 pt-8 border-t border-dark/10">
+              <h4 className="text-lg font-serif font-bold text-dark mb-4">Casos de Uso</h4>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div className="p-4 rounded-lg bg-white/40 border border-primary-300/10">
+                  <p className="font-semibold text-dark mb-2">Hero & Page Titles</p>
+                  <p className="text-sm text-dark/70">H1 en DM Serif Display. Máximo impacto visual, identidad de marca.</p>
+                </div>
+                <div className="p-4 rounded-lg bg-white/40 border border-primary-300/10">
+                  <p className="font-semibold text-dark mb-2">Section Headers</p>
+                  <p className="text-sm text-dark/70">H2/H3 en DM Serif Display. Estructura jerárquica clara dentro de contenido.</p>
+                </div>
+                <div className="p-4 rounded-lg bg-white/40 border border-primary-300/10">
+                  <p className="font-semibold text-dark mb-2">Body & Descripción</p>
+                  <p className="text-sm text-dark/70">Gilroy Regular/Medium. Todo el contenido editorial, párrafos, listas.</p>
+                </div>
+                <div className="p-4 rounded-lg bg-white/40 border border-primary-300/10">
+                  <p className="font-semibold text-dark mb-2">Labels & Chips</p>
+                  <p className="text-sm text-dark/70">Gilroy Medium o Data weights. Tags, skills, meta-información.</p>
+                </div>
               </div>
             </div>
           </div>

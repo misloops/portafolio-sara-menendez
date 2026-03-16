@@ -2,17 +2,7 @@ import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import { cn, getChipClasses } from '../../utils/classNames';
 import { CaseStudyPager } from '../../components/case-study/CaseStudyPager';
-
-type ImageItem = {
-  src: string;
-  alt: string;
-};
-
-type ImageGroup = {
-  title: string;
-  note?: string;
-  images: ImageItem[];
-};
+import { HorizontalImageGallery, type ImageGroup } from '../../components/case-study/HorizontalImageGallery';
 
 const processGroups: ImageGroup[] = [
   {
@@ -84,31 +74,6 @@ const finalScreenGroups: ImageGroup[] = [
     ]
   }
 ];
-
-function HorizontalImageGroup({ title, note, images }: ImageGroup) {
-  return (
-    <article className="rounded-2xl border border-primary-300/30 bg-[#ffffff5c] backdrop-blur-sm p-4 md:p-6">
-      <div className="mb-4">
-        <h3 className="font-serif text-2xl md:text-3xl font-bold text-dark">{title}</h3>
-        {note ? <p className="mt-1 text-base md:text-lg text-dark/75 leading-relaxed">{note}</p> : null}
-      </div>
-
-      <div className="overflow-x-auto pb-1">
-        <div className="flex items-start gap-4 w-max min-w-full">
-          {images.map((image) => (
-            <img
-              key={image.src}
-              src={image.src}
-              alt={image.alt}
-              className="w-auto h-auto max-h-[620px] object-contain rounded-lg"
-              loading="lazy"
-            />
-          ))}
-        </div>
-      </div>
-    </article>
-  );
-}
 
 export function TrickTalesCaseStudy() {
   return (
@@ -192,9 +157,7 @@ export function TrickTalesCaseStudy() {
           <p className="text-lg text-dark/75 max-w-4xl">
             Se agrupa el material de estilo y proceso en scroll horizontal para mantener lectura continua y comparación rápida entre piezas.
           </p>
-          {processGroups.map((group) => (
-            <HorizontalImageGroup key={group.title} {...group} />
-          ))}
+          <HorizontalImageGallery groups={processGroups} />
         </div>
       </section>
 
@@ -221,9 +184,7 @@ export function TrickTalesCaseStudy() {
       <section className="py-16 lg:py-20 px-4 lg:px-6 bg-transparent">
         <div className="max-w-7xl mx-auto space-y-8">
           <h2 className="font-serif text-3xl md:text-4xl font-bold text-dark">Pantallas finales</h2>
-          {finalScreenGroups.map((group) => (
-            <HorizontalImageGroup key={group.title} {...group} />
-          ))}
+          <HorizontalImageGallery groups={finalScreenGroups} />
         </div>
       </section>
 
