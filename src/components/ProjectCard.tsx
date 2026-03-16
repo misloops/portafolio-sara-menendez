@@ -32,9 +32,11 @@ function ProjectCard({
   
   const cardContent = (
     <article className={cn(
-      'flex flex-col h-full group p-4 lg:p-4 rounded-2xl',
+      'flex flex-col h-full p-4 lg:p-4 rounded-2xl',
       hasInternalLink || hasExternalLink ? 'cursor-pointer' : 'cursor-default',
-      getCardClasses()
+      getCardClasses(),
+      'transition-all duration-300',
+      hasInternalLink || hasExternalLink ? 'group-hover:bg-[#98c29b]' : ''
     )}>
       {/* Image Container Header - 220-240px height with padding */}
       <div className={cn(
@@ -84,13 +86,13 @@ function ProjectCard({
           'text-lg md:text-xl',
           'font-normal leading-tight',
           'text-dark',
-          'group-hover:text-primary-500 transition-colors duration-200'
+          'group-hover:text-[#c3b7c3] transition-colors duration-200'
         )}>
           {title}
         </h3>
 
         {meta ? (
-          <p className="text-sm md:text-base text-dark/70 leading-relaxed -mt-1">
+          <p className="text-sm md:text-base text-dark/70 leading-relaxed -mt-1 group-hover:text-[#c3b7c3] transition-colors duration-200">
             {meta}
           </p>
         ) : null}
@@ -101,7 +103,8 @@ function ProjectCard({
           'text-dark/70',
           'leading-relaxed',
           'flex-grow',
-          'line-clamp-3'
+          'line-clamp-3',
+          'group-hover:text-[#c3b7c3] transition-colors duration-200'
         )}>
           {description}
         </p>
@@ -123,19 +126,20 @@ function ProjectCard({
         {/* CTA Link - Always visible */}
         <div className={cn(
           'mt-4 pt-4 lg:mt-6 lg:pt-6 border-t border-[#dde2dd]',
-          'flex items-center justify-between'
+          'flex items-center justify-between',
+          'group-hover:border-[#c3b7c3] transition-colors duration-300'
         )}>
           <span className={cn(
             'text-xs font-semibold uppercase tracking-widest',
             'text-dark/60',
-            'group-hover:text-primary-500 transition-colors'
+            'group-hover:text-[#c3b7c3] transition-colors'
           )}>
             {slug ? 'Ver proyecto' : externalUrl ? 'Ver online' : 'En preparación'}
           </span>
           <svg className={cn(
             'w-4 h-4',
             'text-dark/40',
-            'group-hover:text-primary-500 transition-colors',
+            'group-hover:text-[#c3b7c3] transition-colors',
             'group-hover:translate-x-1'
           )} fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
@@ -150,7 +154,7 @@ function ProjectCard({
     return (
       <Link
         to={`/proyectos/${slug}`}
-        className="hover:no-underline"
+        className="group hover:no-underline"
       >
         {cardContent}
       </Link>
@@ -162,7 +166,7 @@ function ProjectCard({
     return (
       <Link
         to={`/proyectos/${slug}`}
-        className="hover:no-underline"
+        className="group hover:no-underline"
       >
         {cardContent}
       </Link>
@@ -176,7 +180,7 @@ function ProjectCard({
         href={externalUrl}
         target="_blank"
         rel="noopener noreferrer"
-        className="hover:no-underline"
+        className="group hover:no-underline"
       >
         {cardContent}
       </a>

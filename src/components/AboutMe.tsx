@@ -17,7 +17,7 @@ function AboutMe() {
         'max-w-7xl mx-auto'
       )}>
         <div className={cn(
-          'grid grid-cols-1 md:grid-cols-12',
+          'flex flex-col md:grid md:grid-cols-12',
           'gap-[40px]',
           'max-w-5xl mx-auto',
           'items-start'
@@ -25,13 +25,13 @@ function AboutMe() {
           
           {/* Left: Image */}
           <div className={cn(
-            'md:col-span-4',
-            'flex items-start justify-center md:justify-end'
+            'hidden md:flex md:col-span-4',
+            'items-center justify-center md:justify-end w-fit'
           )}>
             <img
               src={profilePlaceholderIcon}
               alt="Icono"
-              className="w-[96px] h-[96px] sm:w-[100px] sm:h-[100px] md:w-[100px] md:h-[100px] lg:w-[100px] lg:h-[100px] object-cover rounded-[22px] md:rounded-full"
+              className="w-[96px] h-[96px] md:w-[100px] md:h-[100px] lg:w-[100px] lg:h-[100px] object-cover rounded-[22px] md:rounded-full flex-shrink-0"
               style={{ imageRendering: 'auto' }}
               loading="lazy"
             />
