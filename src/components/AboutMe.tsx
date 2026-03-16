@@ -23,21 +23,7 @@ function AboutMe() {
           'items-start'
         )}>
           
-          {/* Left: Image */}
-          <div className={cn(
-            'col-span-12 md:col-span-4',
-            'flex items-center justify-center md:justify-end w-full md:w-fit'
-          )}>
-            <img
-              src={profilePlaceholderIcon}
-              alt="Icono"
-              className="w-[96px] h-[96px] md:w-[100px] md:h-[100px] lg:w-[100px] lg:h-[100px] object-cover rounded-[22px] md:rounded-full flex-shrink-0"
-              style={{ imageRendering: 'auto' }}
-              loading="lazy"
-            />
-          </div>
-
-          {/* Right: Bio & Expertise */}
+          {/* Bio & Expertise */}
           <div className={cn(
             'md:col-span-8',
             'flex flex-col justify-start'
@@ -50,6 +36,20 @@ function AboutMe() {
             )}>
               Sobre mí
             </h2>
+
+            {/* Portrait - Mobile only, appears below title */}
+            <div className={cn(
+              'md:hidden',
+              'flex items-center justify-center w-full mb-6'
+            )}>
+              <img
+                src={profilePlaceholderIcon}
+                alt="Sara Martínez"
+                className="w-[96px] h-[96px] object-cover rounded-[22px] flex-shrink-0"
+                style={{ imageRendering: 'auto' }}
+                loading="lazy"
+              />
+            </div>
 
             <div className={cn(
               'flex flex-col gap-2 lg:gap-6 mb-4 lg:mb-8',
@@ -90,6 +90,20 @@ function AboutMe() {
                 Contáctame
               </a>
             </div>
+          </div>
+
+          {/* Portrait - Desktop only, right side */}
+          <div className={cn(
+            'hidden md:flex md:col-span-4',
+            'items-center justify-end w-fit'
+          )}>
+            <img
+              src={profilePlaceholderIcon}
+              alt="Sara Martínez"
+              className="w-[100px] h-[100px] lg:w-[100px] lg:h-[100px] object-cover rounded-full flex-shrink-0"
+              style={{ imageRendering: 'auto' }}
+              loading="lazy"
+            />
           </div>
         </div>
 
