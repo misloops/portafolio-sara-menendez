@@ -121,51 +121,40 @@ function ProjectCard({
         </div>
 
         {/* CTA Link - Always visible */}
-        {hasDualLinks ? (
-          <div className={cn('mt-4 pt-4 lg:mt-6 lg:pt-6 border-t border-[#dde2dd]', 'flex items-center gap-6')}>
-            <Link
-              to={`/proyectos/${slug}`}
-              className="text-xs font-semibold uppercase tracking-widest text-dark/60 hover:text-primary-500 transition-colors"
-            >
-              Ver proyecto
-            </Link>
-            <a
-              href={externalUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-xs font-semibold uppercase tracking-widest text-dark/60 hover:text-primary-500 transition-colors"
-            >
-              Ver online
-            </a>
-          </div>
-        ) : (
-          <div className={cn(
-            'mt-4 pt-4 lg:mt-6 lg:pt-6 border-t border-[#dde2dd]',
-            'flex items-center justify-between'
+        <div className={cn(
+          'mt-4 pt-4 lg:mt-6 lg:pt-6 border-t border-[#dde2dd]',
+          'flex items-center justify-between'
+        )}>
+          <span className={cn(
+            'text-xs font-semibold uppercase tracking-widest',
+            'text-dark/60',
+            'group-hover:text-primary-500 transition-colors'
           )}>
-            <span className={cn(
-              'text-xs font-semibold uppercase tracking-widest',
-              'text-dark/60',
-              'group-hover:text-primary-500 transition-colors'
-            )}>
-              {slug ? 'Ver proyecto' : externalUrl ? 'Ver online' : 'En preparación'}
-            </span>
-            <svg className={cn(
-              'w-4 h-4',
-              'text-dark/40',
-              'group-hover:text-primary-500 transition-colors',
-              'group-hover:translate-x-1'
-            )} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-            </svg>
-          </div>
-        )}
+            {slug ? 'Ver proyecto' : externalUrl ? 'Ver online' : 'En preparación'}
+          </span>
+          <svg className={cn(
+            'w-4 h-4',
+            'text-dark/40',
+            'group-hover:text-primary-500 transition-colors',
+            'group-hover:translate-x-1'
+          )} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+          </svg>
+        </div>
       </div>
     </article>
   );
 
-  if (hasDualLinks) {
-    return <div>{cardContent}</div>;
+  // When both links exist, prioritize case study (internal link)
+  if (hasDualLinks && isLink) {
+    return (
+      <Link
+        to={`/proyectos/${slug}`}
+        className="hover:no-underline"
+      >
+        {cardContent}
+      </Link>
+    );
   }
 
   // Render as router link for case studies

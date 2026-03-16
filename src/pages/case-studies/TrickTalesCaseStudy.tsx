@@ -20,7 +20,7 @@ const processGroups: ImageGroup[] = [
   },
   {
     title: 'Arquitectura y wireframes',
-    note: 'Estructura de información y secuencia de pantallas del flujo completo.',
+    note: 'Estructura de información y wireframes del flujo.',
     images: [
       { src: '/assets/projects/trick-tales/arquitectura-informacion.png', alt: 'Arquitectura de información' },
       { src: '/assets/projects/trick-tales/w1---splash.png', alt: 'Wireframe splash' },
@@ -41,9 +41,8 @@ const processGroups: ImageGroup[] = [
 
 const finalScreenGroups: ImageGroup[] = [
   {
-    title: 'Onboarding y acceso',
+    title: 'Onboarding',
     images: [
-      { src: '/assets/projects/trick-tales/splash.png', alt: 'Splash' },
       { src: '/assets/projects/trick-tales/onboard-1.png', alt: 'Onboarding 1' },
       { src: '/assets/projects/trick-tales/onboard-2.png', alt: 'Onboarding 2' },
       { src: '/assets/projects/trick-tales/onboard-3.png', alt: 'Onboarding 3' },
