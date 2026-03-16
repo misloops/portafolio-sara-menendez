@@ -10,6 +10,7 @@ const processGroups: ImageGroup[] = [
     note: 'Tokens, componentes y piezas UI del proyecto.',
     images: [
       { src: '/assets/projects/trick-tales/colores.png', alt: 'Colores' },
+      { src: '/assets/projects/trick-tales/sistema-colores.png', alt: 'Sistema de colores' },
       { src: '/assets/projects/trick-tales/tipografias.png', alt: 'Tipografías' },
       { src: '/assets/projects/trick-tales/iconos.png', alt: 'Iconos' },
       { src: '/assets/projects/trick-tales/botones.png', alt: 'Botones' },
@@ -19,7 +20,7 @@ const processGroups: ImageGroup[] = [
   },
   {
     title: 'Arquitectura y wireframes',
-    note: 'Estructura y secuencia de pantallas del flujo inicial.',
+    note: 'Estructura de información y secuencia de pantallas del flujo completo.',
     images: [
       { src: '/assets/projects/trick-tales/arquitectura-informacion.png', alt: 'Arquitectura de información' },
       { src: '/assets/projects/trick-tales/w1---splash.png', alt: 'Wireframe splash' },
@@ -27,7 +28,13 @@ const processGroups: ImageGroup[] = [
       { src: '/assets/projects/trick-tales/w3---onboarding-3.png', alt: 'Wireframe onboarding 3' },
       { src: '/assets/projects/trick-tales/w4---onboarding-4.png', alt: 'Wireframe onboarding 4' },
       { src: '/assets/projects/trick-tales/w5---onboarding-5.png', alt: 'Wireframe onboarding 5' },
-      { src: '/assets/projects/trick-tales/w6---onboarding-6.png', alt: 'Wireframe onboarding 6' }
+      { src: '/assets/projects/trick-tales/w6---onboarding-6.png', alt: 'Wireframe onboarding 6' },
+      { src: '/assets/projects/trick-tales/w7---onboarding-7.png', alt: 'Wireframe onboarding 7' },
+      { src: '/assets/projects/trick-tales/w8----log-in.png', alt: 'Wireframe log in' },
+      { src: '/assets/projects/trick-tales/w8----log-in-1.png', alt: 'Wireframe log in 1' },
+      { src: '/assets/projects/trick-tales/w8----log-in-2.png', alt: 'Wireframe log in 2' },
+      { src: '/assets/projects/trick-tales/w8----sing-up.png', alt: 'Wireframe sign up' },
+      { src: '/assets/projects/trick-tales/w8----sing-up-1.png', alt: 'Wireframe sign up 1' }
     ]
   }
 ];
@@ -56,21 +63,55 @@ const finalScreenGroups: ImageGroup[] = [
       { src: '/assets/projects/trick-tales/peso.png', alt: 'Peso' },
       { src: '/assets/projects/trick-tales/peso-1.png', alt: 'Peso detalle' },
       { src: '/assets/projects/trick-tales/nuevo-pesaje.png', alt: 'Nuevo pesaje' },
-      { src: '/assets/projects/trick-tales/feedback-peso.png', alt: 'Feedback peso' }
+      { src: '/assets/projects/trick-tales/feedback-peso.png', alt: 'Feedback peso' },
+      { src: '/assets/projects/trick-tales/feedback-peso-1.png', alt: 'Feedback peso 1' },
+      { src: '/assets/projects/trick-tales/logros.png', alt: 'Logros' },
+      { src: '/assets/projects/trick-tales/logros-1.png', alt: 'Logros detalle' },
+      { src: '/assets/projects/trick-tales/pantalla-de-felicitacion.png', alt: 'Pantalla de felicitación' },
+      { src: '/assets/projects/trick-tales/pantalla-de-felicitacion-1.png', alt: 'Pantalla de felicitación 1' },
+      { src: '/assets/projects/trick-tales/pantalla-de-felicitacion-2.png', alt: 'Pantalla de felicitación 2' }
     ]
   },
   {
-    title: 'Gestión diaria',
+    title: 'Gestión de mascotas',
     images: [
       { src: '/assets/projects/trick-tales/mis-mascotas.png', alt: 'Mis mascotas' },
+      { src: '/assets/projects/trick-tales/mis-mascotas-1.png', alt: 'Mis mascotas detalle' },
       { src: '/assets/projects/trick-tales/perfil-de-mascota.png', alt: 'Perfil de mascota' },
+      { src: '/assets/projects/trick-tales/perfil-de-mascota-1.png', alt: 'Perfil de mascota 1' },
+      { src: '/assets/projects/trick-tales/perfil-de-mascota_editable.png', alt: 'Perfil de mascota editable' },
+      { src: '/assets/projects/trick-tales/agregar-mascota.png', alt: 'Agregar mascota' },
+      { src: '/assets/projects/trick-tales/agregar-mascota-1.png', alt: 'Agregar mascota 1' },
+      { src: '/assets/projects/trick-tales/agregar-mascota-2.png', alt: 'Agregar mascota 2' },
+      { src: '/assets/projects/trick-tales/agregar-mascota-3.png', alt: 'Agregar mascota 3' },
+      { src: '/assets/projects/trick-tales/agregar-mascota-4.png', alt: 'Agregar mascota 4' },
+      { src: '/assets/projects/trick-tales/agregar-mascota-5.png', alt: 'Agregar mascota 5' },
+      { src: '/assets/projects/trick-tales/agregar-mascota-6.png', alt: 'Agregar mascota 6' },
+      { src: '/assets/projects/trick-tales/agregar-mascota-7.png', alt: 'Agregar mascota 7' }
+    ]
+  },
+  {
+    title: 'Citas y medicamentos',
+    images: [
       { src: '/assets/projects/trick-tales/mis-citas.png', alt: 'Mis citas' },
+      { src: '/assets/projects/trick-tales/mis-citas-1.png', alt: 'Mis citas detalle' },
       { src: '/assets/projects/trick-tales/ver-cita.png', alt: 'Ver cita' },
-      { src: '/assets/projects/trick-tales/medicamentos-y-vacunas.png', alt: 'Medicamentos y vacunas' },
+      { src: '/assets/projects/trick-tales/ver-cita-1.png', alt: 'Ver cita detalle' },
       { src: '/assets/projects/trick-tales/agregar-cita.png', alt: 'Agregar cita' },
+      { src: '/assets/projects/trick-tales/agregar-cita-1.png', alt: 'Agregar cita 1' },
+      { src: '/assets/projects/trick-tales/feedback-cita.png', alt: 'Feedback cita' },
+      { src: '/assets/projects/trick-tales/feedback-cita2.png', alt: 'Feedback cita 2' },
+      { src: '/assets/projects/trick-tales/medicamentos-y-vacunas.png', alt: 'Medicamentos y vacunas' },
+      { src: '/assets/projects/trick-tales/medicamentos-y-vacunas-1.png', alt: 'Medicamentos y vacunas detalle' },
       { src: '/assets/projects/trick-tales/agregar-medicamento.png', alt: 'Agregar medicamento' },
+      { src: '/assets/projects/trick-tales/agregar-medicamento-1.png', alt: 'Agregar medicamento 1' },
+      { src: '/assets/projects/trick-tales/feedback-medicamento.png', alt: 'Feedback medicamento' },
+      { src: '/assets/projects/trick-tales/feedback-med.png', alt: 'Feedback med' },
       { src: '/assets/projects/trick-tales/agregar-vacuna.png', alt: 'Agregar vacuna' },
-      { src: '/assets/projects/trick-tales/feedback-vacuna.png', alt: 'Feedback vacuna' }
+      { src: '/assets/projects/trick-tales/agregar-vacuna-1.png', alt: 'Agregar vacuna 1' },
+      { src: '/assets/projects/trick-tales/feedback-vacuna.png', alt: 'Feedback vacuna' },
+      { src: '/assets/projects/trick-tales/feedback-vacuna-1.png', alt: 'Feedback vacuna 1' },
+      { src: '/assets/projects/trick-tales/certificado-vacuna.png', alt: 'Certificado vacuna' }
     ]
   }
 ];

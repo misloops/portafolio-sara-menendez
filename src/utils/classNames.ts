@@ -59,16 +59,16 @@ export function getButtonClasses(
 
   const variants = {
     primary: [
-      'bg-[#98c29b] text-[#302e2e] border-[#7fab86]',
-      'shadow-[0_6px_18px_rgba(83,130,93,0.18)]',
-      'hover:bg-black hover:text-[#98c29b] hover:border-black hover:shadow-[0_10px_26px_rgba(0,0,0,0.30)]',
-      'active:bg-[#1a1a1a]'
+      'bg-[#f2f4f1] text-[#302e2e] border-[#e8e8e6]',
+      'shadow-[0_4px_12px_rgba(0,0,0,0.08)]',
+      'hover:bg-[#c3b7c3] hover:text-[#302e2e] hover:border-[#b0a4b0] hover:shadow-[0_6px_16px_rgba(195,183,195,0.2)]',
+      'active:bg-[#b0a4b0]'
     ].join(' '),
     secondary: [
-      'bg-[#f2f4f1] text-[#302e2e] border-[#d5dbd4]',
-      'shadow-[0_4px_12px_rgba(48,46,46,0.08)]',
-      'hover:bg-[#e8ece7] hover:border-[#c8d0c7] hover:shadow-[0_8px_20px_rgba(48,46,46,0.12)]',
-      'active:bg-[#dde4dd]'
+      'bg-[#98c29b] text-[#302e2e] border-[#7fab86]',
+      'shadow-[0_4px_12px_rgba(83,130,93,0.12)]',
+      'hover:bg-[#7aa871] hover:text-[#302e2e] hover:border-[#6a9860] hover:shadow-[0_8px_20px_rgba(83,130,93,0.18)]',
+      'active:bg-[#6a9860]'
     ].join(' '),
     outline: [
       'bg-transparent text-[#302e2e] border-[#b9c3ba]',
