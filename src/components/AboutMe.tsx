@@ -66,7 +66,7 @@ function AboutMe() {
             </div>
 
             {/* Action Buttons */}
-            <div className="flex flex-col sm:flex-row gap-2 lg:gap-6 w-fit">
+            <div className="flex flex-row gap-4 lg:gap-6 w-fit flex-wrap">
               <a
                 href="/docs/CV_SARA_MENENDEZ_WEB_ES.pdf"
                 target="_blank"
@@ -113,7 +113,7 @@ function AboutMe() {
             <p className="text-xl text-dark/70 mb-6 lg:mb-10 leading-relaxed">
               Si tienes una idea o proyecto que necesita diseño, desarrollo o ambos, me encantaría hablar contigo.
             </p>
-            <div className="flex flex-col sm:flex-row gap-2 lg:gap-6 justify-center">
+            <div className="flex flex-row gap-4 lg:gap-6 justify-center flex-wrap">
               <a
                 href="/contacto"
                 className={cn(

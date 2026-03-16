@@ -148,7 +148,7 @@ function ProjectsPage() {
           <p className="text-xl text-dark/70 mb-6 lg:mb-10 leading-relaxed">
             Si tienes una idea o proyecto que necesita diseño, desarrollo o ambos, me encantaría hablar contigo.
           </p>
-          <div className="flex flex-col sm:flex-row gap-2 lg:gap-6 justify-center">
+          <div className="flex flex-row gap-4 lg:gap-6 justify-center flex-wrap">
             <a
               href="/contacto"
               className={getButtonClasses('primary')}

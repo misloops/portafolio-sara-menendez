@@ -77,9 +77,9 @@ function Hero({ onActionClick }: HeroProps) {
 
           {/* Action Buttons */}
           <div className={cn(
-            'flex flex-col sm:flex-row gap-2 lg:gap-10',
+            'flex flex-row gap-4 lg:gap-8',
             'pt-2 lg:pt-4',
-            'items-center'
+            'items-center flex-wrap'
           )}>
             <a
               href="mailto:sara.m.pumariega@gmail.com"
