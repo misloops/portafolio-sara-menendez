@@ -40,7 +40,7 @@ function AboutMe() {
             {/* Portrait - Mobile only, appears below title */}
             <div className={cn(
               'md:hidden',
-              'flex items-center justify-center w-full mb-6'
+              'flex items-center justify-start w-full mb-6'
             )}>
               <img
                 src={profilePlaceholderIcon}
