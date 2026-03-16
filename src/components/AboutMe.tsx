@@ -51,14 +51,14 @@ function AboutMe() {
               />
               
               {/* Contact Icons - Mobile, inline below image */}
-              <div className="flex flex-row gap-2">
+              <div className="flex flex-row gap-1">
                 {/* Email */}
                 <a
                   href="mailto:sara.m.pumariega@gmail.com"
-                  className="w-8 h-8 flex items-center justify-center text-dark transition-opacity duration-200 hover:opacity-75"
+                  className="w-6 h-6 flex items-center justify-center text-dark transition-all duration-200 hover:bg-[#e3e8e3] rounded-full p-1"
                   title="Email"
                 >
-                  <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="1.8" viewBox="0 0 24 24">
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="1.8" viewBox="0 0 24 24">
                     <rect x="2" y="4" width="20" height="16" rx="2.5" />
                     <path strokeLinecap="round" strokeLinejoin="round" d="M2 7l10 7 10-7" />
                   </svg>
@@ -67,10 +67,10 @@ function AboutMe() {
                 {/* Phone */}
                 <a
                   href="tel:+34625977711"
-                  className="w-8 h-8 flex items-center justify-center text-dark transition-opacity duration-200 hover:opacity-75"
+                  className="w-6 h-6 flex items-center justify-center text-dark transition-all duration-200 hover:bg-[#e3e8e3] rounded-full p-1"
                   title="Teléfono"
                 >
-                  <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="1.8" viewBox="0 0 24 24">
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="1.8" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.9.33 1.77.62 2.6a2 2 0 0 1-.45 2.11L8 9.91a16 16 0 0 0 6.09 6.09l1.48-1.28a2 2 0 0 1 2.11-.45c.83.29 1.7.5 2.6.62A2 2 0 0 1 22 16.92z" />
                   </svg>
                 </a>
@@ -80,10 +80,10 @@ function AboutMe() {
                   href="https://wa.me/34625977711"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-8 h-8 flex items-center justify-center text-dark transition-opacity duration-200 hover:opacity-75"
+                  className="w-6 h-6 flex items-center justify-center text-dark transition-all duration-200 hover:bg-[#e3e8e3] rounded-full p-1"
                   title="WhatsApp"
                 >
-                  <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="1.8" viewBox="0 0 24 24">
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="1.8" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M20.52 3.48A11.9 11.9 0 0 0 3.83 20.08L2 22l1.98-.52a11.9 11.9 0 0 0 16.54-18z" />
                     <path strokeLinecap="round" strokeLinejoin="round" d="M8.2 7.8c.3-.7.6-.7.9-.7h.8c.2 0 .4.1.5.3.2.4.7 1.7.8 1.8.1.2.1.4 0 .6-.1.2-.2.4-.4.6l-.4.4c-.2.2-.3.3-.1.6.2.3.8 1.3 1.8 2.1 1.2 1 2.1 1.4 2.4 1.6.3.1.5.1.7-.1l.7-.8c.2-.2.4-.3.7-.2l1.9.9c.2.1.3.2.4.4.1.2.1 1-.1 1.5-.2.5-1.2 1-1.7 1.1-.5 0-1.1.2-3.7-.8-3.1-1.2-5.1-4.4-5.2-4.6-.1-.2-1.2-1.6-1.2-3.1 0-1.5.8-2.2 1-2.5z" />
                   </svg>
@@ -94,10 +94,10 @@ function AboutMe() {
                   href="https://linkedin.com/in/sara-menendez"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-8 h-8 flex items-center justify-center text-dark transition-opacity duration-200 hover:opacity-75"
+                  className="w-6 h-6 flex items-center justify-center text-dark transition-all duration-200 hover:bg-[#e3e8e3] rounded-full p-1"
                   title="LinkedIn"
                 >
-                  <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="1.8" viewBox="0 0 24 24">
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="1.8" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M8 10v7" />
                     <path strokeLinecap="round" strokeLinejoin="round" d="M8 7.5h.01" />
                     <path strokeLinecap="round" strokeLinejoin="round" d="M12 17v-4a2 2 0 0 1 4 0v4" />
@@ -110,10 +110,10 @@ function AboutMe() {
                   href="/docs/CV_SARA_MENENDEZ_WEB_ES.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-8 h-8 flex items-center justify-center text-dark transition-opacity duration-200 hover:opacity-75"
+                  className="w-6 h-6 flex items-center justify-center text-dark transition-all duration-200 hover:bg-[#e3e8e3] rounded-full p-1"
                   title="CV"
                 >
-                  <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="1.8" viewBox="0 0 24 24">
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="1.8" viewBox="0 0 24 24">
                     <rect x="3" y="4" width="18" height="16" rx="2.5" />
                     <path strokeLinecap="round" strokeLinejoin="round" d="M8 9h8" />
                     <path strokeLinecap="round" strokeLinejoin="round" d="M8 13h8" />
@@ -157,7 +157,7 @@ function AboutMe() {
               {/* Email */}
               <a
                 href="mailto:sara.m.pumariega@gmail.com"
-                className="w-12 h-12 flex items-center justify-center text-dark transition-opacity duration-200 hover:opacity-75 overflow-visible"
+                className="w-12 h-12 flex items-center justify-center text-dark transition-all duration-200 hover:bg-[#e3e8e3] rounded-full overflow-visible"
                 title="Email"
               >
                 <svg className="w-7 h-7" fill="none" stroke="currentColor" strokeWidth="1.8" viewBox="0 0 24 24">
@@ -169,7 +169,7 @@ function AboutMe() {
               {/* Phone */}
               <a
                 href="tel:+34625977711"
-                className="w-12 h-12 flex items-center justify-center text-dark transition-opacity duration-200 hover:opacity-75 overflow-visible"
+                className="w-12 h-12 flex items-center justify-center text-dark transition-all duration-200 hover:bg-[#e3e8e3] rounded-full overflow-visible"
                 title="Teléfono"
               >
                 <svg className="w-7 h-7" fill="none" stroke="currentColor" strokeWidth="1.8" viewBox="0 0 24 24">
@@ -182,7 +182,7 @@ function AboutMe() {
                 href="https://wa.me/34625977711"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-12 h-12 flex items-center justify-center text-dark transition-opacity duration-200 hover:opacity-75 overflow-visible"
+                className="w-12 h-12 flex items-center justify-center text-dark transition-all duration-200 hover:bg-[#e3e8e3] rounded-full overflow-visible"
                 title="WhatsApp"
               >
                 <svg className="w-7 h-7" fill="none" stroke="currentColor" strokeWidth="1.8" viewBox="0 0 24 24">
@@ -196,7 +196,7 @@ function AboutMe() {
                 href="https://linkedin.com/in/sara-menendez"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-12 h-12 flex items-center justify-center text-dark transition-opacity duration-200 hover:opacity-75 overflow-visible"
+                className="w-12 h-12 flex items-center justify-center text-dark transition-all duration-200 hover:bg-[#e3e8e3] rounded-full overflow-visible"
                 title="LinkedIn"
               >
                 <svg className="w-7 h-7" fill="none" stroke="currentColor" strokeWidth="1.8" viewBox="0 0 24 24">
@@ -212,7 +212,7 @@ function AboutMe() {
                 href="/docs/CV_SARA_MENENDEZ_WEB_ES.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-12 h-12 flex items-center justify-center text-dark transition-opacity duration-200 hover:opacity-75 overflow-visible"
+                className="w-12 h-12 flex items-center justify-center text-dark transition-all duration-200 hover:bg-[#e3e8e3] rounded-full overflow-visible"
                 title="CV"
               >
                 <svg className="w-7 h-7" fill="none" stroke="currentColor" strokeWidth="1.8" viewBox="0 0 24 24">
