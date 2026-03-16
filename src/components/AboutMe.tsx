@@ -85,11 +85,7 @@ function AboutMe() {
 
               <a
                 href="/contacto"
-                className={cn(
-                  getButtonClasses('primary'),
-                  'bg-[#98c29b] text-[#302e2e] border-[#7fab86]',
-                  'hover:bg-black hover:text-[#98c29b] hover:border-black'
-                )}
+                className={getButtonClasses('primary')}
               >
                 Contáctame
               </a>
@@ -116,14 +112,7 @@ function AboutMe() {
             <div className="flex flex-row gap-4 lg:gap-6 justify-center flex-wrap">
               <a
                 href="/contacto"
-                className={cn(
-                  'inline-flex items-center justify-center rounded-xl border-2',
-                  'px-4 py-2 text-base min-h-10 lg:px-6 lg:py-3',
-                  'font-semibold',
-                  'bg-white text-[#302e2e] border-[#302e2e]',
-                  'hover:bg-[#9C7C9C] hover:text-white hover:border-[#9C7C9C]',
-                  'transition-all duration-200 ease-out'
-                )}
+                className={getButtonClasses('primary')}
               >
                 Conectemos
               </a>

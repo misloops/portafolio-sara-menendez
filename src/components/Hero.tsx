@@ -1,4 +1,4 @@
-import { cn, getChipClasses } from '../utils/classNames';
+import { cn, getChipClasses, getButtonClasses } from '../utils/classNames';
 import Button from './Button';
 
 interface HeroProps {
@@ -83,14 +83,7 @@ function Hero({ onActionClick }: HeroProps) {
           )}>
             <a
               href="mailto:sara.m.pumariega@gmail.com"
-              className={cn(
-                'inline-flex items-center justify-center rounded-xl border-2',
-                'px-4 py-2 text-base min-h-10 lg:px-6 lg:py-3',
-                'font-semibold',
-                'bg-white text-[#302e2e] border-[#302e2e]',
-                'hover:bg-[#9C7C9C] hover:text-white hover:border-[#9C7C9C]',
-                'transition-all duration-200 ease-out'
-              )}
+              className={getButtonClasses('primary')}
             >
               Escríbeme
             </a>
