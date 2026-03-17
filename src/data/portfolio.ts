@@ -54,7 +54,8 @@ export const services: Service[] = [
 export const projects: Project[] = [
   {
     title: 'Mi Portafolio',
-    description: 'Construyendo una base sólida y escalable con TypeScript, Tailwind CSS y componentes React reutilizables. Design system centralizado.',
+    meta: '2026',
+    description: 'Web construída en React + TypesCript + Github Copilot + Visual Code',
     image: '/assets/projects/portafolio-2026/MIPORTAFOLIO_cover.jpg',
     tags: ['React', 'Diseño Web'],
     category: 'Portafolio',
@@ -64,7 +65,7 @@ export const projects: Project[] = [
   {
     title: 'EAE Business School',
     meta: '(Grupo Planeta) Barcelona 2023 - 2025',
-    description: 'Web corporativa educativa en Drupal. Unificación visual, optimización de navegación y rediseño de fichas de programa para incrementar la captación de leads. +40% conversión.',
+    description: 'Web corporativa educativa en Drupal.\nDrupal + UX/UI + Accesibilidad\nCoordinación con marketing y SEO\nPrototipado en Figma y optimización de usabilidad',
     image: '/assets/projects/eae-business-school/EAE-BUSINESS_COVER.jpg',
     tags: ['Web Manager', 'Web Specialist', 'Drupal'],
     category: 'Case study',
@@ -77,35 +78,39 @@ export const projects: Project[] = [
   },
   {
     title: 'Alien CSI Bioblitz',
-    description: 'Plataforma de ciencia ciudadana para monitorizar especies invasoras en Europa. Frontend desarrollado con Leaflet para mapa interactivo, recopilación de observaciones en tiempo real y análisis de datos en vivo.',
+    meta: 'Barcelona 2022',
+    description: 'Plataforma de ciencia ciudadana para monitorizar especies invasoras en Europa.',
     image: '/assets/projects/alien-csi-bioblitz/ALIEN-CSI_COVER.png',
-    tags: ['Diseño Web', 'Diseño UX / UI'],
+    tags: ['Frontend', 'Drupal', 'Leaflet', 'Mapbox'],
     category: 'Case study',
     slug: 'alien-csi-bioblitz',
     externalUrl: 'https://web.archive.org/web/20220702235245/https://iasbioblitz.creaf.cat/',
     status: 'Completado'
   },
   {
-    title: 'Ohmios Records',
-    description: 'E-commerce para sello musical independiente. Diseño minimalista con identidad cultural, navegación mobile optimizada.',
+    title: 'Ohmios Records Online',
+    meta: 'Asturias 2023-2026',
+    description: 'Tienda online  de discos en vinilo de música electrónica.',
     image: '/assets/projects/ohmios-records/OHMIOS-RECORDS_COVER.png',
-    tags: ['WordPress', 'Diseño UX / UI', 'Web Manager'],
+    tags: ['Diseño Web', 'WordPress', 'Woocommerce'],
     category: 'Tienda Online',
     slug: 'ohmios-records',
     status: 'Completado'
   },
   {
     title: 'Trick Tales App',
-    description: 'Aplicación para mascotas con enfoque en UX/UI. Experiencia intuitiva y diseño centrado en el usuario para facilitar la conexión entre dueños y sus mascotas.',
+    meta: 'Barcelona, ESDESIGN 2025',
+    description: 'Diseño UX / UI de una aplicación para mascotas.',
     image: '/assets/projects/trick-tales/trick-tales_cover.jpg',
-    tags: ['Diseño UX / UI', 'Figma', 'Diseño Web'],
+    tags: ['Diseño UX / UI', 'Figma'],
     category: 'App',
     slug: 'trick-tales-app',
     status: 'Completado'
   },
   {
     title: 'Menlo Artist',
-    description: 'WordPress portfolio para artista especializada en retratos de mascotas. Galería responsive con filtrado, contacto directo y blog de procesos artísticos.',
+    meta: '2025',
+    description: 'WordPress portfolio para artista especializada en retratos de mascotas.',
     image: '/assets/projects/menlo-artist/MENLO_COVER.png',
     tags: ['WordPress', 'Diseño Web'],
     category: 'Portafolio',
@@ -114,7 +119,8 @@ export const projects: Project[] = [
   },
   {
     title: 'ARBOLA',
-    description: 'WordPress web para estudio de arquitectura. Portfolio de proyectos con galería visual, planos y renderizados de obras arquitectónicas.',
+    meta: '2025',
+    description: 'Diseño web en WordPress para un estudio de arquitectura.',
     image: '🏗️',
     tags: ['WordPress', 'Diseño Web'],
     category: 'Portafolio',
@@ -123,9 +129,10 @@ export const projects: Project[] = [
   },
   {
     title: 'Mise en Scène',
-    description: 'E-commerce boutique en pandemia. Tienda online con sistema de filtrado por marcas y espíritu editorial. Comunidad fiel conectada desde Instagram.',
+    meta: 'Barcelona 2021-2022',
+    description: 'Tienda online de moda de diseño de segunda mano.',
     image: '/assets/projects/mise-en-scene/MISE-EN-SCENE_COVER.png',
-    tags: ['WordPress', 'Web Manager', 'Diseño UX / UI'],
+    tags: ['WordPress', 'Woocommerce'],
     category: 'Tienda Online',
     slug: 'mise-en-scene',
     externalUrl: 'https://www.misenscene.es/',
@@ -133,9 +140,10 @@ export const projects: Project[] = [
   },
   {
     title: 'Beatriz Galindo Psicóloga',
-    description: 'Web portfolio para psicóloga especializada en trauma, apego y género. Diseño elegante y profesional con enfoque en accesibilidad y confianza.',
+    meta: '2026',
+    description: 'Web portfolio para psicóloga especializada en trauma, apego y género.',
     image: '/assets/projects/beatriz-galindo/BEATRIZ-GALINDO_COVER.jpg',
-    tags: ['WordPress', 'Diseño Web', 'Diseño UX / UI'],
+    tags: ['WordPress', 'Diseño Web', 'Accesibilidad'],
     category: 'Portafolio',
     externalUrl: 'https://beatrizgalindonavarro.com/',
     status: 'Live'
