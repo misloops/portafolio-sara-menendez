@@ -1,7 +1,6 @@
 import { cn, getButtonClasses } from '../utils/classNames';
 import profilePlaceholderIcon from '../assets/icons/1757370620719.jpg';
-import ContactCard from './ContactCard';
-import { LinkedInIcon, CVIcon } from './icons';
+// Using simple text links for AboutMe (keeps visual weight light and consistent)
 
 /**
  * AboutMe Component
@@ -52,9 +51,9 @@ function AboutMe() {
                 loading="lazy"
               />
               
-              <div className="w-full grid grid-cols-2 gap-4">
-                <ContactCard href="https://linkedin.com/in/sara-menendez" title="LinkedIn" icon={<LinkedInIcon />} ariaLabel="Abrir LinkedIn" isExternal size="md" />
-                <ContactCard href="/docs/CV_SARA_MENENDEZ_WEB_ES.pdf" title="CV" icon={<CVIcon />} ariaLabel="Abrir CV" isExternal size="md" />
+              <div className="w-full mt-4 flex flex-col items-start gap-4">
+                <a href="https://linkedin.com/in/sara-menendez" target="_blank" rel="noopener noreferrer" className="text-sm text-dark/70 hover:underline">LinkedIn</a>
+                <a href="/docs/CV_SARA_MENENDEZ_WEB_ES.pdf" target="_blank" rel="noopener noreferrer" className="text-sm text-dark/70 hover:underline">CV</a>
               </div>
             </div>
 
@@ -86,9 +85,9 @@ function AboutMe() {
               loading="lazy"
             />
             
-            <div className="w-full grid grid-cols-2 gap-4">
-              <ContactCard href="https://linkedin.com/in/sara-menendez" title="LinkedIn" icon={<LinkedInIcon />} ariaLabel="Abrir LinkedIn" isExternal size="md" />
-              <ContactCard href="/docs/CV_SARA_MENENDEZ_WEB_ES.pdf" title="CV" icon={<CVIcon />} ariaLabel="Abrir CV" isExternal size="md" />
+            <div className="w-full mt-4 flex flex-col items-start gap-4">
+              <a href="https://linkedin.com/in/sara-menendez" target="_blank" rel="noopener noreferrer" className="text-sm text-dark/70 hover:underline">LinkedIn</a>
+              <a href="/docs/CV_SARA_MENENDEZ_WEB_ES.pdf" target="_blank" rel="noopener noreferrer" className="text-sm text-dark/70 hover:underline">CV</a>
             </div>
           </div>
         </div>
