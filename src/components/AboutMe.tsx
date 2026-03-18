@@ -52,8 +52,8 @@ function AboutMe() {
               />
               
               <div className="w-full mt-4 flex flex-row items-start gap-4">
-                <a href="https://linkedin.com/in/sara-menendez" target="_blank" rel="noopener noreferrer" className="text-sm text-dark/70 hover:underline">LinkedIn</a>
-                <a href="/docs/CV_SARA_MENENDEZ_WEB_ES.pdf" target="_blank" rel="noopener noreferrer" className="text-sm text-dark/70 hover:underline">CV</a>
+                <a href="https://linkedin.com/in/sara-menendez" target="_blank" rel="noopener noreferrer" className="text-sm text-purple-700 no-underline">LinkedIn</a>
+                <a href="/docs/CV_SARA_MENENDEZ_WEB_ES.pdf" target="_blank" rel="noopener noreferrer" className="text-sm text-purple-700 no-underline">CV</a>
               </div>
             </div>
 
@@ -86,8 +86,8 @@ function AboutMe() {
             />
             
             <div className="w-full mt-4 flex flex-row items-start gap-4">
-              <a href="https://linkedin.com/in/sara-menendez" target="_blank" rel="noopener noreferrer" className="text-sm text-dark/70 hover:underline">LinkedIn</a>
-              <a href="/docs/CV_SARA_MENENDEZ_WEB_ES.pdf" target="_blank" rel="noopener noreferrer" className="text-sm text-dark/70 hover:underline">CV</a>
+              <a href="https://linkedin.com/in/sara-menendez" target="_blank" rel="noopener noreferrer" className="text-sm text-purple-700 no-underline">LinkedIn</a>
+              <a href="/docs/CV_SARA_MENENDEZ_WEB_ES.pdf" target="_blank" rel="noopener noreferrer" className="text-sm text-purple-700 no-underline">CV</a>
             </div>
           </div>
         </div>
