@@ -77,7 +77,7 @@ function ProjectCard({
       </div>
 
       {/* Content Container */}
-      <div className="flex flex-col flex-grow gap-2 lg:gap-6">
+      <div className="flex flex-col flex-grow gap-2 lg:gap-4">
         
         {/* Title - 18-22px, serif, bold */}
         <h3 className={cn(

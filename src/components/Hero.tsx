@@ -25,7 +25,7 @@ function Hero({ onActionClick }: HeroProps) {
         'px-4 lg:px-6'
       )}>
         <div className={cn(
-          'flex flex-col gap-4 lg:gap-8',
+          'flex flex-col gap-2 lg:gap-4',
           'text-left',
           'max-w-4xl'
         )}>
@@ -44,25 +44,18 @@ function Hero({ onActionClick }: HeroProps) {
 
           {/* Supporting copy - Improved intro */}
           <div className={cn(
-            'flex flex-col gap-2 lg:gap-6',
+            'flex flex-col gap-2 lg:gap-4',
             'max-w-3xl'
           )}>
             <p className="heading-subtitle">
-              Hola, soy Sara. Diseño interfaces y desarrollo experiencias digitales que funcionan.
+              Soy Sara y trabajo diseñando, desarrollando y optimizando sitios web con foco en experiencia de usuario y estructura clara.
             </p>
-            <p className={cn(
-              'text-lg md:text-xl',
-              'leading-[1.6]',
-              'text-dark/75',
-              'max-w-3xl'
-            )}>
-              Trabajo con marcas y negocios que necesitan claridad visual, arquitectura sólida y resultados medibles. De principio a fin: desde la estrategia y el diseño hasta código limpio, mantenible y alineado con tus objetivos.
-            </p>
+            {/* ...existing code... */}
           </div>
 
           {/* Skills/Tech Chips */}
           <div className={cn(
-            'flex flex-wrap gap-2 lg:gap-3',
+            'flex flex-wrap gap-2 lg:gap-4',
             'pt-2 lg:pt-4'
           )}>
             {['Web Manager', 'Diseño UX/UI', 'WordPress', 'Drupal', 'Figma'].map((skill) => (
@@ -77,7 +70,7 @@ function Hero({ onActionClick }: HeroProps) {
 
           {/* Action Buttons */}
           <div className={cn(
-            'flex flex-row gap-4 lg:gap-8',
+            'flex flex-row gap-2 lg:gap-4',
             'pt-2 lg:pt-4',
             'items-center flex-wrap'
           )}>

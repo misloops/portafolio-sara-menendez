@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import Logo from './Logo';
 import Navigation from './Navigation';
 import { cn } from '../utils/classNames';
-import whatsappIcon from '../assets/icons/whatsapp.svg';
+import { WhatsAppIcon } from './icons';
 
 interface HeaderProps {
   onNavigate?: (section: string) => void;
@@ -76,7 +76,7 @@ function Header({ onNavigate, activeSection }: HeaderProps) {
             aria-label="Abrir WhatsApp"
             title="WhatsApp"
           >
-            <img src={whatsappIcon} alt="WhatsApp" className="w-6 h-6" />
+            <WhatsAppIcon className="w-6 h-6" />
           </a>
         </div>
 
@@ -131,7 +131,7 @@ function Header({ onNavigate, activeSection }: HeaderProps) {
                 aria-label="Abrir WhatsApp"
                 title="WhatsApp"
               >
-                <img src={whatsappIcon} alt="WhatsApp" className="w-6 h-6" />
+                <WhatsAppIcon className="w-6 h-6" />
               </a>
             </div>
           </div>

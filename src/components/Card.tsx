@@ -24,9 +24,9 @@ function Card({
   );
 
   const variantStyles = {
-    default: 'bg-white border border-neutral-200',
-    elevated: 'bg-white shadow-md',
-    outline: 'bg-transparent border-2 border-secondary-300'
+    default: 'bg-[#98c29b] border border-[#c3b7c3]', // Verde con borde malva
+    elevated: 'bg-[#c3b7c3] shadow-md border border-[#98c29b]', // Malva con borde verde
+    outline: 'bg-transparent border-2 border-[#98c29b]' // Borde verde
   };
 
   const hoverStyles = hover && cn(

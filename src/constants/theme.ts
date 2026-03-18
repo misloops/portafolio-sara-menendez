@@ -17,6 +17,12 @@ export const COLORS = {
     text: '#302e2e', // Updated to Sara's black
     textMuted: '#4a5568',
   },
+  gradients: {
+    portfolioBg: 'linear-gradient(120deg, #f2e8f0 0%, #ede6eb 8%, #e8dce8 10%, #d4c4d4 24%, #b8d4c0 45%, #a8d8b0 70%, #b0deb8 85%, #f0e8f0 100%)',
+    heroBg: 'linear-gradient(120deg, #f2e8f0 0%, #ede6eb 8%, #e8dce8 10%, #d4c4d4 24%, #b8d4c0 45%, #a8d8b0 70%, #b0deb8 85%, #f0e8f0 100%)',
+    contactBg: 'linear-gradient(120deg, #e8dce8 0%, #b8d4c0 45%, #a8d8b0 70%, #f2e8f0 100%)',
+    caseStudyBg: 'linear-gradient(120deg, #f2e8f0 0%, #ede6eb 8%, #e8dce8 10%, #d4c4d4 24%, #b8d4c0 45%, #a8d8b0 70%, #b0deb8 85%, #f0e8f0 100%)',
+  },
 } as const;
 
 // ========== SPACING SCALE ==========

@@ -98,7 +98,7 @@ export function getChipClasses(): string {
     'lg:text-sm lg:leading-[24px]',
     'bg-[#98c29b]/70 border-[#98c29b]',
     'transition-colors duration-200',
-    'hover:bg-[#98c29b] hover:border-[#98c29b]'
+    'hover:bg-[#c3dcc5] hover:border-[#7fab86] focus:bg-[#c3dcc5] focus:border-[#7fab86] active:bg-[#c3dcc5] active:border-[#7fab86]'
   );
 }
 

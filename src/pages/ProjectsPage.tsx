@@ -37,7 +37,7 @@ function ProjectsPage() {
       className="min-h-screen"
       style={{
         background: 'linear-gradient(120deg, #f2e8f0 0%, #ede6eb 8%, #e8dce8 10%, #d4c4d4 24%, #b8d4c0 45%, #a8d8b0 70%, #b0deb8 85%, #f0e8f0 100%)',
-        backgroundAttachment: 'fixed'
+        backgroundAttachment: 'fixed',
       }}
     >
       <Header />
@@ -62,10 +62,7 @@ function ProjectsPage() {
               Proyectos
             </h1>
             <p className="heading-subtitle mb-3 lg:mb-4">
-              Colección de proyectos diseñados y desarrollados.
-            </p>
-            <p className="text-base md:text-[17px] leading-[25px] md:leading-[26px] lg:leading-[29px] text-dark/75">
-              Desde plataformas educativas y e-commerce hasta ciencia ciudadana y diseño de sistemas.
+              Selección de mis trabajos más representativos
             </p>
           </div>
         </div>
@@ -89,10 +86,9 @@ function ProjectsPage() {
               onClick={() => setSelectedTag(null)}
               className={cn(
                 getChipClasses(),
-                'px-2.5 py-0.5 lg:px-3 lg:py-1.5',
                 selectedTag === null 
-                  ? 'bg-[#8f628f] text-[#1f1a1f] border-[#8f628f] hover:bg-[#7e557e] hover:border-[#7e557e]' 
-                  : 'hover:bg-[#e9dfe9] hover:border-[#d4c4d4]'
+                  ? 'bg-[#8f628f] text-[#1f1a1f] border-[#8f628f] hover:bg-[#c3dcc5] hover:border-[#7fab86] focus:bg-[#c3dcc5] focus:border-[#7fab86] active:bg-[#c3dcc5] active:border-[#7fab86]' 
+                  : 'hover:bg-[#c3dcc5] hover:border-[#7fab86] focus:bg-[#c3dcc5] focus:border-[#7fab86] active:bg-[#c3dcc5] active:border-[#7fab86]'
               )}
             >
               Todos
@@ -103,10 +99,9 @@ function ProjectsPage() {
                 onClick={() => setSelectedTag(tag)}
                 className={cn(
                   getChipClasses(),
-                  'px-2.5 py-0.5 lg:px-3 lg:py-1.5',
                   selectedTag === tag 
-                    ? 'bg-[#8f628f] text-[#1f1a1f] border-[#8f628f] hover:bg-[#7e557e] hover:border-[#7e557e]' 
-                    : 'hover:bg-[#e9dfe9] hover:border-[#d4c4d4]',
+                    ? 'bg-[#8f628f] text-[#1f1a1f] border-[#8f628f] hover:bg-[#c3dcc5] hover:border-[#7fab86] focus:bg-[#c3dcc5] focus:border-[#7fab86] active:bg-[#c3dcc5] active:border-[#7fab86]' 
+                    : 'hover:bg-[#c3dcc5] hover:border-[#7fab86] focus:bg-[#c3dcc5] focus:border-[#7fab86] active:bg-[#c3dcc5] active:border-[#7fab86]',
                   'transition-all duration-200'
                 )}
               >
