@@ -1,5 +1,7 @@
 import { cn, getButtonClasses } from '../utils/classNames';
 import profilePlaceholderIcon from '../assets/icons/1757370620719.jpg';
+import ContactIcon from './ContactIcon';
+import { LinkedInIcon, CVIcon } from './icons';
 
 /**
  * AboutMe Component
@@ -50,7 +52,16 @@ function AboutMe() {
                 loading="lazy"
               />
               
-              {/* Contact Icons eliminados */}
+              <div className="flex items-center gap-4">
+                <div className="flex items-center gap-2">
+                  <ContactIcon href="https://linkedin.com/in/sara-menendez" title="LinkedIn" icon={<LinkedInIcon />} size="md" isExternal />
+                  <span className="text-sm text-dark/70">LinkedIn</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <ContactIcon href="/docs/CV_SARA_MENENDEZ_WEB_ES.pdf" title="CV" icon={<CVIcon />} size="md" isExternal />
+                  <span className="text-sm text-dark/70">CV</span>
+                </div>
+              </div>
             </div>
 
             <div className={cn(
@@ -81,7 +92,16 @@ function AboutMe() {
               loading="lazy"
             />
             
-            {/* Contact Icons eliminados */}
+            <div className="flex items-center gap-4">
+              <div className="flex items-center gap-2">
+                <ContactIcon href="https://linkedin.com/in/sara-menendez" title="LinkedIn" icon={<LinkedInIcon />} size="md" isExternal />
+                <span className="text-sm text-dark/70">LinkedIn</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <ContactIcon href="/docs/CV_SARA_MENENDEZ_WEB_ES.pdf" title="CV" icon={<CVIcon />} size="md" isExternal />
+                <span className="text-sm text-dark/70">CV</span>
+              </div>
+            </div>
           </div>
         </div>
 
