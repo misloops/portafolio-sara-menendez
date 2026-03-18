@@ -1,13 +1,16 @@
 import { EmailIcon, PhoneIcon, LinkedInIcon, CVIcon, WhatsAppIcon } from '../components/icons';
+import type { ComponentType } from 'react';
 
 /**
- * centralized icon mapping for contact links
- * Used by Contact.tsx and AboutMe.tsx
+ * Centralized icon mapping for contact links.
+ * Exports components (not JSX) so this file can remain a `.ts` file.
  */
-export const iconMap: Record<string, React.ReactNode> = {
-  'Email': <EmailIcon />,
-  'Teléfono': <PhoneIcon />,
-  'WhatsApp': <WhatsAppIcon />,
-  'LinkedIn': <LinkedInIcon />,
-  'CV': <CVIcon />,
+export const iconMap: Record<string, ComponentType<any>> = {
+  Email: EmailIcon,
+  'Teléfono': PhoneIcon,
+  WhatsApp: WhatsAppIcon,
+  LinkedIn: LinkedInIcon,
+  CV: CVIcon,
 };
+
+export default iconMap;
