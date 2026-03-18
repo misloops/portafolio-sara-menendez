@@ -42,7 +42,7 @@ function Footer() {
             )}>
               <li>
                 <a href="/#inicio" className={cn(
-                  'text-base text-dark/70 no-underline hover:text-[#9C7C9C]',
+                  'text-link',
                   'transition-colors font-medium'
                 )}>
                   Inicio
@@ -50,7 +50,7 @@ function Footer() {
               </li>
               <li>
                 <a href="/#proyectos" className={cn(
-                  'text-base text-dark/70 no-underline hover:text-[#9C7C9C]',
+                  'text-link',
                   'transition-colors font-medium'
                 )}>
                   Proyectos
@@ -58,7 +58,7 @@ function Footer() {
               </li>
               <li>
                 <a href="/contacto" className={cn(
-                  'text-base text-dark/70 no-underline hover:text-[#9C7C9C]',
+                  'text-link',
                   'transition-colors font-medium'
                 )}>
                   Contacto
@@ -83,7 +83,7 @@ function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className={cn(
-                  'text-base text-dark/70 no-underline hover:text-[#9C7C9C]',
+                  'text-link',
                   'transition-colors font-medium'
                 )}
               >
@@ -94,7 +94,7 @@ function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className={cn(
-                  'text-base text-dark/70 no-underline hover:text-[#9C7C9C]',
+                  'text-link',
                   'transition-colors font-medium'
                 )}
               >
@@ -105,7 +105,7 @@ function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className={cn(
-                  'text-base text-dark/70 no-underline hover:text-[#9C7C9C]',
+                  'text-link',
                   'transition-colors font-medium'
                 )}
               >
@@ -116,7 +116,7 @@ function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className={cn(
-                  'text-base text-dark/70 no-underline hover:text-[#9C7C9C]',
+                  'text-link',
                   'transition-colors font-medium'
                 )}
               >
@@ -141,13 +141,13 @@ function Footer() {
             'flex gap-8 text-sm'
           )}>
             <a href="/#proyectos" className={cn(
-              'text-base text-dark/70 no-underline hover:text-[#9C7C9C]',
+              'text-link',
               'transition-colors font-medium'
             )}>
               Ver proyectos
             </a>
             <a href="/contacto" className={cn(
-              'text-base text-dark/70 no-underline hover:text-[#9C7C9C]',
+              'text-link',
               'transition-colors font-medium'
             )}>
               Trabajemos juntas

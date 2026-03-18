@@ -220,6 +220,19 @@ p {
     align-items: center;
     justify-content: center;
   }
+
+  /* Unified text link style used across the site for inline text links */
+  .text-link {
+    font-size: 1rem; /* matches text-base */
+    color: rgba(48,46,46,0.7); /* text-dark/70 */
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+
+  .text-link:hover {
+    color: #9C7C9C; /* malva hover */
+    text-decoration: none;
+  }
 }
 
 html {
