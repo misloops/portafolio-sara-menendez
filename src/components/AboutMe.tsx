@@ -1,6 +1,6 @@
 import { cn, getButtonClasses } from '../utils/classNames';
 import profilePlaceholderIcon from '../assets/icons/1757370620719.jpg';
-import ContactIcon from './ContactIcon';
+import ContactCard from './ContactCard';
 import { LinkedInIcon, CVIcon } from './icons';
 
 /**
@@ -52,15 +52,9 @@ function AboutMe() {
                 loading="lazy"
               />
               
-              <div className="flex items-center gap-4">
-                <div className="flex items-center gap-2">
-                  <ContactIcon href="https://linkedin.com/in/sara-menendez" title="LinkedIn" icon={<LinkedInIcon />} size="md" isExternal />
-                  <span className="text-sm text-dark/70">LinkedIn</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <ContactIcon href="/docs/CV_SARA_MENENDEZ_WEB_ES.pdf" title="CV" icon={<CVIcon />} size="md" isExternal />
-                  <span className="text-sm text-dark/70">CV</span>
-                </div>
+              <div className="w-full grid grid-cols-2 gap-4">
+                <ContactCard href="https://linkedin.com/in/sara-menendez" title="LinkedIn" icon={<LinkedInIcon />} ariaLabel="Abrir LinkedIn" isExternal />
+                <ContactCard href="/docs/CV_SARA_MENENDEZ_WEB_ES.pdf" title="CV" icon={<CVIcon />} ariaLabel="Abrir CV" isExternal />
               </div>
             </div>
 
@@ -92,15 +86,9 @@ function AboutMe() {
               loading="lazy"
             />
             
-            <div className="flex items-center gap-4">
-              <div className="flex items-center gap-2">
-                <ContactIcon href="https://linkedin.com/in/sara-menendez" title="LinkedIn" icon={<LinkedInIcon />} size="md" isExternal />
-                <span className="text-sm text-dark/70">LinkedIn</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <ContactIcon href="/docs/CV_SARA_MENENDEZ_WEB_ES.pdf" title="CV" icon={<CVIcon />} size="md" isExternal />
-                <span className="text-sm text-dark/70">CV</span>
-              </div>
+            <div className="w-full grid grid-cols-2 gap-4">
+              <ContactCard href="https://linkedin.com/in/sara-menendez" title="LinkedIn" icon={<LinkedInIcon />} ariaLabel="Abrir LinkedIn" isExternal />
+              <ContactCard href="/docs/CV_SARA_MENENDEZ_WEB_ES.pdf" title="CV" icon={<CVIcon />} ariaLabel="Abrir CV" isExternal />
             </div>
           </div>
         </div>
