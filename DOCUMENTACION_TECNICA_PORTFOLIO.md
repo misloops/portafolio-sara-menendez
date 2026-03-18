@@ -91,3 +91,43 @@ Este archivo centraliza buenas prácticas, patrones de componentes reutilizables
 
 - **Error persistente AboutMe.tsx**: Al añadir botones o iconos de contacto debajo de la imagen, surgen errores de cierre JSX y la estructura se rompe. Restaurar siempre desde el último commit si ocurre. Revisar estructura de divs y fragments antes de modificar.
 
+---
+
+## Sesión 18/03/2026: Fix build fallido por JSX en `iconMap` (documentación del arreglo)
+
+### Resumen
+- Síntoma: `npm run build` fallaba durante la fase de `tsc` con errores TS1005 ('>' expected) provenientes de `src/constants/iconMap.ts`.
+- Causa: `iconMap.ts` contenía instancias JSX (por ejemplo `<EmailIcon />`) pero tenía extensión `.ts`. TypeScript interpreta `<` como inicio de una expresión genérica en archivos `.ts`, por eso daba error.
+
+### Archivos implicados
+- `src/constants/iconMap.ts` (modificado)
+
+### Commit que corrige el problema
+- `9c63107` — "fix(iconMap): export icon components instead of JSX (TS build)"
+
+### Solución aplicada
+- Reemplazado el contenido de `src/constants/iconMap.ts` para exportar referencias a componentes en lugar de instancias JSX.
+- Nuevo formato:
+	- `export const iconMap: Record<string, ComponentType<any>> = { Email: EmailIcon, 'Teléfono': PhoneIcon, ... }`
+- Razonamiento: mantener el archivo como `.ts` y exportar componentes evita usar JSX en un archivo no-`.tsx`, mejora el tipado y permite instanciar los iconos en los componentes consumidores con `<Icon />`.
+
+### Verificación
+- Comandos ejecutados localmente:
+	```bash
+	npm run build
+	npm run dev  # para comprobar la app en http://localhost:5173/
+	```
+- Resultado: `tsc` y `vite build` se completaron sin errores; `dist/` genera `index.html` y los assets.
+
+### Siguientes pasos recomendados
+- Revisar los usos de `iconMap` en `Contact.tsx`, `AboutMe.tsx` u otros para asegurarse de instanciar con:
+	```tsx
+	const Icon = iconMap[key];
+	return <Icon />;
+	```
+- Revisar despliegue en Vercel (deploy trigger automático al push). Si Vercel muestra errores, copiar los logs aquí para análisis.
+
+---
+
+*Actualizado: 18/03/2026*
+
