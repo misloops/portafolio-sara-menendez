@@ -53,8 +53,8 @@ function AboutMe() {
               />
               
               <div className="w-full grid grid-cols-2 gap-4">
-                <ContactCard href="https://linkedin.com/in/sara-menendez" title="LinkedIn" icon={<LinkedInIcon />} ariaLabel="Abrir LinkedIn" isExternal />
-                <ContactCard href="/docs/CV_SARA_MENENDEZ_WEB_ES.pdf" title="CV" icon={<CVIcon />} ariaLabel="Abrir CV" isExternal />
+                <ContactCard href="https://linkedin.com/in/sara-menendez" title="LinkedIn" icon={<LinkedInIcon />} ariaLabel="Abrir LinkedIn" isExternal size="md" />
+                <ContactCard href="/docs/CV_SARA_MENENDEZ_WEB_ES.pdf" title="CV" icon={<CVIcon />} ariaLabel="Abrir CV" isExternal size="md" />
               </div>
             </div>
 
@@ -87,8 +87,8 @@ function AboutMe() {
             />
             
             <div className="w-full grid grid-cols-2 gap-4">
-              <ContactCard href="https://linkedin.com/in/sara-menendez" title="LinkedIn" icon={<LinkedInIcon />} ariaLabel="Abrir LinkedIn" isExternal />
-              <ContactCard href="/docs/CV_SARA_MENENDEZ_WEB_ES.pdf" title="CV" icon={<CVIcon />} ariaLabel="Abrir CV" isExternal />
+              <ContactCard href="https://linkedin.com/in/sara-menendez" title="LinkedIn" icon={<LinkedInIcon />} ariaLabel="Abrir LinkedIn" isExternal size="md" />
+              <ContactCard href="/docs/CV_SARA_MENENDEZ_WEB_ES.pdf" title="CV" icon={<CVIcon />} ariaLabel="Abrir CV" isExternal size="md" />
             </div>
           </div>
         </div>
