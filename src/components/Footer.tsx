@@ -42,7 +42,7 @@ function Footer() {
             )}>
               <li>
                 <a href="/#inicio" className={cn(
-                  'text-dark/70 hover:text-primary-500',
+                  'text-base text-dark/70 no-underline hover:text-[#9C7C9C]',
                   'transition-colors font-medium'
                 )}>
                   Inicio
@@ -50,7 +50,7 @@ function Footer() {
               </li>
               <li>
                 <a href="/#proyectos" className={cn(
-                  'text-dark/70 hover:text-primary-500',
+                  'text-base text-dark/70 no-underline hover:text-[#9C7C9C]',
                   'transition-colors font-medium'
                 )}>
                   Proyectos
@@ -58,7 +58,7 @@ function Footer() {
               </li>
               <li>
                 <a href="/contacto" className={cn(
-                  'text-dark/70 hover:text-primary-500',
+                  'text-base text-dark/70 no-underline hover:text-[#9C7C9C]',
                   'transition-colors font-medium'
                 )}>
                   Contacto
@@ -83,9 +83,8 @@ function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className={cn(
-                  'text-dark hover:text-dark',
-                  'transition-colors font-medium',
-                  'hover:underline'
+                  'text-base text-dark/70 no-underline hover:text-[#9C7C9C]',
+                  'transition-colors font-medium'
                 )}
               >
                 LinkedIn
@@ -95,9 +94,8 @@ function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className={cn(
-                  'text-dark hover:text-dark',
-                  'transition-colors font-medium',
-                  'hover:underline'
+                  'text-base text-dark/70 no-underline hover:text-[#9C7C9C]',
+                  'transition-colors font-medium'
                 )}
               >
                 Email
@@ -107,9 +105,8 @@ function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className={cn(
-                  'text-dark hover:text-dark',
-                  'transition-colors font-medium',
-                  'hover:underline'
+                  'text-base text-dark/70 no-underline hover:text-[#9C7C9C]',
+                  'transition-colors font-medium'
                 )}
               >
                 Teléfono
@@ -119,9 +116,8 @@ function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className={cn(
-                  'text-dark hover:text-dark',
-                  'transition-colors font-medium',
-                  'hover:underline'
+                  'text-base text-dark/70 no-underline hover:text-[#9C7C9C]',
+                  'transition-colors font-medium'
                 )}
               >
                 WhatsApp
@@ -145,13 +141,13 @@ function Footer() {
             'flex gap-8 text-sm'
           )}>
             <a href="/#proyectos" className={cn(
-              'text-dark/70 hover:text-primary-500',
+              'text-base text-dark/70 no-underline hover:text-[#9C7C9C]',
               'transition-colors font-medium'
             )}>
               Ver proyectos
             </a>
             <a href="/contacto" className={cn(
-              'text-dark/70 hover:text-primary-500',
+              'text-base text-dark/70 no-underline hover:text-[#9C7C9C]',
               'transition-colors font-medium'
             )}>
               Trabajemos juntas
