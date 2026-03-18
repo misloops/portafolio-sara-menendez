@@ -41,7 +41,7 @@ function AboutMe() {
             {/* Portrait - Mobile only, appears below title */}
             <div className={cn(
               'md:hidden',
-              'flex items-center gap-4 w-full mb-6'
+              'flex flex-col items-start gap-4 w-full mb-6'
             )}>
               <img
                 src={profilePlaceholderIcon}
@@ -51,7 +51,7 @@ function AboutMe() {
                 loading="lazy"
               />
               
-              <div className="w-full mt-4 flex flex-col items-start gap-4">
+              <div className="w-full mt-4 flex flex-row items-start gap-4">
                 <a href="https://linkedin.com/in/sara-menendez" target="_blank" rel="noopener noreferrer" className="text-sm text-dark/70 hover:underline">LinkedIn</a>
                 <a href="/docs/CV_SARA_MENENDEZ_WEB_ES.pdf" target="_blank" rel="noopener noreferrer" className="text-sm text-dark/70 hover:underline">CV</a>
               </div>
@@ -85,7 +85,7 @@ function AboutMe() {
               loading="lazy"
             />
             
-            <div className="w-full mt-4 flex flex-col items-start gap-4">
+            <div className="w-full mt-4 flex flex-row items-start gap-4">
               <a href="https://linkedin.com/in/sara-menendez" target="_blank" rel="noopener noreferrer" className="text-sm text-dark/70 hover:underline">LinkedIn</a>
               <a href="/docs/CV_SARA_MENENDEZ_WEB_ES.pdf" target="_blank" rel="noopener noreferrer" className="text-sm text-dark/70 hover:underline">CV</a>
             </div>
