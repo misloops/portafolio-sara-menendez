@@ -1,0 +1,65 @@
+.container {
+  position: fixed;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 60;
+  display: flex;
+  align-items: center;
+  pointer-events: auto;
+}
+
+.tab {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+  color: #302e2e;
+  border-radius: 9999px;
+  padding: 10px 12px;
+  box-shadow: 0 6px 18px rgba(16,24,40,0.06);
+  cursor: pointer;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  max-width: 200px;
+  user-select: none;
+  transition: background 160ms ease, transform 160ms ease;
+}
+
+.tab:focus {
+  outline: 2px solid rgba(152,194,155,0.18);
+  outline-offset: 2px;
+}
+
+.panel {
+  margin-left: 14px;
+  background: rgba(195,183,195,0.95); /* malva casi transparente */
+  color: #1a1a1a;
+  border-radius: 12px;
+  box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -2px rgba(0,0,0,0.05);
+  padding: 24px;
+  max-width: 420px;
+  width: min(420px, 86vw);
+  opacity: 0;
+  transform: translateX(-6px);
+  transition: opacity 220ms ease, transform 220ms ease;
+  pointer-events: none;
+}
+
+.panelVisible {
+  opacity: 1;
+  transform: none;
+  pointer-events: auto;
+}
+
+.text {
+  color: #1a1a1a;
+  line-height: 1.4;
+  font-size: 0.95rem;
+}
+
+@media (max-width: 480px) {
+  .container { left: 8px; }
+  .panel { padding: 16px; }
+  .tab { padding: 8px 10px; }
+}

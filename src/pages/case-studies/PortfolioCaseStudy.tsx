@@ -196,7 +196,7 @@ export function PortfolioCaseStudy() {
       </section>
 
       {/* TECH STACK Section */}
-      <section className="py-10 lg:py-20 px-4 lg:px-6 bg-transparent">
+      <section className="py-8 lg:py-16 px-4 lg:px-6 bg-transparent">
         <div className="max-w-7xl mx-auto">
           <h2 className="font-serif text-3xl md:text-4xl font-bold text-dark mb-8">
             Tech Stack & Decisiones
@@ -230,7 +230,7 @@ export function PortfolioCaseStudy() {
       </section>
 
       {/* ARCHITECTURE Section */}
-      <section className="py-10 lg:py-20 px-4 lg:px-6 bg-transparent">
+      <section className="py-8 lg:py-16 px-4 lg:px-6 bg-transparent">
         <div className="max-w-7xl mx-auto">
           <h2 className="font-serif text-3xl md:text-4xl font-bold text-dark mb-8">
             Arquitectura de Componentes
@@ -304,7 +304,7 @@ export function PortfolioCaseStudy() {
       </section>
 
       {/* DESIGN SYSTEM Section */}
-      <section className="py-10 lg:py-20 px-4 lg:px-6 bg-transparent">
+      <section className="py-8 lg:py-16 px-4 lg:px-6 bg-transparent">
         <div className="max-w-7xl mx-auto">
           <h2 className="font-serif text-3xl md:text-4xl font-bold text-dark mb-8">
             Design System
@@ -338,18 +338,52 @@ export function PortfolioCaseStudy() {
 
           <div className="mb-12">
             <h3 className="text-xl font-serif font-bold text-dark mb-6">Tipografía</h3>
-            <div className="space-y-4">
-              <div>
-                <p className="font-serif text-4xl text-dark mb-2">Serif Heading (DM Serif Display)</p>
-                <p className="text-sm text-dark/60">Tamaños: 48px mobile → 84px desktop</p>
-              </div>
-              <div>
-                <p className="text-2xl text-dark mb-2">Body Text (Gilroy)</p>
-                <p className="text-sm text-dark/60">16px - 20px según contexto</p>
-              </div>
-              <div>
-                <p className="heading-subtitle">Italic Subtitle (32px, Gilroy Italic)</p>
-                <p className="text-sm text-dark/60">Highlighting key messaging</p>
+
+            <div className="bg-white/60 backdrop-blur-sm rounded-lg p-6 md:p-8 border border-primary-300/20">
+
+              <div className="overflow-x-auto">
+                <table className="w-full table-auto text-left">
+                  <thead>
+                    <tr className="text-sm text-dark/60">
+                      <th className="px-3 py-2">Rol</th>
+                      <th className="px-3 py-2">Familia</th>
+                      <th className="px-3 py-2">Ejemplo</th>
+                      <th className="px-3 py-2">Tamaños</th>
+                      <th className="px-3 py-2">Peso / Uso</th>
+                    </tr>
+                  </thead>
+                  <tbody className="align-top">
+                    <tr className="border-t border-dark/6">
+                      <td className="px-3 py-4 align-top font-semibold">Headings</td>
+                      <td className="px-3 py-4 align-top font-mono text-sm text-dark/70">DM Serif Display (serif)</td>
+                      <td className="px-3 py-4 align-top">
+                        <p className="font-serif text-2xl md:text-3xl text-dark">Diseño Web · Identidad · Interfaces</p>
+                      </td>
+                      <td className="px-3 py-4 align-top text-sm text-dark/60">H1: 48–84px (clamp) · H2: 32–56px · H3: 24–36px</td>
+                      <td className="px-3 py-4 align-top text-sm text-dark/60">400 (normal). Uso: títulos, secciones principales, citas destacadas.</td>
+                    </tr>
+
+                    <tr className="border-t border-dark/6">
+                      <td className="px-3 py-4 align-top font-semibold">Cuerpo / Body</td>
+                      <td className="px-3 py-4 align-top font-mono text-sm text-dark/70">Gilroy (sans)</td>
+                      <td className="px-3 py-4 align-top">
+                        <p className="text-base text-dark">Este portafolio está en constante evolución. Si ves algún detalle por pulir, probablemente ya esté en mi lista de mejoras.</p>
+                      </td>
+                      <td className="px-3 py-4 align-top text-sm text-dark/60">Base: 16px · Escalado contextual 16–20px</td>
+                      <td className="px-3 py-4 align-top text-sm text-dark/60">400–600. Uso: párrafos, labels, navegación, formularios.</td>
+                    </tr>
+
+                    <tr className="border-t border-dark/6">
+                      <td className="px-3 py-4 align-top font-semibold">Subtítulos / Italic</td>
+                      <td className="px-3 py-4 align-top font-mono text-sm text-dark/70">DM Serif Display Italic</td>
+                      <td className="px-3 py-4 align-top">
+                        <p className="heading-subtitle">Subtítulo en cursiva — énfasis y tono editorial</p>
+                      </td>
+                      <td className="px-3 py-4 align-top text-sm text-dark/60">~32px (desktop) · ~24–28px (tablet)</td>
+                      <td className="px-3 py-4 align-top text-sm text-dark/60">400 italic. Uso: subtítulos, destacados y frases de introducción.</td>
+                    </tr>
+                  </tbody>
+                </table>
               </div>
             </div>
           </div>
@@ -357,11 +391,8 @@ export function PortfolioCaseStudy() {
       </section>
 
       {/* CODE EXAMPLES Section */}
-      <section className="py-10 lg:py-20 px-4 lg:px-6 bg-transparent">
+      <section className="py-8 lg:py-16 px-4 lg:px-6 bg-transparent">
         <div className="max-w-7xl mx-auto">
-          <h2 className="font-serif text-3xl md:text-4xl font-bold text-dark mb-8">
-            Ejemplos de Código
-          </h2>
           
           <div className="space-y-12">
             {/* Code Example 1: cn() Utility */}

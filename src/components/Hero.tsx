@@ -48,7 +48,7 @@ function Hero({ onActionClick }: HeroProps) {
             'max-w-3xl'
           )}>
             <p className="heading-subtitle">
-              Soy Sara y trabajo diseñando, desarrollando y optimizando sitios web con foco en experiencia de usuario y estructura clara.
+              Soy Sara y trabajo diseñando, desarrollando y optimizando sitios web con foco en experiencia de usuario.
             </p>
             {/* ...existing code... */}
           </div>
