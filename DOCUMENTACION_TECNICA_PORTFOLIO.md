@@ -131,3 +131,22 @@ Este archivo centraliza buenas prácticas, patrones de componentes reutilizables
 
 *Actualizado: 18/03/2026*
 
+---
+
+## Sesión 27/03/2026: Actualización del CV
+
+### Resumen
+- Se reemplazó el PDF del CV en `public/docs/CV_SARA_MENENDEZ_WEB_ES.pdf` por la versión más reciente proporcionada por la autora.
+- Se verificaron y confirmaron las referencias al PDF en los componentes `src/components/Contact.tsx`, `src/components/AboutMe.tsx` y en `src/constants/contactInfo.ts`.
+
+### Acciones realizadas
+- Archivo reemplazado: `public/docs/CV_SARA_MENENDEZ_WEB_ES.pdf` (nuevo binario subido por la autora).
+- Verificación local: servidor de desarrollo arrancado (`npm run dev`) y enlace de Contacto comprobado.
+- Tarea registrada en el TODO interno y marcada como completada.
+
+### Próximos pasos
+- Hacer commit y push del cambio al repositorio remoto para que Vercel despliegue la versión con el CV actualizado.
+- Si Vercel muestra problemas en build, traer logs para diagnóstico.
+
+*Actualizado: 27/03/2026*
+
