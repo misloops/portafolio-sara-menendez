@@ -15,6 +15,7 @@ function App() {
         <Route path="/contacto" element={<ContactPage />} />
         <Route path="/proyectos/:slug" element={<CaseStudyPage />} />
       </Routes>
+      <InfoNote />
     </>
   );
 }
