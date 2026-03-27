@@ -33,8 +33,9 @@ const InfoNote: React.FC = () => {
 
         <div id="info-note-content" className={styles.content}>
           <p className={styles.text}>
-            Este portafolio está en constante evolución. Si ves algún detalle por pulir,
-            probablemente ya esté en mi lista de mejoras.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+            nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
           </p>
 
           <button
