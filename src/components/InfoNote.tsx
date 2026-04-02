@@ -18,7 +18,7 @@ const InfoNote: React.FC = () => {
 
   return (
     <div
-      className={`${styles.container} ${expanded ? styles.expanded : ''}`}
+      className={styles.container}
       aria-hidden={false}
     >
       <div
@@ -43,15 +43,16 @@ const InfoNote: React.FC = () => {
         aria-hidden={!expanded}
         onClick={(e) => e.stopPropagation()}
       >
+        <h3 className={styles.heading}>¡Bienvenid@s a mi portafolio!</h3>
         <p className={styles.text}>
-          ¡Bienvenid@s a mi portafolio!
-          <br />
           Este espacio está en constante evolución. Como diseñadora, me gusta revisar,
           mejorar y actualizar mis proyectos para que reflejen lo que voy aprendiendo y
           cómo voy creciendo profesionalmente.
           <br />
+          <br />
           Si encuentras algún detalle por pulir, es muy probable que ya esté en mi lista de
           mejoras.
+          <br />
           <br />
           Mi objetivo es mostrar mi trabajo con transparencia y cuidado, tal y como lo vivo:
           un proceso continuo de creatividad, aprendizaje y evolución.
