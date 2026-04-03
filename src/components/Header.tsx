@@ -1,6 +1,8 @@
 import { useEffect, useState } from 'react';
+import { useLanguage } from '../context/LanguageContext';
 import Logo from './Logo';
 import Navigation from './Navigation';
+import { LanguageSwitcher } from './LanguageSwitcher';
 import { cn } from '../utils/classNames';
 import { WhatsAppIcon } from './icons';
 
@@ -58,7 +60,7 @@ function Header({ onNavigate, activeSection }: HeaderProps) {
           <Logo imageClassName="h-10 w-auto max-w-none object-contain" />
         </div>
 
-        <div className="hidden md:flex items-center gap-4 lg:gap-6">
+        <div className="hidden md:flex items-center gap-10 lg:gap-10">
           {/* Navigation - Desktop */}
           <Navigation onNavigate={onNavigate} activeSection={activeSection} />
 
@@ -78,6 +80,8 @@ function Header({ onNavigate, activeSection }: HeaderProps) {
           >
             <WhatsAppIcon className="w-6 h-6" />
           </a>
+
+          <LanguageSwitcher />
         </div>
 
         {/* Mobile Menu Button */}
@@ -116,7 +120,7 @@ function Header({ onNavigate, activeSection }: HeaderProps) {
               onNavigate={handleNavigate}
               activeSection={activeSection}
             />
-            <div className="pt-2 border-t border-[#d8ded8] flex justify-center">
+            <div className="pt-4 border-t border-[#d8ded8] flex flex-col items-center gap-4">
               <a
                 href="https://wa.me/34625977711"
                 target="_blank"
@@ -133,6 +137,7 @@ function Header({ onNavigate, activeSection }: HeaderProps) {
               >
                 <WhatsAppIcon className="w-6 h-6" />
               </a>
+              <LanguageSwitcher />
             </div>
           </div>
         </div>

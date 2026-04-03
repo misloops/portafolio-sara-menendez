@@ -1,8 +1,10 @@
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import { CaseStudyHero } from '../../components/case-study/CaseStudyHero';
+import { useLanguage } from '../../context/LanguageContext';
 
 export function Portfolio2025CaseStudy() {
+  const { t } = useLanguage();
   return (
     <div
       className="min-h-screen"

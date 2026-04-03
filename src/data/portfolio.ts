@@ -19,6 +19,7 @@ export type Project = {
   imagePosition?: 'center' | 'top' | 'bottom';
   imagePaddingClassName?: string;
   status?: string;
+  translationKey?: string;
 };
 
 export type ContactItem = {
@@ -60,7 +61,8 @@ export const projects: Project[] = [
     tags: ['React', 'Diseño Web'],
     category: 'Portafolio',
     slug: 'mi-portafolio-2026',
-    status: 'En construcción'
+    status: 'En construcción',
+    translationKey: 'miPortafolio2026'
   },
   {
     title: 'EAE Business School',
@@ -74,7 +76,8 @@ export const projects: Project[] = [
     imageFit: 'cover',
     imagePosition: 'top',
     imagePaddingClassName: 'p-4',
-    status: 'Live'
+    status: 'Live',
+    translationKey: 'eaeBusinessSchool'
   },
   {
     title: 'Alien CSI Bioblitz',
@@ -85,7 +88,8 @@ export const projects: Project[] = [
     category: 'Case study',
     slug: 'alien-csi-bioblitz',
     externalUrl: 'https://web.archive.org/web/20220702235245/https://iasbioblitz.creaf.cat/',
-    status: 'Completado'
+    status: 'Completado',
+    translationKey: 'alienCsiBioblitz'
   },
   {
     title: 'Ohmios Records Online',
@@ -95,7 +99,8 @@ export const projects: Project[] = [
     tags: ['Diseño Web', 'WordPress', 'Woocommerce'],
     category: 'Tienda Online',
     slug: 'ohmios-records',
-    status: 'Completado'
+    status: 'Completado',
+    translationKey: 'ohmiosRecords'
   },
   {
     title: 'Trick Tales App',
@@ -105,7 +110,8 @@ export const projects: Project[] = [
     tags: ['Diseño UX / UI', 'Figma'],
     category: 'App',
     slug: 'trick-tales-app',
-    status: 'Completado'
+    status: 'Completado',
+    translationKey: 'trickTalesApp'
   },
   {
     title: 'Menlo Artist',
@@ -115,7 +121,8 @@ export const projects: Project[] = [
     tags: ['WordPress', 'Diseño Web'],
     category: 'Portafolio',
     externalUrl: 'https://menloartist.com',
-    status: 'Live'
+    status: 'Live',
+    translationKey: 'menloArtist'
   },
   {
     title: 'ARBOLA',
@@ -125,7 +132,8 @@ export const projects: Project[] = [
     tags: ['WordPress', 'Diseño Web'],
     category: 'Portafolio',
     externalUrl: 'https://arbola.cc/',
-    status: 'Live'
+    status: 'Live',
+    translationKey: 'arbola'
   },
   {
     title: 'Mise en Scène',
@@ -136,7 +144,8 @@ export const projects: Project[] = [
     category: 'Tienda Online',
     slug: 'mise-en-scene',
     externalUrl: 'https://www.misenscene.es/',
-    status: 'Live'
+    status: 'Live',
+    translationKey: 'miseEnScene'
   },
   {
     title: 'Beatriz Galindo Psicóloga',
@@ -146,7 +155,8 @@ export const projects: Project[] = [
     tags: ['WordPress', 'Diseño Web', 'Accesibilidad'],
     category: 'Portafolio',
     externalUrl: 'https://beatrizgalindonavarro.com/',
-    status: 'Live'
+    status: 'Live',
+    translationKey: 'beatrizGalindo'
   }
 ];
 

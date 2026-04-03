@@ -1,3 +1,4 @@
+import { useLanguage } from '../context/LanguageContext';
 import NavLink from './NavLink';
 
 type NavigationProps = {
@@ -5,13 +6,15 @@ type NavigationProps = {
   activeSection?: string;
 };
 
-const NAV_ITEMS = [
-  { href: '/#inicio', id: 'inicio', label: 'Inicio' },
-  { href: '/proyectos', id: 'proyectos', label: 'Proyectos' },
-  { href: '/contacto', id: 'contacto', label: 'Contacto' }
-];
-
 function Navigation({ onNavigate, activeSection }: NavigationProps) {
+  const { t } = useLanguage();
+
+  const NAV_ITEMS = [
+    { href: '/#inicio', id: 'inicio', label: t('navigation.inicio') },
+    { href: '/proyectos', id: 'proyectos', label: t('navigation.proyectos') },
+    { href: '/contacto', id: 'contacto', label: t('navigation.contacto') }
+  ];
+
   return (
     <nav className="flex flex-col md:flex-row gap-2 md:gap-6 lg:gap-8 justify-center">
       {NAV_ITEMS.map((item) => (

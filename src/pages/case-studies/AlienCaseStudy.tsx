@@ -2,8 +2,13 @@ import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import { cn, getChipClasses } from '../../utils/classNames';
 import { CaseStudyPager } from '../../components/case-study/CaseStudyPager';
+import { useLanguage } from '../../context/LanguageContext';
+import { translations } from '../../constants/translations';
 
 export function AlienCaseStudy() {
+  const { t, language } = useLanguage();
+  const alienContent = translations[language === 'en' ? 'en' : 'es'].caseStudiesContent.alien;
+  
   return (
     <div
       className="min-h-screen"
@@ -26,23 +31,23 @@ export function AlienCaseStudy() {
       >
         <div className={cn('relative z-10', 'max-w-7xl mx-auto', 'px-4 lg:px-6')}>
           <div className={cn('flex flex-col gap-4 lg:gap-8', 'text-left', 'max-w-4xl')}>
-            <p className={cn('text-sm font-semibold uppercase tracking-widest', 'text-dark/60')}>Frontend</p>
+            <p className={cn('text-sm font-semibold uppercase tracking-widest', 'text-dark/60')}>{t('caseStudiesContent.alien.category')}</p>
 
             <h1 className={cn('font-serif', 'text-4xl md:text-5xl lg:text-6xl', 'font-normal leading-[1.02]', 'text-dark')}>
-              ALIEN BIOBLITZ
+              {t('caseStudiesContent.alien.heroTitle')}
             </h1>
 
             <div className={cn('flex flex-col gap-2 lg:gap-6', 'max-w-3xl')}>
               <p className="heading-subtitle">
-                Plataforma web para monitorizar y analizar especies invasoras con participación ciudadana.
+                {t('caseStudiesContent.alien.heroDescription')}
               </p>
               <p className={cn('text-lg md:text-xl', 'leading-[1.6]', 'text-dark/75', 'max-w-3xl')}>
-                Durante el evento, científicos, familias, estudiantes y profesorado recogen información en campo que se integra en el sistema.
+                {t('caseStudiesContent.alien.heroSubtitle')}
               </p>
             </div>
 
             <div className={cn('flex flex-wrap gap-2 lg:gap-3', 'pt-2 lg:pt-4')}>
-              {['Frontend', 'Drupal', 'Leaflet', 'Mapbox'].map((chip) => (
+              {alienContent.tools.map((chip: string) => (
                 <span key={chip} className={getChipClasses()}>{chip}</span>
               ))}
             </div>
@@ -60,12 +65,12 @@ export function AlienCaseStudy() {
             />
           </div>
           <div className="w-full lg:w-[25%] flex flex-col gap-3">
-            <h3 className="font-serif text-xl font-bold text-dark">Información</h3>
+            <h3 className="font-serif text-xl font-bold text-dark">{t('caseStudyLabels.information')}</h3>
             <p className="text-base text-dark/75 leading-relaxed">
-              La páginas web The Invasive Alien Invasive Species Bioblitz es un proyecto diseñado para monitorizar y analizar las especies invasoras.
+              {t('caseStudiesContent.alien.information').split('\n\n')[0]}
             </p>
             <p className="text-base text-dark/75 leading-relaxed">
-              Durante el evento, científicos, familias, estudiantes, profesores, y otros miembros de la comunidad recogerán información de cada área…
+              {t('caseStudiesContent.alien.information').split('\n\n')[1]}
             </p>
           </div>
         </div>
@@ -74,9 +79,9 @@ export function AlienCaseStudy() {
       <section className="py-16 lg:py-20 px-4 lg:px-6 bg-transparent">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
           <div>
-            <h2 className="font-serif text-3xl md:text-4xl font-bold text-dark mb-5">Problema</h2>
+            <h2 className="font-serif text-3xl md:text-4xl font-bold text-dark mb-5">{t('caseStudyLabels.problem')}</h2>
             <p className="text-lg text-dark/75 leading-relaxed">
-              Hay un desconocimiento amplio sobre el impacto de las especies invasoras y cómo afectan al hábitat. El reto era traducir un tema científico complejo en una experiencia comprensible y participativa.
+              {t('caseStudiesContent.alien.problem')}
             </p>
           </div>
           <div className="flex justify-center">
@@ -92,11 +97,11 @@ export function AlienCaseStudy() {
       <section className="py-16 lg:py-20 px-4 lg:px-6 bg-transparent">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
           <div>
-            <h2 className="font-serif text-3xl md:text-4xl font-bold text-dark mb-5">Objetivo</h2>
+            <h2 className="font-serif text-3xl md:text-4xl font-bold text-dark mb-5">{t('caseStudyLabels.objective')}</h2>
             <ul className="space-y-3 text-lg text-dark/75">
-              <li className="flex gap-3"><span className="text-primary-400 font-bold">•</span><span>Difundir conocimiento sobre especies invasoras en Europa.</span></li>
-              <li className="flex gap-3"><span className="text-primary-400 font-bold">•</span><span>Atraer participación antes, durante y después del evento.</span></li>
-              <li className="flex gap-3"><span className="text-primary-400 font-bold">•</span><span>Hacer visible la evolución de observaciones por región.</span></li>
+              {alienContent.objectives.map((objective: string) => (
+                <li key={objective} className="flex gap-3"><span className="text-primary-400 font-bold">•</span><span>{objective}</span></li>
+              ))}
             </ul>
           </div>
           <div className="flex justify-center lg:justify-end">
@@ -111,15 +116,15 @@ export function AlienCaseStudy() {
 
       <section className="py-20 lg:py-24 px-4 lg:px-6 bg-transparent">
         <div className="max-w-7xl mx-auto">
-          <h2 className="font-serif text-3xl md:text-4xl font-bold text-dark mb-3">Solución estratégica de diseño</h2>
-          <p className="text-lg text-dark/75 mb-8">El proyecto está dividido en tres fases:</p>
+          <h2 className="font-serif text-3xl md:text-4xl font-bold text-dark mb-3">{t('caseStudyLabels.strategicDesign')}</h2>
+          <p className="text-lg text-dark/75 mb-8">{t('caseStudiesContent.alien.phasesTitle')}</p>
 
           <div className="space-y-8">
             <article className="grid grid-cols-1 lg:grid-cols-10 gap-8 items-center rounded-2xl border border-gray-200/60 bg-[#ffffff5c] backdrop-blur-sm shadow-[0_8px_24px_rgba(48,46,46,0.08)] p-6 md:p-8">
               <div className="lg:col-span-4">
-                <h3 className="text-2xl font-bold text-dark mb-3">Pre-evento</h3>
+                <h3 className="text-2xl font-bold text-dark mb-3">{alienContent.phaseTitles.preEvent}</h3>
                 <p className="text-dark/75 leading-relaxed">
-                  Se definió una plataforma para promover el evento y educar sobre especies objetivo. El mapa muestra regiones participantes y enlaza a landings por país e idioma.
+                  {t('caseStudiesContent.alien.phases.preEvent')}
                 </p>
               </div>
               <div className="lg:col-span-6 flex justify-center lg:justify-end">
@@ -133,9 +138,9 @@ export function AlienCaseStudy() {
 
             <article className="grid grid-cols-1 lg:grid-cols-10 gap-8 items-center rounded-2xl border border-gray-200/60 bg-[#ffffff5c] backdrop-blur-sm shadow-[0_8px_24px_rgba(48,46,46,0.08)] p-6 md:p-8">
               <div className="lg:col-span-4">
-                <h3 className="text-2xl font-bold text-dark mb-3">Durante el evento</h3>
+                <h3 className="text-2xl font-bold text-dark mb-3">{alienContent.phaseTitles.duringEvent}</h3>
                 <p className="text-dark/75 leading-relaxed">
-                  Se integraron observaciones mediante iNaturalist para validar capturas y alimentar el mapa en tiempo real con número de especies por región.
+                  {t('caseStudiesContent.alien.phases.duringEvent')}
                 </p>
               </div>
               <div className="lg:col-span-6 flex justify-center lg:justify-end">
@@ -149,9 +154,9 @@ export function AlienCaseStudy() {
 
             <article className="grid grid-cols-1 lg:grid-cols-10 gap-8 items-center rounded-2xl border border-gray-200/60 bg-[#ffffff5c] backdrop-blur-sm shadow-[0_8px_24px_rgba(48,46,46,0.08)] p-6 md:p-8">
               <div className="lg:col-span-4">
-                <h3 className="text-2xl font-bold text-dark mb-3">Post-evento</h3>
+                <h3 className="text-2xl font-bold text-dark mb-3">{alienContent.phaseTitles.postEvent}</h3>
                 <p className="text-dark/75 leading-relaxed">
-                  Las observaciones son revisadas por científicos y publicadas con visualizaciones para comunicar resultados y sostener el aprendizaje.
+                  {t('caseStudiesContent.alien.phases.postEvent')}
                 </p>
               </div>
               <div className="lg:col-span-6 flex justify-center lg:justify-end">
@@ -167,9 +172,9 @@ export function AlienCaseStudy() {
       </section>
 
       <CaseStudyPager
-        previousLabel="Volver a proyectos"
+        previousLabel={t('caseStudy.backTo')}
         previousHref="/proyectos"
-        nextLabel="Ohmios Records Online"
+        nextLabel={alienContent.pagerNext}
         nextHref="/proyectos/ohmios-records"
       />
 

@@ -1,6 +1,7 @@
 import { ReactNode } from 'react';
 import { services } from '../data/portfolio';
 import { cn } from '../utils/classNames';
+import { useLanguage } from '../context/LanguageContext';
 
 const serviceIcons: Record<string, ReactNode> = {
   design: (
@@ -31,16 +32,18 @@ const serviceIcons: Record<string, ReactNode> = {
  * Uses design system colors and hover effects
  */
 function Services() {
+  const { t } = useLanguage();
+  
   return (
     <section id="servicios" className="bg-gradient-services py-20 lg:py-28">
       <div className="container">
         {/* Section Header */}
         <div className="mb-16 text-center">
           <h2 className="text-5xl md:text-6xl font-bold mb-4 text-dark">
-            Mis Servicios
+            {t('services.title')}
           </h2>
           <p className="text-neutral-600 text-lg max-w-2xl mx-auto leading-relaxed">
-            Ofrezco soluciones completas para transformar tu negocio digital
+            {t('services.description')}
           </p>
         </div>
 

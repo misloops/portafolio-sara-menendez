@@ -1,4 +1,5 @@
 import { Route, Routes } from 'react-router-dom';
+import { LanguageProvider } from './context/LanguageContext';
 import HomePage from './pages/HomePage';
 import ProjectsPage from './pages/ProjectsPage';
 import CaseStudyPage from './pages/CaseStudyPage';
@@ -8,7 +9,7 @@ import InfoTab from './components/InfoTab';
 
 function App() {
   return (
-    <>
+    <LanguageProvider>
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/proyectos" element={<ProjectsPage />} />
@@ -16,7 +17,7 @@ function App() {
         <Route path="/proyectos/:slug" element={<CaseStudyPage />} />
       </Routes>
       <InfoNote />
-    </>
+    </LanguageProvider>
   );
 }
 

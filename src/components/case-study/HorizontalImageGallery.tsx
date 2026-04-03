@@ -41,7 +41,7 @@ export function HorizontalImageGallery({
   groups,
   containerClassName,
   groupClassName,
-  imageMaxHeight = 'max-h-[620px]'
+  imageMaxHeight = 'max-h-[300px] sm:max-h-[420px] lg:max-h-[620px]'
 }: HorizontalImageGalleryProps) {
   return (
     <div className={cn('space-y-8', containerClassName)}>
@@ -66,8 +66,8 @@ export function HorizontalImageGallery({
           </div>
 
           {/* Horizontal Scroll Container */}
-          <div className="overflow-x-auto pb-1">
-            <div className="flex items-start gap-4 w-max min-w-full">
+          <div className="overflow-x-auto pb-3 scroll-smooth [&::-webkit-scrollbar]:h-1.5 [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-thumb]:bg-primary-300/60 [&::-webkit-scrollbar-track]:bg-transparent">
+            <div className="flex items-start gap-3 lg:gap-4 w-max min-w-full">
               {group.images.map((image) => (
                 <img
                   key={image.src}

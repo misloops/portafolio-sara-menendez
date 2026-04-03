@@ -2,8 +2,12 @@ import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import { cn, getChipClasses } from '../../utils/classNames';
 import { CaseStudyPager } from '../../components/case-study/CaseStudyPager';
+import { useLanguage } from '../../context/LanguageContext';
+import { translations } from '../../constants/translations';
 
 export function PortfolioCaseStudy() {
+  const { t, language } = useLanguage();
+  const portfolioContent = translations[language === 'en' ? 'en' : 'es'].caseStudiesContent.portfolio;
   return (
     <div 
       className="min-h-screen"
@@ -37,7 +41,7 @@ export function PortfolioCaseStudy() {
               'text-sm font-semibold uppercase tracking-widest',
               'text-dark/60'
             )}>
-              Design System & React
+              {portfolioContent.category}
             </p>
 
             {/* Main Title */}
@@ -47,7 +51,7 @@ export function PortfolioCaseStudy() {
               'font-normal leading-[1.02]',
               'text-dark'
             )}>
-              Mi Portafolio 2026
+              {portfolioContent.heroTitle}
             </h1>
 
             {/* Supporting copy */}
@@ -56,7 +60,7 @@ export function PortfolioCaseStudy() {
               'max-w-3xl'
             )}>
               <p className="heading-subtitle">
-                Migración desde WordPress y Framer a código nativo con React.
+                {portfolioContent.heroDescription}
               </p>
               <p className={cn(
                 'text-lg md:text-xl',
@@ -64,7 +68,7 @@ export function PortfolioCaseStudy() {
                 'text-dark/75',
                 'max-w-3xl'
               )}>
-                De herramientas visuales a arquitectura técnica completa. Un case study sobre cómo construir un portafolio que sea a la vez galería de trabajo y demostración de capacidad técnica en React.
+                {portfolioContent.heroSubtitle}
               </p>
             </div>
 
@@ -95,10 +99,10 @@ export function PortfolioCaseStudy() {
       {/* INFORMACIÓN Section */}
       <section className="py-10 lg:py-20 px-4 lg:px-6 bg-transparent">
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-10 gap-[40px]">
+          <div className="grid grid-cols-1 lg:grid-cols-10 gap-6 lg:gap-[40px]">
             {/* Title - Left Column (40%) */}
             <h2 className="lg:col-span-4 font-serif text-3xl md:text-4xl font-bold text-dark">
-              Por Qué Reconstruir
+              {portfolioContent.whyRebuildTitle}
             </h2>
             
             {/* Spacer for right column alignment */}
@@ -107,10 +111,10 @@ export function PortfolioCaseStudy() {
             {/* Left Column - Text (40%) */}
             <div className="lg:col-span-4">
               <p className="text-lg text-dark/70 leading-relaxed mb-4">
-                Mi portafolio anterior en WordPress + Framer era visualmente atractivo pero limitado técnicamente. Herramientas visuales que funcionan bien para prototipos rápidos, pero no reflejan habilidades en desarrollo real.
+                {portfolioContent.whyRebuildPara1}
               </p>
               <p className="text-lg text-dark/70 leading-relaxed">
-                Después de trabajar con clientes en proyectos reales—Drupal, WordPress, desarrollo custom con React—necesitaba un portafolio que no fuera solo galería bonita, sino demostración viva de arquitectura técnica, componentes reutilizables, y capacidad para construir sistemas escalables.
+                {portfolioContent.whyRebuildPara2}
               </p>
             </div>
 
@@ -134,61 +138,41 @@ export function PortfolioCaseStudy() {
       <section className="py-10 lg:py-20 px-4 lg:px-6 bg-transparent">
         <div className="max-w-7xl mx-auto">
           <h2 className="font-serif text-3xl md:text-4xl font-bold text-dark mb-8">
-            El Desafío
+            {portfolioContent.challengeTitle}
           </h2>
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-[40px]">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-[40px]">
           {/* Left Column - Challenge & Role */}
           <div>
             <div className="mb-12">
-              <h3 className="text-2xl font-serif font-bold text-dark mb-6">Limitaciones de Antes</h3>
+              <h3 className="text-2xl font-serif font-bold text-dark mb-6">{portfolioContent.oldLimitationsTitle}</h3>
               <ul className="space-y-3">
-                <li className="flex items-start gap-4">
-                  <span className="text-primary-400 font-bold text-xl mt-0.5">•</span>
-                  <span className="text-lg text-dark/70">Herramientas visuales (WordPress + Framer). Bonitas, pero sin verdadera arquitectura técnica.</span>
-                </li>
-                <li className="flex items-start gap-4">
-                  <span className="text-primary-400 font-bold text-xl mt-0.5">•</span>
-                  <span className="text-lg text-dark/70">No demostraba capacidad en React puro, TypeScript, o design systems escalables.</span>
-                </li>
-                <li className="flex items-start gap-4">
-                  <span className="text-primary-400 font-bold text-xl mt-0.5">•</span>
-                  <span className="text-lg text-dark/70">Limitada capacidad de customización. Lo que ves es lo que hay.</span>
-                </li>
-                <li className="flex items-start gap-4">
-                  <span className="text-primary-400 font-bold text-xl mt-0.5">•</span>
-                  <span className="text-lg text-dark/70">Imposible documentar arquitectura, decisiones técnicas, o sistema de componentes.</span>
-                </li>
+                {portfolioContent.oldLimitations.map((item: string) => (
+                  <li key={item} className="flex items-start gap-4">
+                    <span className="text-primary-400 font-bold text-xl mt-0.5">•</span>
+                    <span className="text-lg text-dark/70">{item}</span>
+                  </li>
+                ))}
               </ul>
             </div>
 
             <div>
-              <h3 className="text-2xl font-serif font-bold text-dark mb-6">Mi Rol</h3>
+              <h3 className="text-2xl font-serif font-bold text-dark mb-6">{t('caseStudyLabels.myRole')}</h3>
               <p className="text-lg text-dark/70 leading-relaxed">
-                Designer, Developer, Arquitecta del sistema. Responsable de definir: stack tecnológico, arquitectura de componentes, design tokens, sistema de tipografía y color, patrón de layout, workflow de construcción, y documentación.
+                {portfolioContent.myRoleText}
               </p>
             </div>
           </div>
 
           {/* Right Column - Technical Approach */}
           <div>
-            <h3 className="text-2xl font-serif font-bold text-dark mb-6">Objetivos</h3>
+            <h3 className="text-2xl font-serif font-bold text-dark mb-6">{portfolioContent.objectivesTitle}</h3>
             <ul className="space-y-4">
-              <li className="flex items-start gap-4">
-                <span className="text-primary-400 font-bold text-xl mt-0.5">✓</span>
-                <span className="text-lg text-dark/70"><strong>Galería profesional</strong> de proyectos con capacidad de narrativa única por proyecto.</span>
-              </li>
-              <li className="flex items-start gap-4">
-                <span className="text-primary-400 font-bold text-xl mt-0.5">✓</span>
-                <span className="text-lg text-dark/70"><strong>Design system documentado</strong>: colores, tipografía, componentes, espaciado.</span>
-              </li>
-              <li className="flex items-start gap-4">
-                <span className="text-primary-400 font-bold text-xl mt-0.5">✓</span>
-                <span className="text-lg text-dark/70"><strong>Demostración técnica</strong> a través de arquitectura visible, código limpio, patterns reutilizables.</span>
-              </li>
-              <li className="flex items-start gap-4">
-                <span className="text-primary-400 font-bold text-xl mt-0.5">✓</span>
-                <span className="text-lg text-dark/70"><strong>Case studies documentados</strong> que expliquen por qué, no solo qué.</span>
-              </li>
+              {portfolioContent.objectiveItems.map((item: string) => (
+                <li key={item} className="flex items-start gap-4">
+                  <span className="text-primary-400 font-bold text-xl mt-0.5">✓</span>
+                  <span className="text-lg text-dark/70">{item}</span>
+                </li>
+              ))}
             </ul>
           </div>
         </div>
@@ -199,32 +183,16 @@ export function PortfolioCaseStudy() {
       <section className="py-8 lg:py-16 px-4 lg:px-6 bg-transparent">
         <div className="max-w-7xl mx-auto">
           <h2 className="font-serif text-3xl md:text-4xl font-bold text-dark mb-8">
-            Tech Stack & Decisiones
+            {portfolioContent.techStackTitle}
           </h2>
           <div className="space-y-8">
-            <div className="bg-white/50 backdrop-blur-sm rounded-lg p-8 border border-primary-300/20">
-              <h3 className="text-2xl font-serif font-bold text-dark mb-4">React 18 + TypeScript</h3>
-              <p className="text-lg text-dark/70 leading-relaxed mb-4">
-                Componentes reutilizables, tipado fuerte, ecosistema robusto. React permite construir interfaces complejas manteniendo código limpio y mantenible.
-              </p>
-              <p className="text-sm text-dark/60">Por qué: Flexibilidad máxima, componentes reutilizables, y demostración clara de capacidad técnica.</p>
-            </div>
-
-            <div className="bg-white/50 backdrop-blur-sm rounded-lg p-8 border border-primary-300/20">
-              <h3 className="text-2xl font-serif font-bold text-dark mb-4">Tailwind CSS</h3>
-              <p className="text-lg text-dark/70 leading-relaxed mb-4">
-                Utility-first CSS que mantiene diseño y código sincronizados. Facilita iteración rápida y consistencia visual sin overhead de selectors CSS.
-              </p>
-              <p className="text-sm text-dark/60">Por qué: Velocidad, consistencia, y la trazabilidad de estilos directamente en markup.</p>
-            </div>
-
-            <div className="bg-white/50 backdrop-blur-sm rounded-lg p-8 border border-primary-300/20">
-              <h3 className="text-2xl font-serif font-bold text-dark mb-4">Vite</h3>
-              <p className="text-lg text-dark/70 leading-relaxed mb-4">
-                Build tool moderno. Hot module replacement instantáneo, bundling optimizado, velocidad de desarrollo incomparable a webpack.
-              </p>
-              <p className="text-sm text-dark/60">Por qué: Desarrollo rápido, builds eficientes, y setup mínimo necesario.</p>
-            </div>
+            {portfolioContent.techItems.map((item: { title: string; body: string; why: string }) => (
+              <div key={item.title} className="bg-white/50 backdrop-blur-sm rounded-lg p-8 border border-primary-300/20">
+                <h3 className="text-2xl font-serif font-bold text-dark mb-4">{item.title}</h3>
+                <p className="text-lg text-dark/70 leading-relaxed mb-4">{item.body}</p>
+                <p className="text-sm text-dark/60">{item.why}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -233,11 +201,11 @@ export function PortfolioCaseStudy() {
       <section className="py-8 lg:py-16 px-4 lg:px-6 bg-transparent">
         <div className="max-w-7xl mx-auto">
           <h2 className="font-serif text-3xl md:text-4xl font-bold text-dark mb-8">
-            Arquitectura de Componentes
+            {portfolioContent.architectureTitle}
           </h2>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             <div>
-              <h3 className="text-xl font-serif font-bold text-dark mb-4">Estructura de Carpetas</h3>
+              <h3 className="text-xl font-serif font-bold text-dark mb-4">{portfolioContent.folderTitle}</h3>
               <pre className="bg-dark/5 rounded-lg p-4 text-sm overflow-x-auto text-dark/80 font-mono">
 {`src/
 ├── components/
@@ -267,36 +235,17 @@ export function PortfolioCaseStudy() {
             </div>
 
             <div>
-              <h3 className="text-xl font-serif font-bold text-dark mb-4">Patrones Clave</h3>
+              <h3 className="text-xl font-serif font-bold text-dark mb-4">{portfolioContent.patternsTitle}</h3>
               <ul className="space-y-3">
-                <li className="flex items-start gap-3">
-                  <span className="text-primary-400 font-bold mt-1">•</span>
-                  <div>
-                    <p className="font-semibold text-dark">Componentes Modulares</p>
-                    <p className="text-sm text-dark/70">Hero y caso de estudio: reutilizables pero adaptables.</p>
-                  </div>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="text-primary-400 font-bold mt-1">•</span>
-                  <div>
-                    <p className="font-semibold text-dark">Wrappers por Sección</p>
-                    <p className="text-sm text-dark/70">CaseStudySection: componente base para todas las secciones.</p>
-                  </div>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="text-primary-400 font-bold mt-1">•</span>
-                  <div>
-                    <p className="font-semibold text-dark">Utilidades Centralizadas</p>
-                    <p className="text-sm text-dark/70">getChipClasses(), cn(): lógica de estilos en un solo lugar.</p>
-                  </div>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="text-primary-400 font-bold mt-1">•</span>
-                  <div>
-                    <p className="font-semibold text-dark">Orquestación de Rutas</p>
-                    <p className="text-sm text-dark/70">CaseStudyPage: enrutador inteligente según slug.</p>
-                  </div>
-                </li>
+                {portfolioContent.patterns.map((p: { title: string; desc: string }) => (
+                  <li key={p.title} className="flex items-start gap-3">
+                    <span className="text-primary-400 font-bold mt-1">•</span>
+                    <div>
+                      <p className="font-semibold text-dark">{p.title}</p>
+                      <p className="text-sm text-dark/70">{p.desc}</p>
+                    </div>
+                  </li>
+                ))}
               </ul>
             </div>
           </div>
@@ -307,11 +256,11 @@ export function PortfolioCaseStudy() {
       <section className="py-8 lg:py-16 px-4 lg:px-6 bg-transparent">
         <div className="max-w-7xl mx-auto">
           <h2 className="font-serif text-3xl md:text-4xl font-bold text-dark mb-8">
-            Design System
+            {portfolioContent.designSystemTitle}
           </h2>
           
           <div className="mb-12">
-            <h3 className="text-xl font-serif font-bold text-dark mb-6">Paleta de Colores</h3>
+            <h3 className="text-xl font-serif font-bold text-dark mb-6">{portfolioContent.colorsTitle}</h3>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
               <div>
                 <div className="w-full h-24 rounded-lg bg-[#98c29b] mb-2"></div>
@@ -337,7 +286,7 @@ export function PortfolioCaseStudy() {
           </div>
 
           <div className="mb-12">
-            <h3 className="text-xl font-serif font-bold text-dark mb-6">Tipografía</h3>
+            <h3 className="text-xl font-serif font-bold text-dark mb-6">{portfolioContent.typographyTitle}</h3>
 
             <div className="bg-white/60 backdrop-blur-sm rounded-lg p-6 md:p-8 border border-primary-300/20">
 
@@ -345,42 +294,42 @@ export function PortfolioCaseStudy() {
                 <table className="w-full table-auto text-left">
                   <thead>
                     <tr className="text-sm text-dark/60">
-                      <th className="px-3 py-2">Rol</th>
-                      <th className="px-3 py-2">Familia</th>
-                      <th className="px-3 py-2">Ejemplo</th>
-                      <th className="px-3 py-2">Tamaños</th>
-                      <th className="px-3 py-2">Peso / Uso</th>
+                      <th className="px-3 py-2">{portfolioContent.typographyHeaders[0]}</th>
+                      <th className="px-3 py-2">{portfolioContent.typographyHeaders[1]}</th>
+                      <th className="px-3 py-2">{portfolioContent.typographyHeaders[2]}</th>
+                      <th className="px-3 py-2">{portfolioContent.typographyHeaders[3]}</th>
+                      <th className="px-3 py-2">{portfolioContent.typographyHeaders[4]}</th>
                     </tr>
                   </thead>
                   <tbody className="align-top">
                     <tr className="border-t border-dark/6">
-                      <td className="px-3 py-4 align-top font-semibold">Headings</td>
+                      <td className="px-3 py-4 align-top font-semibold">{portfolioContent.typographyRows[0].role}</td>
                       <td className="px-3 py-4 align-top font-mono text-sm text-dark/70">DM Serif Display (serif)</td>
                       <td className="px-3 py-4 align-top">
                         <p className="font-serif text-2xl md:text-3xl text-dark">Diseño Web · Identidad · Interfaces</p>
                       </td>
                       <td className="px-3 py-4 align-top text-sm text-dark/60">H1: 48–84px (clamp) · H2: 32–56px · H3: 24–36px</td>
-                      <td className="px-3 py-4 align-top text-sm text-dark/60">400 (normal). Uso: títulos, secciones principales, citas destacadas.</td>
+                      <td className="px-3 py-4 align-top text-sm text-dark/60">{portfolioContent.typographyRows[0].usage}</td>
                     </tr>
 
                     <tr className="border-t border-dark/6">
-                      <td className="px-3 py-4 align-top font-semibold">Cuerpo / Body</td>
+                      <td className="px-3 py-4 align-top font-semibold">{portfolioContent.typographyRows[1].role}</td>
                       <td className="px-3 py-4 align-top font-mono text-sm text-dark/70">Gilroy (sans)</td>
                       <td className="px-3 py-4 align-top">
                         <p className="text-base text-dark">Este portafolio está en constante evolución. Si ves algún detalle por pulir, probablemente ya esté en mi lista de mejoras.</p>
                       </td>
                       <td className="px-3 py-4 align-top text-sm text-dark/60">Base: 16px · Escalado contextual 16–20px</td>
-                      <td className="px-3 py-4 align-top text-sm text-dark/60">400–600. Uso: párrafos, labels, navegación, formularios.</td>
+                      <td className="px-3 py-4 align-top text-sm text-dark/60">{portfolioContent.typographyRows[1].usage}</td>
                     </tr>
 
                     <tr className="border-t border-dark/6">
-                      <td className="px-3 py-4 align-top font-semibold">Subtítulos / Italic</td>
+                      <td className="px-3 py-4 align-top font-semibold">{portfolioContent.typographyRows[2].role}</td>
                       <td className="px-3 py-4 align-top font-mono text-sm text-dark/70">DM Serif Display Italic</td>
                       <td className="px-3 py-4 align-top">
                         <p className="heading-subtitle">Subtítulo en cursiva — énfasis y tono editorial</p>
                       </td>
                       <td className="px-3 py-4 align-top text-sm text-dark/60">~32px (desktop) · ~24–28px (tablet)</td>
-                      <td className="px-3 py-4 align-top text-sm text-dark/60">400 italic. Uso: subtítulos, destacados y frases de introducción.</td>
+                      <td className="px-3 py-4 align-top text-sm text-dark/60">{portfolioContent.typographyRows[2].usage}</td>
                     </tr>
                   </tbody>
                 </table>
@@ -399,7 +348,7 @@ export function PortfolioCaseStudy() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
               <div>
                 <h3 className="text-xl font-bold text-dark mb-4">Utility: <code className="text-sm bg-dark/5 px-2 py-1 rounded">cn()</code></h3>
-                <p className="text-dark/70 mb-6 leading-relaxed">Centralizar la lógica de clases Tailwind. En lugar de escribir ternarios o condicionales anidados, usamos una función simple que maneja undefined, null y false.</p>
+                <p className="text-dark/70 mb-6 leading-relaxed">{portfolioContent.cnUtilityDesc}</p>
                 <pre className="bg-dark/5 rounded-lg p-4 text-sm overflow-x-auto text-dark/80 font-mono leading-relaxed">
 {`export function cn(
   ...classes: (string | undefined | null | false)[]
@@ -652,9 +601,9 @@ export function PortfolioCaseStudy() {
       </section>
 
       <CaseStudyPager
-        previousLabel="Volver a proyectos"
+        previousLabel={t('caseStudy.backTo')}
         previousHref="/proyectos"
-        nextLabel="EAE Business School"
+        nextLabel={portfolioContent.pagerNext}
         nextHref="/proyectos/eae-business-school"
       />
 

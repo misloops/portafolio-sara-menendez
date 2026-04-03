@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { cn, getCardClasses, getChipClasses } from '../utils/classNames';
 import { Project } from '../data/portfolio';
+import { useLanguage } from '../context/LanguageContext';
 
 interface ProjectCardProps extends Omit<Project, 'category' | 'status'> {
   isLink?: boolean;
@@ -19,6 +20,7 @@ function ProjectCard({
   tags,
   slug,
   externalUrl,
+  translationKey,
   imageFit = 'contain',
   imagePosition = 'center',
   imagePaddingClassName = 'p-4',
@@ -27,6 +29,13 @@ function ProjectCard({
   const hasInternalLink = Boolean(slug);
   const hasExternalLink = Boolean(externalUrl);
   const hasDualLinks = hasInternalLink && hasExternalLink;
+  const { t } = useLanguage();
+
+  // Use translated description if translationKey exists, otherwise fall back to prop
+  const displayDescription = translationKey
+    ? (t(`projectDescriptions.${translationKey}`) || description)
+    : description;
+
   const imageFitClass = imageFit === 'cover' ? 'object-cover' : 'object-contain';
   const imagePositionClass = imagePosition === 'top' ? 'object-top' : imagePosition === 'bottom' ? 'object-bottom' : 'object-center';
   
@@ -105,7 +114,7 @@ function ProjectCard({
           'line-clamp-3',
           'group-hover:text-[#c3b7c3] transition-colors duration-200'
         )}>
-          {description}
+          {displayDescription}
         </p>
 
         {/* Tags - 12-14px, inline, una línea */}
@@ -134,7 +143,7 @@ function ProjectCard({
             'text-dark/60',
             'group-hover:text-[#c3b7c3] transition-colors'
           )}>
-            {slug ? 'Ver proyecto' : externalUrl ? 'Ver online' : 'En preparación'}
+            {slug ? t('projectCard.viewProject') : externalUrl ? t('projectCard.viewOnline') : t('projectCard.comingSoon')}
           </span>
           <svg className={cn(
             'w-4 h-4',

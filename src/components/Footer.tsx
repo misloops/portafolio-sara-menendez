@@ -1,12 +1,14 @@
 import { cn } from '../utils/classNames';
 import Logo from './Logo';
+import { useLanguage } from '../context/LanguageContext';
 
 function Footer() {
   const currentYear = new Date().getFullYear();
+  const { t } = useLanguage();
 
   return (
     <footer className={cn(
-      'py-16 md:py-20 lg:py-24',
+      'py-10 md:py-16 lg:py-24',
       'px-6 md:px-12 lg:px-16',
         'bg-gradient-to-br from-[#faf8fa] via-[#e8dce8] to-[#b8d4c0]',
       'border-t border-neutral-200'
@@ -16,7 +18,7 @@ function Footer() {
       )}>
         
         <div className={cn(
-          'grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-16 mb-12'
+          'grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-16 mb-10 md:mb-12'
         )}>
           {/* Brand */}
           <div>
@@ -25,7 +27,7 @@ function Footer() {
               'text-base text-dark/70',
               'leading-relaxed'
             )}>
-              Diseño web y desarrollo React con enfoque estratégico y criterio.
+              {t('footer.about')}
             </p>
           </div>
 
@@ -35,7 +37,7 @@ function Footer() {
               'font-semibold text-dark mb-4',
               'text-sm uppercase tracking-widest'
             )}>
-              Navegación
+              {t('footer.navigation')}
             </h4>
             <ul className={cn(
               'space-y-3'
@@ -45,7 +47,7 @@ function Footer() {
                   'text-link',
                   'transition-colors font-medium'
                 )}>
-                  Inicio
+                  {t('footer.links.inicio')}
                 </a>
               </li>
               <li>
@@ -53,7 +55,7 @@ function Footer() {
                   'text-link',
                   'transition-colors font-medium'
                 )}>
-                  Proyectos
+                  {t('footer.links.proyectos')}
                 </a>
               </li>
               <li>
@@ -61,7 +63,7 @@ function Footer() {
                   'text-link',
                   'transition-colors font-medium'
                 )}>
-                  Contacto
+                  {t('footer.links.contacto')}
                 </a>
               </li>
             </ul>
@@ -73,7 +75,7 @@ function Footer() {
               'font-semibold text-dark mb-4',
               'text-sm uppercase tracking-widest'
             )}>
-              Conecta conmigo
+              {t('footer.connectWith')}
             </h4>
             <div className={cn(
               'flex flex-wrap gap-4'
@@ -87,7 +89,7 @@ function Footer() {
                   'transition-colors font-medium'
                 )}
               >
-                LinkedIn
+                {t('footer.links.linkedin')}
               </a>
               <a 
                 href="mailto:sara.m.pumariega@gmail.com"
@@ -98,7 +100,7 @@ function Footer() {
                   'transition-colors font-medium'
                 )}
               >
-                Email
+                {t('footer.links.email')}
               </a>
               <a 
                 href="tel:+34625977711"
@@ -109,7 +111,7 @@ function Footer() {
                   'transition-colors font-medium'
                 )}
               >
-                Teléfono
+                {t('footer.links.phone')}
               </a>
               <a 
                 href="https://wa.me/34625977711"
@@ -120,7 +122,7 @@ function Footer() {
                   'transition-colors font-medium'
                 )}
               >
-                WhatsApp
+                {t('footer.links.whatsapp')}
               </a>
             </div>
           </div>
@@ -135,7 +137,7 @@ function Footer() {
           <p className={cn(
             'text-dark/60 text-sm font-medium'
           )}>
-            © {currentYear}. Todos los derechos reservados.
+            © {currentYear}. {t('footer.copyright').replace('© 2026', '')}
           </p>
           <div className={cn(
             'flex gap-8 text-sm'
@@ -144,13 +146,13 @@ function Footer() {
               'text-link',
               'transition-colors font-medium'
             )}>
-              Ver proyectos
+              {t('footer.viewProjects')}
             </a>
             <a href="/contacto" className={cn(
               'text-link',
               'transition-colors font-medium'
             )}>
-              Trabajemos juntas
+              {t('footer.workTogether')}
             </a>
           </div>
         </div>

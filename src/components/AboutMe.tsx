@@ -1,5 +1,6 @@
 import { cn, getButtonClasses } from '../utils/classNames';
-import profilePlaceholderIcon from '../assets/icons/1757370620719.jpg';
+import profilePlaceholderIcon from '../assets/portrait/retrato.png';
+import { useLanguage } from '../context/LanguageContext';
 // Using simple text links for AboutMe (keeps visual weight light and consistent)
 
 /**
@@ -8,6 +9,12 @@ import profilePlaceholderIcon from '../assets/icons/1757370620719.jpg';
  * Positioned after projects, before contact CTA
  */
 function AboutMe() {
+  const { t } = useLanguage();
+  
+  // Parse multiline description from translations
+  const bioText = t('aboutMe.description');
+  const bioparagraphs = bioText.split('\n\n');
+  
   return (
     <section id="sobre-mi" className={cn(
       'py-16 lg:py-28',
@@ -19,9 +26,9 @@ function AboutMe() {
       )}>
         <div className={cn(
           'flex flex-col md:grid md:grid-cols-12',
-          'gap-[40px]',
+          'gap-6 md:gap-[40px]',
           'max-w-5xl mx-auto',
-          'items-start'
+          'items-center'
         )}>
           
           {/* Bio & Expertise */}
@@ -35,7 +42,7 @@ function AboutMe() {
               'font-bold leading-tight',
               'text-dark mb-4 lg:mb-8'
             )}>
-              Sobre mí
+              {t('aboutMe.title')}
             </h2>
 
             {/* Portrait - Mobile only, appears below title */}
@@ -46,14 +53,14 @@ function AboutMe() {
               <img
                 src={profilePlaceholderIcon}
                 alt="Sara Martínez"
-                className="w-[96px] h-[96px] object-cover rounded-[22px] flex-shrink-0"
+                className="w-[180px] h-[180px] object-cover rounded-2xl flex-shrink-0"
                 style={{ imageRendering: 'auto' }}
                 loading="lazy"
               />
               
               <div className="w-full mt-4 flex flex-row items-start gap-4">
-                <a href="https://linkedin.com/in/sara-menendez" target="_blank" rel="noopener noreferrer" className="text-link">LinkedIn</a>
-                <a href="/docs/CV_SARA_MENENDEZ_WEB_ES.pdf" target="_blank" rel="noopener noreferrer" className="text-link">CV</a>
+                <a href="https://linkedin.com/in/sara-menendez" target="_blank" rel="noopener noreferrer" className="text-link underline underline-offset-2">LinkedIn</a>
+                <a href="/docs/CV_SARA_MENENDEZ_WEB_ES.pdf" target="_blank" rel="noopener noreferrer" className="text-link underline underline-offset-2">CV</a>
               </div>
             </div>
 
@@ -63,31 +70,30 @@ function AboutMe() {
               'text-dark/70',
               'max-w-xl leading-relaxed'
             )}>
-              <p>
-                ¡Hola! Soy Sara, diseñadora web y especialista en UX/UI con formación en Historia del Arte y un sólido recorrido en mediación cultural. Mi carrera comenzó en museos y espacios culturales (MNCARS, librerías como La Central y Fnac), donde aprendí a valorar la importancia. Con el tiempo llevé esa experiencia al entorno digital: primero como freelance y más tarde como Webmaster Manager en Grupo Planeta (EAE Business School), uniendo diseño visual, usabilidad y estrategia digital.
-              </p>
-              <p>
-                Hoy combino mi bagaje humanístico con mi experiencia técnica en diseño web (WordPress, Drupal, Prestashop, Figma, Framer), creando proyectos que no solo funcionan, sino que transmiten identidad, coherencia y sentido.
-              </p>
+              {bioparagraphs.map((paragraph, index) => (
+                <p key={index}>
+                  {paragraph}
+                </p>
+              ))}
             </div>
           </div>
 
           {/* Portrait & Icons - Desktop only, left aligned */}
           <div className={cn(
             'hidden md:flex md:col-span-4',
-            'flex-col items-start gap-6'
+            'flex-col items-center gap-6'
           )}>
             <img
               src={profilePlaceholderIcon}
               alt="Sara Martínez"
-              className="w-[100px] h-[100px] lg:w-[100px] lg:h-[100px] object-cover rounded-full flex-shrink-0"
+              className="w-[200px] h-[200px] lg:w-[240px] lg:h-[240px] object-cover rounded-2xl flex-shrink-0"
               style={{ imageRendering: 'auto' }}
               loading="lazy"
             />
             
-            <div className="w-full mt-4 flex flex-row items-start gap-4">
-              <a href="https://linkedin.com/in/sara-menendez" target="_blank" rel="noopener noreferrer" className="text-link">LinkedIn</a>
-              <a href="/docs/CV_SARA_MENENDEZ_WEB_ES.pdf" target="_blank" rel="noopener noreferrer" className="text-link">CV</a>
+            <div className="flex flex-row gap-4">
+              <a href="https://linkedin.com/in/sara-menendez" target="_blank" rel="noopener noreferrer" className="text-link underline underline-offset-2">LinkedIn</a>
+              <a href="/docs/CV_SARA_MENENDEZ_WEB_ES.pdf" target="_blank" rel="noopener noreferrer" className="text-link underline underline-offset-2">CV</a>
             </div>
           </div>
         </div>
@@ -103,17 +109,17 @@ function AboutMe() {
               'text-3xl md:text-4xl lg:text-5xl',
               'font-normal text-dark mb-4 lg:mb-8'
             )}>
-              ¿Tienes un Proyecto?
+              {t('aboutMe.projectTitle')}
             </h2>
             <p className="text-xl text-dark/70 mb-6 lg:mb-10 leading-relaxed">
-              Si tienes una idea o proyecto que necesita diseño, desarrollo o ambos, me encantaría hablar contigo.
+              {t('aboutMe.projectDescription')}
             </p>
             <div className="flex flex-row gap-4 lg:gap-6 justify-center flex-wrap">
               <a
                 href="/contacto"
                 className={getButtonClasses('primary')}
               >
-                Conectemos
+                {t('aboutMe.projectCta')}
               </a>
             </div>
           </div>

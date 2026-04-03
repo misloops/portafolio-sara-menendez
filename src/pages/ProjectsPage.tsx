@@ -5,6 +5,7 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import ProjectCard from '../components/ProjectCard';
 import { projects } from '../data/portfolio';
+import { useLanguage } from '../context/LanguageContext';
 
 /**
  * ProjectsPage Component
@@ -24,6 +25,7 @@ const ALLOWED_TAGS = [
 ];
 
 function ProjectsPage() {
+  const { t } = useLanguage();
   const [selectedTag, setSelectedTag] = useState<string | null>(null);
 
   // Filter projects based on selected tag
@@ -59,10 +61,10 @@ function ProjectsPage() {
               'font-normal text-dark mb-4 lg:mb-8',
               'leading-tight'
             )}>
-              Proyectos
+              {t('projectsPage.title')}
             </h1>
             <p className="heading-subtitle mb-3 lg:mb-4">
-              Selección de mis trabajos más representativos
+              {t('projectsPage.subtitle')}
             </p>
           </div>
         </div>
@@ -77,7 +79,7 @@ function ProjectsPage() {
         <div className="max-w-7xl mx-auto">
           {/* Filter Chips */}
           <p className="text-sm font-semibold uppercase tracking-widest text-dark/60 mb-3">
-            Filtros
+            {t('projectsPage.filters')}
           </p>
           <div className={cn(
             'flex flex-wrap gap-2 mb-8 pb-6 border-b border-dark/10'
@@ -91,7 +93,7 @@ function ProjectsPage() {
                   : 'hover:bg-[#c3dcc5] hover:border-[#7fab86] focus:bg-[#c3dcc5] focus:border-[#7fab86] active:bg-[#c3dcc5] active:border-[#7fab86]'
               )}
             >
-              Todos
+              {t('projectsPage.filterAll')}
             </button>
             {ALLOWED_TAGS.map((tag) => (
               <button
@@ -138,10 +140,10 @@ function ProjectsPage() {
             'text-3xl md:text-4xl lg:text-5xl',
             'font-normal text-dark mb-4 lg:mb-8'
           )}>
-            ¿Tienes un Proyecto?
+            {t('projectsPage.projectTitle')}
           </h2>
           <p className="text-xl text-dark/70 mb-6 lg:mb-10 leading-relaxed">
-            Si tienes una idea o proyecto que necesita diseño, desarrollo o ambos, me encantaría hablar contigo.
+            {t('projectsPage.projectDescription')}
           </p>
           <div className="flex flex-row gap-4 lg:gap-6 justify-center flex-wrap">
             <a

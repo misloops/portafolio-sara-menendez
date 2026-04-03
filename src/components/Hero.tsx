@@ -1,5 +1,6 @@
 import { cn, getChipClasses, getButtonClasses } from '../utils/classNames';
 import Button from './Button';
+import { useLanguage } from '../context/LanguageContext';
 
 interface HeroProps {
   onActionClick?: (action: string) => void;
@@ -11,6 +12,8 @@ interface HeroProps {
  * Following christinamday.com design patterns with Sara's brand colors
  */
 function Hero({ onActionClick }: HeroProps) {
+  const { t } = useLanguage();
+  
   return (
     <section className={cn(
       'relative',
@@ -37,9 +40,9 @@ function Hero({ onActionClick }: HeroProps) {
             'font-normal leading-[1.02]',
             'text-dark'
           )}>
-            <span className="text-gradient-hero font-bold">Diseño Web</span>
+            <span className="text-gradient-hero font-bold">{t('hero.mainTitle')}</span>
             <br />
-            Creo experiencias web con identidad, usabilidad y criterio estético
+            {t('hero.mainSubtitle')}
           </h1>
 
           {/* Supporting copy - Improved intro */}
@@ -48,7 +51,7 @@ function Hero({ onActionClick }: HeroProps) {
             'max-w-3xl'
           )}>
             <p className="heading-subtitle">
-              Soy Sara y trabajo diseñando, desarrollando y optimizando sitios web con foco en experiencia de usuario.
+              {t('hero.subtitle')}
             </p>
             {/* ...existing code... */}
           </div>
@@ -58,7 +61,7 @@ function Hero({ onActionClick }: HeroProps) {
             'flex flex-wrap gap-2 lg:gap-4',
             'pt-2 lg:pt-4'
           )}>
-            {['Web Manager', 'Diseño UX/UI', 'WordPress', 'Drupal', 'Figma'].map((skill) => (
+            {(t('hero.skills') as any).map((skill: string) => (
               <span
                 key={skill}
                 className={getChipClasses()}
@@ -78,7 +81,7 @@ function Hero({ onActionClick }: HeroProps) {
               href="mailto:sara.m.pumariega@gmail.com"
               className={getButtonClasses('primary')}
             >
-              Escríbeme
+              {t('hero.cta1')}
             </a>
 
             <a
@@ -96,7 +99,7 @@ function Hero({ onActionClick }: HeroProps) {
                 'transition-all duration-200 ease-out'
               )}
             >
-              Proyectos
+              {t('hero.cta2')}
             </a>
 
             <button
@@ -110,7 +113,7 @@ function Hero({ onActionClick }: HeroProps) {
                 'cursor-pointer hover:underline'
               )}
             >
-              Sobre mí
+              {t('hero.cta3')}
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
               </svg>

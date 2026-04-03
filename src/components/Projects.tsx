@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import { projects } from '../data/portfolio';
 import { cn } from '../utils/classNames';
 import ProjectCard from './ProjectCard';
+import { useLanguage } from '../context/LanguageContext';
 
 /**
  * Projects Component
@@ -9,6 +10,8 @@ import ProjectCard from './ProjectCard';
  * Following christinamday.com grid layout: 3 cols desktop, responsive
  */
 function Projects() {
+  const { t } = useLanguage();
+  
   // Show only first 6 projects on home
   const featuredProjects = projects.slice(0, 6);
 
@@ -30,7 +33,7 @@ function Projects() {
             'font-normal leading-tight',
             'text-dark mb-2 lg:mb-6'
           )}>
-            Proyectos destacados
+            {t('projects.title')}
           </h2>
           <p className={cn(
             'text-base md:text-lg',
@@ -38,7 +41,7 @@ function Projects() {
             'leading-relaxed',
             'max-w-3xl mx-auto'
           )}>
-            Trabajos recientes mostrando diseño, desarrollo y pensamiento sistemático.
+            {t('projects.description')}
           </p>
         </div>
 
@@ -69,7 +72,7 @@ function Projects() {
               'transition-all duration-200 ease-out'
             )}
           >
-            Ver todos los proyectos
+            {t('projects.allProjects')}
           </Link>
         </div>
 
