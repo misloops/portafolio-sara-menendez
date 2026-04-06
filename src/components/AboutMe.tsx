@@ -1,4 +1,4 @@
-import { cn, getButtonClasses } from '../utils/classNames';
+import { cn } from '../utils/classNames';
 import profilePlaceholderIcon from '../assets/portrait/retrato.png';
 import { useLanguage } from '../context/LanguageContext';
 // Using simple text links for AboutMe (keeps visual weight light and consistent)
@@ -98,32 +98,6 @@ function AboutMe() {
           </div>
         </div>
 
-        {/* CTA Section */}
-        <div className={cn(
-          'mt-16 lg:mt-28 pt-16 lg:pt-28',
-          'border-t border-[#dee2de]'
-        )}>
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className={cn(
-              'font-serif',
-              'text-3xl md:text-4xl lg:text-5xl',
-              'font-normal text-dark mb-4 lg:mb-8'
-            )}>
-              {t('aboutMe.projectTitle')}
-            </h2>
-            <p className="text-xl text-dark/70 mb-6 lg:mb-10 leading-relaxed">
-              {t('aboutMe.projectDescription')}
-            </p>
-            <div className="flex flex-row gap-4 lg:gap-6 justify-center flex-wrap">
-              <a
-                href="/contacto"
-                className={getButtonClasses('primary')}
-              >
-                {t('aboutMe.projectCta')}
-              </a>
-            </div>
-          </div>
-        </div>
       </div>
     </section>
   );
