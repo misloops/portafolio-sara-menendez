@@ -92,7 +92,7 @@ function Contact() {
 
             {/* LinkedIn */}
             <a
-              href="https://linkedin.com/in/sara-menendez"
+              href="https://www.linkedin.com/in/sara-men%C3%A9ndez/"
               target="_blank"
               rel="noopener noreferrer"
               className="w-full min-h-[72px] sm:min-h-[96px] px-2 sm:px-4 py-3 sm:py-4 rounded-2xl border border-[#dbe3db] bg-[#ffffff66] shadow-[0_8px_24px_rgba(48,46,46,0.08)] flex flex-col items-center justify-center gap-1.5 sm:gap-2 text-dark transition-all duration-200 hover:bg-[#e8eee8] hover:shadow-[0_10px_28px_rgba(48,46,46,0.12)]"

@@ -10,7 +10,7 @@ Información sobre Sara:
 - Especialidades: diseño estratégico, investigación de usuarios, Figma, prototipado, sistemas de diseño
 - Proyectos destacados: Arbola, Beatriz Galindo, EAE Business School, Trick Tales, Alien CSI BioBlitz, Ohmios Records, Mise en Scène
 - Disponible para proyectos de diseño web, rediseños, consultoría UX y desarrollo frontend
-- Contacto: sara.m.pumariega@gmail.com | WhatsApp: +34 625 977 711 | LinkedIn: linkedin.com/in/sara-menendez
+- Contacto: sara.m.pumariega@gmail.com | WhatsApp: +34 625 977 711 | LinkedIn: https://www.linkedin.com/in/sara-men%C3%A9ndez/
 - CV descargable en el portfolio
 
 Reglas:

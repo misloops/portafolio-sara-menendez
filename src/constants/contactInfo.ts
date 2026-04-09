@@ -23,7 +23,7 @@ export const contactData: ContactLink[] = [
     ariaLabel: 'Chat por WhatsApp',
   },
   {
-    href: 'https://linkedin.com/in/sara-menendez',
+    href: 'https://www.linkedin.com/in/sara-men%C3%A9ndez/',
     title: 'LinkedIn',
     isExternal: true,
     ariaLabel: 'Perfil de LinkedIn',

@@ -23,12 +23,6 @@ function Footer() {
           {/* Brand */}
           <div>
             <Logo className="mb-3" imageClassName="h-10 w-auto max-w-none object-contain" />
-            <p className={cn(
-              'text-base text-dark/70',
-              'leading-relaxed'
-            )}>
-              {t('footer.about')}
-            </p>
           </div>
 
           {/* Navigation */}
@@ -81,7 +75,7 @@ function Footer() {
               'flex flex-wrap gap-4'
             )}>
               <a 
-                href="https://linkedin.com/in/sara-menendez"
+                href="https://www.linkedin.com/in/sara-men%C3%A9ndez/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className={cn(

@@ -59,7 +59,7 @@ function AboutMe() {
               />
               
               <div className="w-full mt-4 flex flex-row items-start gap-4">
-                <a href="https://linkedin.com/in/sara-menendez" target="_blank" rel="noopener noreferrer" className="text-link underline underline-offset-2">LinkedIn</a>
+                <a href="https://www.linkedin.com/in/sara-men%C3%A9ndez/" target="_blank" rel="noopener noreferrer" className="text-link underline underline-offset-2">LinkedIn</a>
                 <a href="/docs/CV_SARA_MENENDEZ_WEB_ES.pdf" target="_blank" rel="noopener noreferrer" className="text-link underline underline-offset-2">CV</a>
               </div>
             </div>
@@ -92,7 +92,7 @@ function AboutMe() {
             />
             
             <div className="flex flex-row gap-4">
-              <a href="https://linkedin.com/in/sara-menendez" target="_blank" rel="noopener noreferrer" className="text-link underline underline-offset-2">LinkedIn</a>
+              <a href="https://www.linkedin.com/in/sara-men%C3%A9ndez/" target="_blank" rel="noopener noreferrer" className="text-link underline underline-offset-2">LinkedIn</a>
               <a href="/docs/CV_SARA_MENENDEZ_WEB_ES.pdf" target="_blank" rel="noopener noreferrer" className="text-link underline underline-offset-2">CV</a>
             </div>
           </div>
