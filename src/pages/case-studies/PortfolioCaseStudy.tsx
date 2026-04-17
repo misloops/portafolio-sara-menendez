@@ -20,7 +20,7 @@ export function PortfolioCaseStudy() {
       {/* Hero Section - Following Home Hero Pattern */}
       <section className={cn(
         'relative',
-        'py-10 lg:py-20',
+        'pt-32 pb-16 lg:pt-40 lg:pb-24',
         'px-4 lg:px-6',
         'bg-transparent',
         'overflow-hidden'

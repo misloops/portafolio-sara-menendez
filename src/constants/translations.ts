@@ -15,8 +15,8 @@ export const translations = {
     hero: {
       title: 'Hola, soy Sara',
       mainTitle: 'Diseño Web',
-      mainSubtitle: 'Creo\u00A0experiencias web con identidad, usabilidad y criterio estético',
-      subtitle: 'Soy Sara y trabajo diseñando, desarrollando y optimizando sitios web con foco en experiencia de usuario.',
+      mainSubtitle: 'Soy Sara y diseño, desarrollo y optimizo sitios web con foco en la experiencia de usuario.',
+      subtitle: 'Creo experiencias web con identidad, usabilidad y criterio estético',
       skills: ['Web Manager', 'Diseño UX/UI', 'WordPress', 'Drupal', 'Figma'],
       cta1: 'Escríbeme',
       cta2: 'Proyectos',
@@ -262,7 +262,7 @@ export const translations = {
       },
       portfolio: {
         category: 'React + Design System',
-        heroTitle: 'DESIGN SYSTEM & REACT',
+        heroTitle: 'MI PORTAFOLIO',
         heroDescription: 'Migración desde WordPress y Framer a código nativo con React.',
         heroSubtitle: 'De herramientas visuales a arquitectura técnica completa. Un case study sobre cómo construir un portafolio que sea a la vez galería de trabajo y demostración de capacidad técnica en React.',
         whyRebuildTitle: 'Por Qué Reconstruir',
@@ -318,8 +318,8 @@ export const translations = {
     hero: {
       title: 'Hi, I\'m Sara',
       mainTitle: 'Web Design',
-      mainSubtitle: 'I create web experiences with identity, usability, and aesthetic criteria',
-      subtitle: 'I\'m Sara and I work designing, developing, and optimizing websites with a focus on user experience.',
+      mainSubtitle: 'I\'m Sara and I design, develop, and optimize websites with a focus on user experience.',
+      subtitle: 'I create web experiences with identity, usability, and aesthetic criteria',
       skills: ['Web Manager', 'UX/UI Design', 'WordPress', 'Drupal', 'Figma'],
       cta1: 'Write to me',
       cta2: 'Projects',
@@ -572,7 +572,7 @@ export const translations = {
       },
       portfolio: {
         category: 'React + Design System',
-        heroTitle: 'DESIGN SYSTEM & REACT',
+        heroTitle: 'MI PORTAFOLIO',
         heroDescription: 'Migration from WordPress and Framer to native React code.',
         heroSubtitle: 'From visual tools to complete technical architecture. A case study on how to build a portfolio that is both a gallery of work and a demonstration of technical capability in React.',
         whyRebuildTitle: 'Why Rebuild',
