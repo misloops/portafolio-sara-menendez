@@ -52,33 +52,38 @@ export function OhmiosRecordsCaseStudy() {
         </div>
       </section>
 
+      {/* Cover Image & Challenge/Objective Section */}
       <section className="py-12 lg:py-16 px-4 lg:px-6 bg-transparent">
-        <div className="max-w-5xl mx-auto">
-          <img
-            src="/assets/projects/ohmios-records/OHMIOS-RECORDS_COVER.png"
-            alt="Ohmios Records Online - Cover"
-            className="w-full h-auto object-contain rounded-2xl shadow-lg"
-          />
-        </div>
-      </section>
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 lg:gap-12 items-center">
+            {/* Left Column - Challenge & Objective Cards (40%) */}
+            <div className="flex flex-col gap-6 lg:col-span-2">
+              <article className="rounded-2xl border border-primary-300/25 bg-[#ffffff5c] backdrop-blur-sm p-6 md:p-8">
+                <h3 className="font-serif text-2xl font-bold text-dark mb-4">{t('caseStudyLabels.challenge')}</h3>
+                <p className="text-base md:text-[17px] leading-[28px] text-dark/80">
+                  {ohmiosContent.challengeText}
+                </p>
+              </article>
 
-      <section className="py-16 lg:py-20 px-4 lg:px-6 bg-transparent">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8">
-          <article className="rounded-2xl border border-primary-300/25 bg-[#ffffff5c] backdrop-blur-sm p-6 md:p-8">
-            <h3 className="font-serif text-2xl font-bold text-dark mb-4">{t('caseStudyLabels.challenge')}</h3>
-            <p className="text-base md:text-[17px] leading-[28px] text-dark/80">
-              {ohmiosContent.challengeText}
-            </p>
-          </article>
+              <article className="rounded-2xl border border-primary-300/25 bg-[#ffffff5c] backdrop-blur-sm p-6 md:p-8">
+                <h3 className="font-serif text-2xl font-bold text-dark mb-4">{t('caseStudyLabels.objective')}</h3>
+                <ul className="space-y-3 text-base md:text-[17px] leading-[28px] text-dark/80">
+                  {ohmiosContent.objectiveItems.map((item: string) => (
+                    <li key={item} className="flex gap-3"><span className="text-primary-400 font-bold">•</span><span>{item}</span></li>
+                  ))}
+                </ul>
+              </article>
+            </div>
 
-          <article className="rounded-2xl border border-primary-300/25 bg-[#ffffff5c] backdrop-blur-sm p-6 md:p-8">
-            <h3 className="font-serif text-2xl font-bold text-dark mb-4">{t('caseStudyLabels.objective')}</h3>
-            <ul className="space-y-3 text-base md:text-[17px] leading-[28px] text-dark/80">
-              {ohmiosContent.objectiveItems.map((item: string) => (
-                <li key={item} className="flex gap-3"><span className="text-primary-400 font-bold">•</span><span>{item}</span></li>
-              ))}
-            </ul>
-          </article>
+            {/* Right Column - Cover Image (60%) */}
+            <div className="flex items-center justify-center lg:col-span-3">
+              <img
+                src="/assets/projects/ohmios-records/OHMIOS_cover.png"
+                alt="Ohmios Records Online - Cover"
+                className="w-full h-auto object-contain rounded-2xl shadow-lg"
+              />
+            </div>
+          </div>
         </div>
       </section>
 

@@ -1,8 +1,6 @@
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import { cn, getChipClasses } from '../../utils/classNames';
-import { ScrollableCaseStudyImage } from '../../components/ScrollableCaseStudyImage';
-import { BeforeAfterImageCompare } from '../../components/BeforeAfterImageCompare';
 import { CaseStudyPager } from '../../components/case-study/CaseStudyPager';
 import { useLanguage } from '../../context/LanguageContext';
 import { translations } from '../../constants/translations';
@@ -85,12 +83,30 @@ export function EAECaseStudy() {
                 <span key={chip} className={getChipClasses()}>{chip}</span>
               ))}
             </div>
+
+            {/* View Online Button */}
+            <div className={cn(
+              'pt-2 lg:pt-4',
+              'flex items-center'
+            )}>
+              <a
+                href="https://www.eaebarcelona.com/es/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-[#f2f4f1] text-[#302e2e] border border-[#e8e8e6] font-semibold rounded-xl hover:bg-[#c3b7c3] transition-all duration-200 shadow-[0_4px_12px_rgba(0,0,0,0.08)] hover:shadow-[0_6px_16px_rgba(195,183,195,0.2)]"
+              >
+                {t('caseStudyLabels.viewOnlineButton')}
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                </svg>
+              </a>
+            </div>
           </div>
         </div>
       </section>
 
       {/* INFORMACIÓN Section - Two Columns */}
-      <section className="py-20 lg:py-28 px-4 lg:px-6 bg-transparent">
+      <section className="pt-10 lg:pt-12 pb-20 lg:pb-28 px-4 lg:px-6 bg-transparent">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-10 gap-6 lg:gap-[40px]">
             {/* Title - Left Column (40%) */}
@@ -113,12 +129,14 @@ export function EAECaseStudy() {
 
             {/* Right Column - Image (60%) */}
             <div className="lg:col-span-6 flex items-start justify-center">
-              <ScrollableCaseStudyImage
-                src="/assets/projects/eae-business-school/EAE-BUSINESS_COVER.jpg"
-                alt="EAE Business School Cover"
-                caption="Scroll interno para ver la página completa"
-                viewportClassName="h-[300px] md:h-[420px] lg:h-[560px]"
-              />
+              <div className="w-full rounded-2xl border border-dark/15 bg-white/65 shadow-[0_20px_45px_rgba(48,46,46,0.12)] backdrop-blur-sm overflow-hidden">
+                <img
+                  src="/assets/projects/eae-business-school/EAE-BUSINESS_COVER.jpg"
+                  alt="EAE Business School"
+                  className="w-full h-auto object-cover"
+                  loading="lazy"
+                />
+              </div>
             </div>
           </div>
         </div>
@@ -156,17 +174,35 @@ export function EAECaseStudy() {
             </div>
           </div>
 
-          {/* Right Column - Before/After compare */}
+          {/* Right Column - Image Placeholder */}
           <div>
             <h3 className="text-2xl font-serif font-bold text-dark mb-6">{t('caseStudyLabels.beforeAfter')}</h3>
-            <BeforeAfterImageCompare
-              beforeSrc="/assets/projects/EAEweb_antes.png"
-              afterSrc="/assets/projects/Nuevo diseño área.png"
-              beforeAlt="EAE antes"
-              afterAlt="EAE despues"
-              beforeLabel={t('caseStudyLabels.before')}
-              afterLabel={t('caseStudyLabels.after')}
-            />
+            <div className="grid grid-cols-1 gap-6">
+              {/* Before Image */}
+              <div className="flex flex-col gap-3">
+                <div className="rounded-2xl border border-dark/15 bg-white/65 shadow-[0_20px_45px_rgba(48,46,46,0.12)] backdrop-blur-sm overflow-hidden h-[320px] md:h-[400px] lg:h-[480px]">
+                  <img
+                    src="/assets/projects/eae-business-school/EAE_ficha-antes.png"
+                    alt="Ficha de programa antes"
+                    className="w-full h-full object-contain"
+                    loading="lazy"
+                  />
+                </div>
+                <p className="text-sm font-medium text-dark/70">Ficha de programa antes</p>
+              </div>
+
+              {/* After Image Placeholder */}
+              <div className="rounded-2xl border border-dark/15 bg-white/65 shadow-[0_20px_45px_rgba(48,46,46,0.12)] backdrop-blur-sm overflow-hidden h-[320px] md:h-[400px] lg:h-[480px] flex items-center justify-center">
+                <div className="flex flex-col items-center justify-center gap-3 text-center w-full h-full">
+                  <svg className="w-10 h-10 text-dark/30" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24">
+                    <rect x="3" y="3" width="18" height="18" rx="3"/>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M3 16l5-5 4 4 3-3 6 6"/>
+                    <circle cx="8.5" cy="8.5" r="1.5"/>
+                  </svg>
+                  <p className="text-dark/50 font-medium">{t('caseStudyLabels.upcomingScreenshots')}</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
         </div>
@@ -192,36 +228,68 @@ export function EAECaseStudy() {
           </div>
         </div>
 
-        {/* Próximas imágenes */}
-        <div className="rounded-2xl border border-gray-200/60 bg-[#ffffff5c] backdrop-blur-sm shadow-[0_8px_24px_rgba(48,46,46,0.08)] p-8 flex flex-col items-center justify-center gap-3 text-center min-h-[160px]">
-          <svg className="w-10 h-10 text-dark/30" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24">
-            <rect x="3" y="3" width="18" height="18" rx="3"/>
-            <path strokeLinecap="round" strokeLinejoin="round" d="M3 16l5-5 4 4 3-3 6 6"/>
-            <circle cx="8.5" cy="8.5" r="1.5"/>
-          </svg>
-          <p className="text-dark/50 font-medium">{t('caseStudyLabels.upcomingScreenshots')}</p>
-          <p className="text-sm text-dark/35">{t('caseStudyLabels.upcomingScreenshotsDesc')}</p>
-        </div>
-        </div>
-      </section>
-
-      {/* Ver online CTA */}
-      <section className="py-12 lg:py-16 px-4 lg:px-6 bg-transparent">
-        <div className="max-w-7xl mx-auto">
-          <div className="flex flex-col items-center justify-center gap-4 text-center">
-            <p className="text-lg text-dark/70">{t('caseStudyLabels.viewOnline')}</p>
-            <a
-              href="https://www.eaebarcelona.com/es/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-[#f2f4f1] text-[#302e2e] border border-[#e8e8e6] font-semibold rounded-xl hover:bg-[#c3b7c3] transition-all duration-200 shadow-[0_4px_12px_rgba(0,0,0,0.08)] hover:shadow-[0_6px_16px_rgba(195,183,195,0.2)]"
-            >
-              {t('caseStudyLabels.viewOnlineButton')}
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+        {/* Gallery Section */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {/* Large image - Top Left, spans 2 rows */}
+          <div className="md:row-span-2 rounded-2xl border border-dark/15 bg-white/65 shadow-[0_20px_45px_rgba(48,46,46,0.12)] backdrop-blur-sm overflow-hidden h-[320px] md:h-[500px] flex items-center justify-center">
+            <div className="flex flex-col items-center justify-center gap-3 text-center w-full h-full">
+              <svg className="w-10 h-10 text-dark/30" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24">
+                <rect x="3" y="3" width="18" height="18" rx="3"/>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M3 16l5-5 4 4 3-3 6 6"/>
+                <circle cx="8.5" cy="8.5" r="1.5"/>
               </svg>
-            </a>
+              <p className="text-dark/50 font-medium text-sm">{t('caseStudyLabels.upcomingScreenshots')}</p>
+            </div>
           </div>
+
+          {/* Medium image - Top Right */}
+          <div className="rounded-2xl border border-dark/15 bg-white/65 shadow-[0_20px_45px_rgba(48,46,46,0.12)] backdrop-blur-sm overflow-hidden h-[240px] flex items-center justify-center">
+            <div className="flex flex-col items-center justify-center gap-3 text-center w-full h-full">
+              <svg className="w-8 h-8 text-dark/30" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24">
+                <rect x="3" y="3" width="18" height="18" rx="3"/>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M3 16l5-5 4 4 3-3 6 6"/>
+                <circle cx="8.5" cy="8.5" r="1.5"/>
+              </svg>
+              <p className="text-dark/50 font-medium text-xs">{t('caseStudyLabels.upcomingScreenshots')}</p>
+            </div>
+          </div>
+
+          {/* Small image - Middle Right */}
+          <div className="rounded-2xl border border-dark/15 bg-white/65 shadow-[0_20px_45px_rgba(48,46,46,0.12)] backdrop-blur-sm overflow-hidden h-[240px] flex items-center justify-center">
+            <div className="flex flex-col items-center justify-center gap-3 text-center w-full h-full">
+              <svg className="w-8 h-8 text-dark/30" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24">
+                <rect x="3" y="3" width="18" height="18" rx="3"/>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M3 16l5-5 4 4 3-3 6 6"/>
+                <circle cx="8.5" cy="8.5" r="1.5"/>
+              </svg>
+              <p className="text-dark/50 font-medium text-xs">{t('caseStudyLabels.upcomingScreenshots')}</p>
+            </div>
+          </div>
+
+          {/* Bottom Left image */}
+          <div className="rounded-2xl border border-dark/15 bg-white/65 shadow-[0_20px_45px_rgba(48,46,46,0.12)] backdrop-blur-sm overflow-hidden h-[240px] flex items-center justify-center md:col-start-2">
+            <div className="flex flex-col items-center justify-center gap-3 text-center w-full h-full">
+              <svg className="w-8 h-8 text-dark/30" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24">
+                <rect x="3" y="3" width="18" height="18" rx="3"/>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M3 16l5-5 4 4 3-3 6 6"/>
+                <circle cx="8.5" cy="8.5" r="1.5"/>
+              </svg>
+              <p className="text-dark/50 font-medium text-xs">{t('caseStudyLabels.upcomingScreenshots')}</p>
+            </div>
+          </div>
+
+          {/* Bottom Right image */}
+          <div className="rounded-2xl border border-dark/15 bg-white/65 shadow-[0_20px_45px_rgba(48,46,46,0.12)] backdrop-blur-sm overflow-hidden h-[240px] flex items-center justify-center">
+            <div className="flex flex-col items-center justify-center gap-3 text-center w-full h-full">
+              <svg className="w-8 h-8 text-dark/30" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24">
+                <rect x="3" y="3" width="18" height="18" rx="3"/>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M3 16l5-5 4 4 3-3 6 6"/>
+                <circle cx="8.5" cy="8.5" r="1.5"/>
+              </svg>
+              <p className="text-dark/50 font-medium text-xs">{t('caseStudyLabels.upcomingScreenshots')}</p>
+            </div>
+          </div>
+        </div>
         </div>
       </section>
 
