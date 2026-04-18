@@ -1,4 +1,5 @@
 import { Route, Routes } from 'react-router-dom';
+import { Analytics } from '@vercel/analytics/react';
 import { LanguageProvider } from './context/LanguageContext';
 import HomePage from './pages/HomePage';
 import ProjectsPage from './pages/ProjectsPage';
@@ -17,6 +18,7 @@ function App() {
         <Route path="/proyectos/:slug" element={<CaseStudyPage />} />
       </Routes>
       <InfoNote />
+      <Analytics />
     </LanguageProvider>
   );
 }
