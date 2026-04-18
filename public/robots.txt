@@ -1,0 +1,10 @@
+# https://www.robotstxt.org/robotstxt.html
+User-agent: *
+Allow: /
+Disallow: /admin
+Disallow: /.env
+Disallow: /node_modules
+Disallow: *.pdf
+
+# Sitemap
+Sitemap: https://saram.me/sitemap.xml

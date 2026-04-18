@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <!-- Homepage -->
+  <url>
+    <loc>https://saram.me/</loc>
+    <lastmod>2026-04-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- Projects Page -->
+  <url>
+    <loc>https://saram.me/proyectos</loc>
+    <lastmod>2026-04-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Contact Page -->
+  <url>
+    <loc>https://saram.me/contacto</loc>
+    <lastmod>2026-04-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Case Studies -->
+  <url>
+    <loc>https://saram.me/proyectos/mi-portafolio-2026</loc>
+    <lastmod>2026-04-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://saram.me/assets/projects/portafolio-2026/MIPORTAFOLIO_cover.jpg</image:loc>
+      <image:title>Mi Portafolio 2026 - React + TypeScript</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://saram.me/proyectos/eae-business-school</loc>
+    <lastmod>2026-04-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://saram.me/assets/projects/eae-business-school/EAE-BUSINESS_COVER.jpg</image:loc>
+      <image:title>EAE Business School - Drupal Web Manager</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://saram.me/proyectos/alien-csi-bioblitz</loc>
+    <lastmod>2026-04-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://saram.me/assets/projects/alien-csi-bioblitz/ALIEN-CSI_COVER.png</image:loc>
+      <image:title>Alien CSI Bioblitz - Plataforma de Ciencia Ciudadana</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://saram.me/proyectos/ohmios-records</loc>
+    <lastmod>2026-04-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://saram.me/assets/projects/ohmios-records/OHMIOS-RECORDS_COVER.png</image:loc>
+      <image:title>Ohmios Records - Tienda Online de Vinilo</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://saram.me/proyectos/trick-tales-app</loc>
+    <lastmod>2026-04-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://saram.me/assets/projects/trick-tales/trick-tales_cover.jpg</image:loc>
+      <image:title>Trick Tales - App UX/UI para Mascotas</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://saram.me/proyectos/mise-en-scene</loc>
+    <lastmod>2026-04-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://saram.me/assets/projects/mise-en-scene/MISE-EN-SCENE_COVER.png</image:loc>
+      <image:title>Mise en Scène - Tienda Online de Moda</image:title>
+    </image:image>
+  </url>
+</urlset>

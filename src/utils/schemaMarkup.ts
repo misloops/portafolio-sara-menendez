@@ -1,17 +1,12 @@
-import { useEffect } from 'react';
-import { Route, Routes } from 'react-router-dom';
-import { Analytics } from '@vercel/analytics/react';
-import { LanguageProvider } from './context/LanguageContext';
-import HomePage from './pages/HomePage';
-import ProjectsPage from './pages/ProjectsPage';
-import CaseStudyPage from './pages/CaseStudyPage';
-import ContactPage from './pages/ContactPage';
-import InfoNote from './components/InfoNote';
-import InfoTab from './components/InfoTab';
+/**
+ * SEO Schema Markup Component
+ * Injects structured data (JSON-LD) into the document head
+ * Helps search engines understand page content better
+ */
 
-function App() {
-  // Inject JSON-LD Schema Markup
-  useEffect(() => {
+export function useSchemaMarkup() {
+  React.useEffect(() => {
+    // Person/Portfolio Schema
     const personSchema = {
       '@context': 'https://schema.org',
       '@type': 'Person',
@@ -36,6 +31,7 @@ function App() {
       }
     };
 
+    // Add schema to head
     const script = document.createElement('script');
     script.type = 'application/ld+json';
     script.innerHTML = JSON.stringify(personSchema);
@@ -45,18 +41,4 @@ function App() {
       document.head.removeChild(script);
     };
   }, []);
-  return (
-    <LanguageProvider>
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/proyectos" element={<ProjectsPage />} />
-        <Route path="/contacto" element={<ContactPage />} />
-        <Route path="/proyectos/:slug" element={<CaseStudyPage />} />
-      </Routes>
-      <InfoNote />
-      <Analytics />
-    </LanguageProvider>
-  );
 }
-
-export default App;
