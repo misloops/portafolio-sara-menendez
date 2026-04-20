@@ -3,9 +3,9 @@
  * Injects structured data (JSON-LD) into the document head
  * Helps search engines understand page content better
  */
-
+import { useEffect } from 'react';
 export function useSchemaMarkup() {
-  React.useEffect(() => {
+  useEffect(() => {
     // Person/Portfolio Schema
     const personSchema = {
       '@context': 'https://schema.org',
