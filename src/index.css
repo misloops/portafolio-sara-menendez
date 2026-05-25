@@ -26,8 +26,7 @@
 
 /* ===== Image Optimization ===== */
 img {
-  image-rendering: crisp-edges;
-  image-rendering: -webkit-optimize-contrast;
+  image-rendering: auto;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

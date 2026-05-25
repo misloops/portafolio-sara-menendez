@@ -38,6 +38,7 @@ function ProjectCard({
 
   const imageFitClass = imageFit === 'cover' ? 'object-cover' : 'object-contain';
   const imagePositionClass = imagePosition === 'top' ? 'object-top' : imagePosition === 'bottom' ? 'object-bottom' : 'object-center';
+  const imageSrc = (image && (image.startsWith('/') || image.startsWith('http'))) ? image : '/assets/projects/placeholders/case-study-placeholder-1.svg';
   
   const cardContent = (
     <article className={cn(
@@ -55,9 +56,8 @@ function ProjectCard({
         'border-b border-[#dee2de]'
       )}>
         <div className='absolute inset-0 flex items-center justify-center overflow-hidden rounded-t-2xl bg-white'>
-          {image.startsWith('/') || image.startsWith('http') ? (
             <img 
-              src={image} 
+              src={imageSrc} 
               alt={title}
               loading="lazy"
               decoding="async"
@@ -69,14 +69,11 @@ function ProjectCard({
                 'group-hover:scale-105 transition-transform duration-300'
               )}
               style={{
-                imageRendering: 'crisp-edges',
+                imageRendering: 'auto',
                 WebkitFontSmoothing: 'antialiased',
                 backfaceVisibility: 'hidden'
               }}
             />
-          ) : (
-            <span className="text-5xl flex items-center justify-center h-full">{image}</span>
-          )}
         </div>
         <div className={cn(
           'absolute inset-0',

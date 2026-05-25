@@ -10,6 +10,7 @@ export const translations = {
     navigation: {
       inicio: 'Inicio',
       sobre: 'Sobre mí',
+      wordpress: 'WordPress',
       proyectos: 'Proyectos',
       contacto: 'Contacto',
     },
@@ -314,6 +315,7 @@ export const translations = {
     navigation: {
       inicio: 'Home',
       sobre: 'About',
+      wordpress: 'WordPress',
       proyectos: 'Projects',
       contacto: 'Contact',
     },
