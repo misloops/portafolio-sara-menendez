@@ -111,10 +111,10 @@ export default {
       borderRadius: {
         none: "0",
         xs: "0.25rem",   // 4px
-        sm: "0.375rem",  // 6px
-        base: "0.5rem",  // 8px (default lg)
-        lg: "0.5rem",    // 8px
-        xl: "0.75rem",   // 12px
+        sm: "0.25rem",   // 4px
+        base: "0.25rem", // 4px
+        lg: "0.25rem",   // 4px
+        xl: "0.25rem",   // 4px
         full: "9999px",
       },
 

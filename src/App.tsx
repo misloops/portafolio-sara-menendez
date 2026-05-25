@@ -6,6 +6,7 @@ import HomePage from './pages/HomePage';
 import ProjectsPage from './pages/ProjectsPage';
 import CaseStudyPage from './pages/CaseStudyPage';
 import ContactPage from './pages/ContactPage';
+import AboutPage from './pages/AboutPage';
 import InfoNote from './components/InfoNote';
 import InfoTab from './components/InfoTab';
 
@@ -52,6 +53,7 @@ function App() {
         <Route path="/proyectos" element={<ProjectsPage />} />
         <Route path="/contacto" element={<ContactPage />} />
         <Route path="/proyectos/:slug" element={<CaseStudyPage />} />
+        <Route path="/sobre-mi" element={<AboutPage />} />
       </Routes>
       <InfoNote />
       <Analytics />

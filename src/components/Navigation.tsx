@@ -11,6 +11,7 @@ function Navigation({ onNavigate, activeSection }: NavigationProps) {
 
   const NAV_ITEMS = [
     { href: '/#inicio', id: 'inicio', label: t('navigation.inicio') },
+    { href: '/sobre-mi', id: 'sobre-mi', label: t('navigation.sobre') },
     { href: '/proyectos', id: 'proyectos', label: t('navigation.proyectos') },
     { href: '/contacto', id: 'contacto', label: t('navigation.contacto') }
   ];

@@ -19,7 +19,7 @@ export function OhmiosCaseStudy() {
         category="Case Study: Music Platform"
         title="Ohmios Records"
         summary="Plataforma de distribución musical independiente."
-        context="Proyecto colaborativo para artistas emergentes."
+        context="Proyecto tienda online de música  emergentes."
         role="UX/UI Designer"
         at="Proyecto Colaborativo"
         year="2025"

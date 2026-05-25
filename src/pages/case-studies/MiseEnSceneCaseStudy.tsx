@@ -34,7 +34,7 @@ export function MiseEnSceneCaseStudy() {
         ]}
       />
 
-      <section className="py-20 lg:py-28 px-4 lg:px-6 bg-transparent">
+      <section className="py-20 lg:py-28 px-4 lg:px-6 bg-transparent hidden">
         <div className="max-w-7xl mx-auto">
           <h2 className="font-serif text-3xl md:text-4xl font-bold text-dark mb-6">Contenido Próximamente</h2>
           <p className="text-lg text-dark/70">Sección en desarrollo...</p>

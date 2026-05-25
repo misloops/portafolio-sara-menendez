@@ -174,36 +174,6 @@ export function EAECaseStudy() {
             </div>
           </div>
 
-          {/* Right Column - Image Placeholder */}
-          <div>
-            <h3 className="text-2xl font-serif font-bold text-dark mb-6">{t('caseStudyLabels.beforeAfter')}</h3>
-            <div className="grid grid-cols-1 gap-6">
-              {/* Before Image */}
-              <div className="flex flex-col gap-3">
-                <div className="rounded-2xl border border-dark/15 bg-white/65 shadow-[0_20px_45px_rgba(48,46,46,0.12)] backdrop-blur-sm overflow-hidden h-[320px] md:h-[400px] lg:h-[480px]">
-                  <img
-                    src="/assets/projects/eae-business-school/EAE_ficha-antes.png"
-                    alt="Ficha de programa antes"
-                    className="w-full h-full object-contain"
-                    loading="lazy"
-                  />
-                </div>
-                <p className="text-sm font-medium text-dark/70">Ficha de programa antes</p>
-              </div>
-
-              {/* After Image Placeholder */}
-              <div className="rounded-2xl border border-dark/15 bg-white/65 shadow-[0_20px_45px_rgba(48,46,46,0.12)] backdrop-blur-sm overflow-hidden h-[320px] md:h-[400px] lg:h-[480px] flex items-center justify-center">
-                <div className="flex flex-col items-center justify-center gap-3 text-center w-full h-full">
-                  <svg className="w-10 h-10 text-dark/30" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24">
-                    <rect x="3" y="3" width="18" height="18" rx="3"/>
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M3 16l5-5 4 4 3-3 6 6"/>
-                    <circle cx="8.5" cy="8.5" r="1.5"/>
-                  </svg>
-                  <p className="text-dark/50 font-medium">{t('caseStudyLabels.upcomingScreenshots')}</p>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
         </div>
       </section>
@@ -214,8 +184,6 @@ export function EAECaseStudy() {
           <h2 className="font-serif text-3xl md:text-4xl font-bold text-dark mb-8">
             {t('caseStudyLabels.achievements')}
           </h2>
-        {/* Top Row - Results Text */}
-        <div className="mb-12">
           <div className="bg-light/50 border border-primary-300/30 rounded-lg p-8 md:p-12">
             <ul className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {eaeContent.achievementItems.map((item: string) => (
@@ -226,70 +194,6 @@ export function EAECaseStudy() {
               ))}
             </ul>
           </div>
-        </div>
-
-        {/* Gallery Section */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {/* Large image - Top Left, spans 2 rows */}
-          <div className="md:row-span-2 rounded-2xl border border-dark/15 bg-white/65 shadow-[0_20px_45px_rgba(48,46,46,0.12)] backdrop-blur-sm overflow-hidden h-[320px] md:h-[500px] flex items-center justify-center">
-            <div className="flex flex-col items-center justify-center gap-3 text-center w-full h-full">
-              <svg className="w-10 h-10 text-dark/30" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24">
-                <rect x="3" y="3" width="18" height="18" rx="3"/>
-                <path strokeLinecap="round" strokeLinejoin="round" d="M3 16l5-5 4 4 3-3 6 6"/>
-                <circle cx="8.5" cy="8.5" r="1.5"/>
-              </svg>
-              <p className="text-dark/50 font-medium text-sm">{t('caseStudyLabels.upcomingScreenshots')}</p>
-            </div>
-          </div>
-
-          {/* Medium image - Top Right */}
-          <div className="rounded-2xl border border-dark/15 bg-white/65 shadow-[0_20px_45px_rgba(48,46,46,0.12)] backdrop-blur-sm overflow-hidden h-[240px] flex items-center justify-center">
-            <div className="flex flex-col items-center justify-center gap-3 text-center w-full h-full">
-              <svg className="w-8 h-8 text-dark/30" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24">
-                <rect x="3" y="3" width="18" height="18" rx="3"/>
-                <path strokeLinecap="round" strokeLinejoin="round" d="M3 16l5-5 4 4 3-3 6 6"/>
-                <circle cx="8.5" cy="8.5" r="1.5"/>
-              </svg>
-              <p className="text-dark/50 font-medium text-xs">{t('caseStudyLabels.upcomingScreenshots')}</p>
-            </div>
-          </div>
-
-          {/* Small image - Middle Right */}
-          <div className="rounded-2xl border border-dark/15 bg-white/65 shadow-[0_20px_45px_rgba(48,46,46,0.12)] backdrop-blur-sm overflow-hidden h-[240px] flex items-center justify-center">
-            <div className="flex flex-col items-center justify-center gap-3 text-center w-full h-full">
-              <svg className="w-8 h-8 text-dark/30" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24">
-                <rect x="3" y="3" width="18" height="18" rx="3"/>
-                <path strokeLinecap="round" strokeLinejoin="round" d="M3 16l5-5 4 4 3-3 6 6"/>
-                <circle cx="8.5" cy="8.5" r="1.5"/>
-              </svg>
-              <p className="text-dark/50 font-medium text-xs">{t('caseStudyLabels.upcomingScreenshots')}</p>
-            </div>
-          </div>
-
-          {/* Bottom Left image */}
-          <div className="rounded-2xl border border-dark/15 bg-white/65 shadow-[0_20px_45px_rgba(48,46,46,0.12)] backdrop-blur-sm overflow-hidden h-[240px] flex items-center justify-center md:col-start-2">
-            <div className="flex flex-col items-center justify-center gap-3 text-center w-full h-full">
-              <svg className="w-8 h-8 text-dark/30" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24">
-                <rect x="3" y="3" width="18" height="18" rx="3"/>
-                <path strokeLinecap="round" strokeLinejoin="round" d="M3 16l5-5 4 4 3-3 6 6"/>
-                <circle cx="8.5" cy="8.5" r="1.5"/>
-              </svg>
-              <p className="text-dark/50 font-medium text-xs">{t('caseStudyLabels.upcomingScreenshots')}</p>
-            </div>
-          </div>
-
-          {/* Bottom Right image */}
-          <div className="rounded-2xl border border-dark/15 bg-white/65 shadow-[0_20px_45px_rgba(48,46,46,0.12)] backdrop-blur-sm overflow-hidden h-[240px] flex items-center justify-center">
-            <div className="flex flex-col items-center justify-center gap-3 text-center w-full h-full">
-              <svg className="w-8 h-8 text-dark/30" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24">
-                <rect x="3" y="3" width="18" height="18" rx="3"/>
-                <path strokeLinecap="round" strokeLinejoin="round" d="M3 16l5-5 4 4 3-3 6 6"/>
-                <circle cx="8.5" cy="8.5" r="1.5"/>
-              </svg>
-              <p className="text-dark/50 font-medium text-xs">{t('caseStudyLabels.upcomingScreenshots')}</p>
-            </div>
-          </div>
-        </div>
         </div>
       </section>
 

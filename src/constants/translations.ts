@@ -9,6 +9,7 @@ export const translations = {
   es: {
     navigation: {
       inicio: 'Inicio',
+      sobre: 'Sobre mí',
       proyectos: 'Proyectos',
       contacto: 'Contacto',
     },
@@ -312,6 +313,7 @@ export const translations = {
   en: {
     navigation: {
       inicio: 'Home',
+      sobre: 'About',
       proyectos: 'Projects',
       contacto: 'Contact',
     },
