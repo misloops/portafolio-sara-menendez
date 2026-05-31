@@ -4,7 +4,9 @@ import Header from '../components/Header';
 import Hero from '../components/Hero';
 import Projects from '../components/Projects';
 import AboutMe from '../components/AboutMe';
+
 import Footer from '../components/Footer';
+import WebAuditBanner from '../components/WebAuditBanner';
 
 function HomePage() {
   const location = useLocation();
@@ -81,6 +83,7 @@ function HomePage() {
         <Hero onActionClick={handleHeroAction} />
         <Projects />
         <AboutMe />
+        <WebAuditBanner />
       </main>
 
       <Footer />

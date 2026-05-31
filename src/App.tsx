@@ -19,8 +19,8 @@ function App() {
       '@context': 'https://schema.org',
       '@type': 'Person',
       name: 'Sara Menéndez',
-      url: 'https://saram.me',
-      image: 'https://saram.me/assets/projects/portafolio-2026/MIPORTAFOLIO_cover.jpg',
+      url: 'https://portafolio-sara-menendez.vercel.app/',
+      image: 'https://portafolio-sara-menendez.vercel.app/assets/projects/portafolio-2026/MIPORTAFOLIO_cover.jpg',
       description: 'Diseñadora y Desarrolladora Web especializada en React, WordPress y estrategia digital',
       sameAs: [
         'https://github.com/misloops',

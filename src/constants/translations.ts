@@ -10,23 +10,24 @@ export const translations = {
     navigation: {
       inicio: 'Inicio',
       sobre: 'Sobre mí',
-      wordpress: 'WordPress',
+      wordpress: 'Diseño WordPress',
       proyectos: 'Proyectos',
       contacto: 'Contacto',
     },
     hero: {
       title: 'Hola, soy Sara',
       mainTitle: 'Diseño Web',
-      mainSubtitle: 'Soy Sara y diseño, desarrollo y optimizo sitios web con foco en la experiencia de usuario.',
-      subtitle: 'Creo experiencias web con identidad, usabilidad y criterio estético',
-      skills: ['Web Manager', 'Diseño UX/UI', 'WordPress', 'Drupal', 'Figma'],
-      cta1: 'Escríbeme',
+      mainSubtitle: 'Tu web debería trabajar para ti, no darte problemas.',
+      subtitle: 'Porque una web no solo tiene que verse bien. Tiene que funcionar bien. Diseño, desarrollo y optimizo sitios WordPress funcionales, intuitivos y fáciles de mantener, que combinan diseño, usabilidad y rendimiento para ayudarte a transmitir confianza y centrarte en lo importante: tu negocio.',
+
+      skills: ['Web Manager', 'Diseño UX/UI', 'WordPress', 'Drupal',],
+      cta1: '¿Hablamos?',
       cta2: 'Proyectos',
       cta3: 'Sobre mí',
     },
     aboutMe: {
       title: 'Sobre mí',
-      description: 'Soy una diseñadora UX/UI con conocimientos en frontend development. Me encanta trabajar en proyectos desafiantes que requieran innovación y atención al detalle.\n\nMi enfoque combina diseño estratégico, investigación de usuarios y código limpio para crear soluciones que no solo se ven bien, sino que funcionan de manera intuitiva.',
+      description: 'Soy Sara Menéndez diseñadora web que vive en Barcelona y trabajando para clientes en todo el territorio español. Estoy especializada sobre todo  en WordPress con más de 6 años de experiencia. Aunque también trabajo con otros CMS como Drupal ( Web Manager en EAE) y Prestashop. Tengo un perfil híbrido: mi formación base es Historia del Arte y mi experiencia profesional previa al diseño web está basada sobre todo en el sector cultural, atención al cliente y comunicación..',
       cta: 'Descargar CV',
     },
     services: {
@@ -48,11 +49,12 @@ export const translations = {
       ],
     },
     projects: {
-      title: 'Proyectos',
-      description: 'Trabajos recientes mostrando diseño, desarrollo y pensamiento sistemático.',
-      viewCase: 'Ver caso de estudio',
-      allProjects: 'Ver todos los proyectos',
-    },
+  title: 'Proyectos',
+  description: 'Algunos de mis proyectos más destacados',
+  viewCase: 'Ver caso de estudio',
+  allProjects: 'Ver todos los proyectos',
+},
+
     contact: {
       title: 'Contacto',
       subtitle: '¿Necesitas mejorar la experiencia de tu web?',
@@ -80,11 +82,11 @@ export const translations = {
     footer: {
       copyright: '© 2026 Sara Menéndez. Todos los derechos reservados.',
       madeWith: 'Hecho con ❤️ en React + TypeScript',
-      about: 'Diseño web y desarrollo React con enfoque estratégico y criterio.',
+      about: 'Diseño web.',
       navigation: 'Navegación',
       connectWith: 'Conecta conmigo',
       viewProjects: 'Ver proyectos',
-      workTogether: 'Trabajemos juntas',
+      workTogether: 'Trabajemos juntos',
       links: {
         inicio: 'Inicio',
         proyectos: 'Proyectos',
@@ -148,33 +150,33 @@ export const translations = {
     caseStudies: {
       eae: {
         title: 'EAE Business School',
-        description: 'Rediseño y desarrollo de plataforma e-learning',
-        shortDescription: 'Plataforma e-learning intuitiva para educación empresarial',
+        description: 'web manager de la web de la escuela de negocios EAE Barcelona Business School.',
+        shortDescription: 'web institucón educativa ',
       },
       alienCsi: {
         title: 'Alien CSI: Bioblitz',
-        description: 'Aplicación interactiva de identificación de especies',
-        shortDescription: 'Herramienta gamificada para ciencia ciudadana',
+        description: 'Aplicación interactiva de identificación de especies invasoras',
+        shortDescription: 'Herramienta para ciencia ciudadana',
       },
       portfolio2026: {
         title: 'Mi Portafolio 2026',
         description: 'Portfolio personal de diseño y desarrollo',
-        shortDescription: 'Vitrina de proyectos y servicios',
+        shortDescription: 'muestra de proyectos y servicios',
       },
       ohmios: {
         title: 'Ohmios Records',
-        description: 'Plataforma de distribución de música digital',
-        shortDescription: 'E-commerce y streaming para artistas independientes',
+        description: 'Tienda online de música electronica en formato vinilo',
+        shortDescription: 'E-commerce para tienda online de discos',
       },
       trickTales: {
         title: 'Trick Tales',
-        description: 'Plataforma de contenido interactivo',
+        description: 'Diseño UX / UI de una aplicación para mascotas',
         shortDescription: 'Red social de historias y desafíos',
       },
       arbola: {
         title: 'Árbo-la',
-        description: 'App de sostenibilidad y reforestación',
-        shortDescription: 'Gamificación de acciones ecológicas',
+        description: 'Web de estudio de arquitectura sostenible',
+        shortDescription: ' Diseño web para arquitectura sostenible',
       },
       bendita: {
         title: 'Bendita María',
@@ -188,7 +190,7 @@ export const translations = {
       },
       beatrizGalindo: {
         title: 'Beatriz Galindo',
-        description: 'Website corporativo de consultoría',
+        description: 'Website corporativo de psi',
         shortDescription: 'Identidad y presencia digital profesional',
       },
     },
@@ -315,7 +317,7 @@ export const translations = {
     navigation: {
       inicio: 'Home',
       sobre: 'About',
-      wordpress: 'WordPress',
+      wordpress: 'WordPress design',
       proyectos: 'Projects',
       contacto: 'Contact',
     },
