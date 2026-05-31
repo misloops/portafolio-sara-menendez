@@ -87,7 +87,7 @@ export function WordPressPage() {
               'font-normal leading-[1.02]',
               'text-dark'
             )}>
-              WordPress
+              Diseño y Desarrollo WordPress
             </h1>
 
             {/* Para quién es - Exact copy */}
@@ -97,7 +97,20 @@ export function WordPressPage() {
               'text-dark/75',
               'max-w-3xl'
             )}>
-              Para autónomos y pequeños negocios que tienen una web pero no están contentos con ella. Para quien montó algo con prisa y ahora quiere hacerlo bien. Para quien recibió una web de un proveedor anterior y no sabe qué tiene entre manos. Para quien necesita a alguien que le explique las cosas sin tecnicismos y no le deje a medias.
+              WordPress es el gestor de contenidos más utilizado del mundo, y no es casualidad. Su flexibilidad, escalabilidad y facilidad de gestión lo convierten en una de las mejores opciones para empresas, marcas y profesionales que necesitan una web sólida y fácil de administrar.
+Como diseñadora web freelance especializada en WordPress, llevo más de seis años creando, rediseñando y optimizando sitios web adaptados a las necesidades de cada cliente. Desde páginas corporativas hasta tiendas online, mi objetivo es que tu web no solo tenga una buena imagen, sino que funcione de forma eficiente y ayude a cumplir tus objetivos de negocio.<br></br>
+
+<strong>¿Por qué contar con una especialista en WordPress?</strong><br></br>
+WordPress es una herramienta accesible, pero detrás de una web profesional hay mucho más que instalar un tema y añadir algunos plugins.
+La optimización, la seguridad, el rendimiento, la compatibilidad y el posicionamiento requieren conocimientos técnicos que marcan la diferencia entre una web que simplemente existe y una web que aporta valor al negocio.
+Trabajar con una profesional especializada ayuda a evitar problemas habituales como:
+    <li>Fallos de seguridad y vulnerabilidades.</li>
+    <li>Pérdida de posicionamiento en buscadores.</li>
+    <li>Lentitud en la carga de la página.</li>
+    <li>Errores tras actualizaciones.</li>
+    <li>Pérdida de información por falta de copias de seguridad.</li>
+    <li>Costes elevados derivados de desarrollos mal ejecutados.</li>
+En la mayoría de los casos, prevenir siempre resulta más económico que reparar.
             </p>
           </div>
         </div>
@@ -136,7 +149,7 @@ export function WordPressPage() {
                 Diseño y desarrollo web desde 0
               </h3>
               <p className="text-dark/70 leading-relaxed">
-                Creamos tu presencia digital desde cero. Diseño responsive, desarrollo limpio y optimización para que tu web no solo se vea bien, sino que funcione y convierta.
+                Creo tu presencia digital desde cero. Diseño responsive, desarrollo limpio y optimización para que tu web no solo se vea bien, sino que funcione y convierta.
               </p>
             </div>
 
@@ -161,7 +174,8 @@ export function WordPressPage() {
                 Mantenimiento
               </h3>
               <p className="text-dark/70 leading-relaxed">
-                Tu web necesita cuidados. Actualizaciones, backups, soporte técnico y optimización constante para que funcione sin sobresaltos mientras tú te enfocas en tu negocio.
+                Una web necesita cuidados constantes para seguir funcionando correctamente. Actualizaciones, seguridad, copias de respaldo y revisiones técnicas forman parte de un mantenimiento preventivo que evita problemas futuros.
+Un sitio web bien mantenido es más seguro, más rápido y mucho menos propenso a sufrir caídas o errores inesperados.
               </p>
             </div>
 
@@ -186,7 +200,8 @@ export function WordPressPage() {
                 Rediseño web
               </h3>
               <p className="text-dark/70 leading-relaxed">
-                Tu web actual te limita. Analizamos, repensamos la estructura y la renovamos. Preservamos lo que funciona, mejoramos lo que no, y le damos nueva vida sin empezar de cero.
+                Si tu página se ha quedado anticuada, no refleja la calidad de tu empresa o simplemente no está generando resultados, puedo ayudarte a renovarla por completo.
+Trabajo la estructura, la experiencia de usuario, el diseño visual y el rendimiento para crear webs atractivas, intuitivas y preparadas para convertir visitas en oportunidades.
               </p>
             </div>
           </div>

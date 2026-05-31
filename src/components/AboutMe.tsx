@@ -85,7 +85,7 @@ function AboutMe() {
           )}>
             <img
               src={profilePlaceholderIcon}
-              alt="Sara Martínez"
+              alt="Sara Menéndez"
               className="w-[200px] h-[200px] lg:w-[240px] lg:h-[240px] object-cover rounded-2xl flex-shrink-0"
               style={{ imageRendering: 'auto' }}
               loading="lazy"
