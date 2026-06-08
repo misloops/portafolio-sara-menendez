@@ -108,17 +108,12 @@ export function EAECaseStudy() {
       {/* INFORMACIÓN Section - Two Columns */}
       <section className="pt-10 lg:pt-12 pb-20 lg:pb-28 px-4 lg:px-6 bg-transparent">
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-10 gap-6 lg:gap-[40px]">
-            {/* Title - Left Column (40%) */}
-            <h2 className="lg:col-span-4 font-serif text-3xl md:text-4xl font-bold text-dark">
-              {t('caseStudyLabels.information')}
-            </h2>
-            
-            {/* Spacer for right column alignment */}
-            <div className="lg:col-span-6" />
-            
-            {/* Left Column - Text (40%) */}
+          <div className="grid grid-cols-1 lg:grid-cols-10 gap-6 lg:gap-[40px] items-end">
+            {/* Left Column - Title + Text (40%) */}
             <div className="lg:col-span-4">
+              <h2 className="font-serif text-3xl md:text-4xl font-bold text-dark mb-4">
+                {t('caseStudyLabels.information')}
+              </h2>
               <p className="text-lg text-dark/70 leading-relaxed mb-4">
                 {eaeContent.information[0]}
               </p>
@@ -128,12 +123,12 @@ export function EAECaseStudy() {
             </div>
 
             {/* Right Column - Image (60%) */}
-            <div className="lg:col-span-6 flex items-start justify-center">
-              <div className="w-full rounded-2xl border border-dark/15 bg-white/65 shadow-[0_20px_45px_rgba(48,46,46,0.12)] backdrop-blur-sm overflow-hidden">
+            <div className="lg:col-span-6 flex items-center justify-center">
+              <div className="w-full max-w-[550px] rounded-2xl border border-dark/15 bg-white/65 shadow-[0_20px_45px_rgba(48,46,46,0.12)] backdrop-blur-sm overflow-hidden">
                 <img
                   src="/assets/projects/eae-business-school/EAE-BUSINESS_COVER.jpg"
                   alt="EAE Business School"
-                  className="w-full h-auto object-cover"
+                  className="w-full h-auto object-contain"
                   loading="lazy"
                 />
               </div>
@@ -145,36 +140,95 @@ export function EAECaseStudy() {
       {/* RETO Section - Two Columns */}
       <section className="py-20 lg:py-28 px-4 lg:px-6 bg-transparent">
         <div className="max-w-7xl mx-auto">
-          <h2 className="font-serif text-3xl md:text-4xl font-bold text-dark mb-8">
-            {t('caseStudyLabels.challenge')} {t('caseStudyLabels.myRole').replace('Mi ', '')}
-          </h2>
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
-          {/* Left Column - Challenge & Role */}
-          <div>
-            <div className="mb-12">
-              <h3 className="text-2xl font-serif font-bold text-dark mb-6">{t('caseStudyLabels.challenge')}</h3>
-              <p className="text-lg text-dark/70 leading-relaxed mb-4">
-                {eaeContent.challengeBody[0]}
-              </p>
-              <p className="text-lg text-dark/70 leading-relaxed">
-                {eaeContent.challengeBody[1]}
-              </p>
-            </div>
+          {/* Titles row */}
+          <div className="grid grid-cols-1 lg:grid-cols-10 gap-6 lg:gap-[40px] mb-12">
+            {/* Title - Left Column (Mi rol) */}
+            <h2 className="lg:col-span-5 font-serif text-3xl md:text-4xl font-bold text-dark">
+              {t('caseStudyLabels.myRole')}
+            </h2>
 
-            <div>
-              <h3 className="text-2xl font-serif font-bold text-dark mb-6">{t('caseStudyLabels.myRole')}</h3>
-              <ul className="space-y-3">
-                {eaeContent.roleItems.map((item: string) => (
+            {/* Title - Right Column (Reto) */}
+            <h2 className="lg:col-span-5 font-serif text-3xl md:text-4xl font-bold text-dark">
+              {t('caseStudyLabels.challenge')}
+            </h2>
+          </div>
+
+          {/* Content row with card below Reto */}
+          <div className="grid grid-cols-1 lg:grid-cols-10 gap-6 lg:gap-[40px]">
+            {/* Left Column - Role List (50%) */}
+            <div className="lg:col-span-5 lg:p-6 flex flex-col gap-4">
+              {/* First item - No bullet, bold */}
+              <p className="text-lg font-bold text-dark mb-4">{eaeContent.roleItems[0]}</p>
+              
+              {/* Rest of items - Bullets */}
+              <ul className="space-y-3 flex-1">
+                {eaeContent.roleItems.slice(1).map((item: string) => (
                   <li key={item} className="flex items-start gap-4">
                     <span className="text-primary-400 font-bold text-xl mt-0.5">•</span>
                     <span className="text-lg text-dark/70">{item}</span>
                   </li>
                 ))}
               </ul>
+
+              {/* Info Card - Below Mi Rol */}
+              <div className="rounded-2xl border border-neutral-300/40 bg-[#dee2de]/25 backdrop-blur-sm shadow-[0_8px_24px_rgba(48,46,46,0.08)] p-8 md:p-12">
+                <p className="text-base md:text-lg text-dark/75 leading-relaxed">
+                  Además de gestionar y supervisar con diferentes departamentos y ser la intermediadora entre ellos. Una de mis principales tareas era velar por la seguridad y reportar incidencias directamente con el equipo de desarrolladores mediante la herramienta <span className="font-bold">Jira</span>, con un seguimiento de las <span className="font-bold">incidencias</span> y su validación.
+                </p>
+              </div>
+            </div>
+
+            {/* Right Column - Challenge List + Card (50%) */}
+            <div className="lg:col-span-5 lg:p-6 flex flex-col gap-4">
+              {/* Challenge List */}
+              {/* First item - No bullet, bold */}
+              <p className="text-lg font-bold text-dark">{eaeContent.challengeItems[0]}</p>
+              
+              {/* Rest of items - Bullets */}
+              <ul className="space-y-3 flex-1">
+                {eaeContent.challengeItems.slice(1).map((item: string) => (
+                  <li key={item} className="flex items-start gap-4">
+                    <span className="text-primary-400 font-bold text-xl mt-0.5">•</span>
+                    <span className="text-lg text-dark/70">{item}</span>
+                  </li>
+                ))}
+              </ul>
+
+              {/* Info Card - Below Reto */}
+              <div className="rounded-2xl border border-neutral-300/40 bg-[#dee2de]/25 backdrop-blur-sm shadow-[0_8px_24px_rgba(48,46,46,0.08)] p-8 md:p-12">
+                <p className="text-base md:text-lg text-dark/75 leading-relaxed">
+                  Abajo se muestra cómo estaba la web cuando empecé en el proyecto y en la imagen de la derecha se puede ver un año después un cambio notable, no solo a nivel de diseño, sino a nivel de conversión de leads. Este cambio vino acompañado del lanzamiento de la <span className="font-bold">nueva campaña de comunicación</span>, culminación del trabajo de diferentes equipos de profesionales.
+                </p>
+              </div>
             </div>
           </div>
 
-        </div>
+          {/* Antes / Después images section */}
+          <div className="mt-20 lg:mt-28 grid grid-cols-1 lg:grid-cols-10 gap-6 lg:gap-[40px]">
+            <div className="lg:col-span-5 flex justify-center">
+              <figure className="flex flex-col items-center w-full">
+                <h3 className="mb-4 font-serif text-lg md:text-xl font-bold text-dark">Antes — marzo 2023</h3>
+                <img
+                  src="/assets/projects/eae-business-school/EAE_BUSINESS_antes.jpg"
+                  alt="EAE antes"
+                  className="w-[550px] h-auto object-contain rounded-lg"
+                  loading="eager"
+                />
+              </figure>
+            </div>
+
+            <div className="lg:col-span-5 flex justify-center">
+              <figure className="flex flex-col items-center w-full">
+                <h3 className="mb-4 font-serif text-lg md:text-xl font-bold text-dark">Después — marzo 2024</h3>
+                <img
+                  src="/assets/projects/eae-business-school/EAE_BUSINESS_después.jpg"
+                  alt="EAE después"
+                  className="w-[550px] h-auto object-contain rounded-lg"
+                  loading="eager"
+                />
+              </figure>
+            </div>
+          </div>
         </div>
       </section>
 

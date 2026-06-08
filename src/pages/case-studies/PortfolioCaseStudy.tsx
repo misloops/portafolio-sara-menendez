@@ -385,16 +385,14 @@ export function PortfolioCaseStudy() {
             </div>
 
             {/* Code Example 2: ProjectCard Component */}
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
-              <div className="bg-gradient-to-br from-primary-100/30 to-secondary-100/30 rounded-lg p-8 border border-primary-300/30 flex items-center justify-center min-h-[300px]">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+              <div className="bg-gradient-to-br from-primary-100/30 to-secondary-100/30 rounded-lg p-8 flex items-center justify-center min-h-[300px]">
                 <div className="text-center">
-                  <p className="text-dark/60 text-sm mb-4">Card en acción</p>
-                  <div className="inline-block bg-white/70 rounded-lg p-3 border border-primary-300/30 space-y-2">
-                    <div className="w-32 h-24 bg-gradient-to-br from-primary-200 to-secondary-200 rounded"></div>
-                    <p className="text-xs text-dark font-semibold">Project Title</p>
-                    <p className="text-xs text-dark/70">Description...</p>
-                    <div className="flex gap-1"><span className="text-xs bg-primary-200 px-2 py-1 rounded">Tag</span></div>
-                  </div>
+                  <img 
+                    src="/assets/projects/portafolio-2026/MIPORTAFOLIO_card_proyeco.png" 
+                    alt="ProjectCard component in action" 
+                    className="rounded-lg max-w-xl mx-auto"
+                  />
                 </div>
               </div>
               <div>
@@ -443,7 +441,7 @@ export function PortfolioCaseStudy() {
             </div>
 
             {/* Code Example 3: Utility Function */}
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
               <div>
                 <h3 className="text-xl font-bold text-dark mb-4">Utility: <code className="text-sm bg-dark/5 px-2 py-1 rounded">getChipClasses()</code></h3>
                 <p className="text-dark/70 mb-6 leading-relaxed">Centralizar estilos de chips/tags que se repiten en múltiples lugares. Un single source of truth para el diseño de etiquetas.</p>
@@ -468,22 +466,19 @@ export function PortfolioCaseStudy() {
 </span>`}
                 </pre>
               </div>
-              <div className="bg-gradient-to-br from-primary-100/30 to-secondary-100/30 rounded-lg p-8 border border-primary-300/30 flex items-center justify-center min-h-[300px]">
-                <div className="text-center space-y-4">
-                  <p className="text-dark/60 text-sm">Chips/Tags renderizados</p>
-                  <div className="flex flex-wrap gap-2 justify-center">
-                    {['React', 'TypeScript', 'Tailwind CSS', 'Vite', 'Design System'].map((tag) => (
-                      <span key={tag} className="inline-flex items-center rounded-full px-3 py-1.5 text-xs font-medium bg-primary-100/60 text-primary-700 border border-primary-300/40">
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
+              <div className="bg-gradient-to-br from-primary-100/30 to-secondary-100/30 rounded-lg p-8 flex items-center justify-center min-h-[300px]">
+                <div className="text-center">
+                  <img 
+                    src="/assets/projects/portafolio-2026/MIPORTAFOLIO_chips.png" 
+                    alt="Chips utility preview" 
+                    className="rounded-lg max-w-xl mx-auto"
+                  />
                 </div>
               </div>
             </div>
 
             {/* Code Example 4: Case Study Hero */}
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
               <div>
                 <h3 className="text-xl font-bold text-dark mb-4">Componente: Hero de Case Study</h3>
                 <p className="text-dark/70 mb-6 leading-relaxed">Estructura base reutilizada en todas las nuevas paginas de case study: label de rol, titulo, subtitulo y descripcion con layout consistente.</p>
@@ -517,14 +512,13 @@ export function PortfolioCaseStudy() {
 </section>`}
                 </pre>
               </div>
-              <div className="bg-gradient-to-br from-primary-100/30 to-secondary-100/30 rounded-lg p-8 border border-primary-300/30 flex items-center justify-center min-h-[300px]">
+              <div className="bg-gradient-to-br from-primary-100/30 to-secondary-100/30 rounded-lg p-8 flex items-center justify-center min-h-[300px]">
                 <div className="text-center">
-                  <p className="text-dark/60 text-sm mb-4">Preview estructura Hero</p>
-                  <div className="inline-block text-left bg-white/70 rounded-lg p-4 border border-primary-300/30 max-w-sm">
-                    <p className="text-xs uppercase tracking-widest text-dark/60 mb-2">Frontend</p>
-                    <p className="font-serif text-lg text-dark mb-2">ALIEN BIOBLITZ</p>
-                    <p className="text-sm text-dark/70">Layout reutilizable para nuevos case studies</p>
-                  </div>
+                  <img 
+                    src="/assets/projects/portafolio-2026/MIPORTAFOLIO_hero.png" 
+                    alt="Case Study Hero component" 
+                    className="rounded-lg max-w-xl mx-auto"
+                  />
                 </div>
               </div>
             </div>

@@ -19,7 +19,12 @@ export default function WebAuditBanner() {
             Auditoría web gratis — cuéntamelo y le echo un vistazo.
           </span>
         </div>
-        <a href="#contacto" className="flex-shrink-0">
+        <a
+          href="https://mail.google.com/mail/?view=cm&fs=1&to=sara.m.pumariega@gmail.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex-shrink-0"
+        >
           <Button text="Lo quiero" variant="outline" size="md" />
         </a>
       </div>
