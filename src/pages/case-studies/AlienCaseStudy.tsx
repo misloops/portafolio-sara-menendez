@@ -4,6 +4,7 @@ import { cn, getChipClasses } from '../../utils/classNames';
 import { CaseStudyPager } from '../../components/case-study/CaseStudyPager';
 import { useLanguage } from '../../context/LanguageContext';
 import { translations } from '../../constants/translations';
+import { Helmet } from 'react-helmet-async'; // 1. Importamos Helmet
 
 export function AlienCaseStudy() {
   const { t, language } = useLanguage();
@@ -18,6 +19,13 @@ export function AlienCaseStudy() {
         backgroundAttachment: 'fixed'
       }}
     >
+      {/* 2. Inyección de Meta Tags Dinámicas para el proyecto científico */}
+      <Helmet>
+        <title>Caso de Estudio: Alien CSI Bioblitz | Sara Menéndez</title>
+        <meta name="description" content="Diseño de producto digital e interfaz interactiva para Alien CSI Bioblitz. Estructuración de fases complejas y UX orientada a la recolección de datos científicos." />
+        <link rel="canonical" href="https://portafolio-sara-menendez.vercel.app/proyectos/alien-csi-bioblitz" />
+      </Helmet>
+
       <Header />
 
       <section
@@ -60,7 +68,7 @@ export function AlienCaseStudy() {
           <div className="w-full lg:w-[75%]">
             <img
               src="/assets/projects/alien-csi-bioblitz/ALIEN-CSI_COVER.png"
-              alt="Alien CSI cover"
+              alt="Interfaz principal y mockups del proyecto de ciencia ciudadana Alien CSI Bioblitz"
               className="w-full h-auto object-contain rounded-2xl shadow-lg"
             />
           </div>
@@ -87,7 +95,7 @@ export function AlienCaseStudy() {
           <div className="flex justify-center">
             <img
               src="/assets/projects/alien-csi-bioblitz/ALIEN_1.png"
-              alt="ALIEN 1"
+              alt="Análisis del ecosistema digital previo y planteamiento de problemas de usabilidad"
               className="w-auto h-auto max-h-[520px] object-contain rounded-2xl shadow-md"
             />
           </div>
@@ -106,8 +114,8 @@ export function AlienCaseStudy() {
           </div>
           <div className="flex justify-center lg:justify-end">
             <img
-              src="/assets/projects/alien-csi-bioblitz/ALIEN_2_mapa%20interactivo.png"
-              alt="ALIEN mapa interactivo"
+              src="/assets/projects/alien-csi-bioblitz/ALIEN_2_mapa-interactivo.png"
+              alt="Diseño de mapa interactivo para el registro y geolocalización de especies biológicas"
               className="w-full h-auto max-h-[460px] object-contain rounded-2xl shadow-md"
             />
           </div>
@@ -130,7 +138,7 @@ export function AlienCaseStudy() {
               <div className="lg:col-span-6 flex justify-center lg:justify-end">
                 <img
                   src="/assets/projects/alien-csi-bioblitz/ALIEN_3_pre-event.png"
-                  alt="ALIEN pre evento"
+                  alt="Flujo de registro y captación de usuarios en la fase previa al evento científico"
                   className="w-full h-auto max-h-[420px] object-contain rounded-xl shadow-md"
                 />
               </div>
@@ -146,7 +154,7 @@ export function AlienCaseStudy() {
               <div className="lg:col-span-6 flex justify-center lg:justify-end">
                 <img
                   src="/assets/projects/alien-csi-bioblitz/ALIEN_4_during-event.png"
-                  alt="ALIEN durante evento"
+                  alt="Panel de control e interacciones de usuario en tiempo real durante la ejecución del Bioblitz"
                   className="w-full h-auto max-h-[420px] object-contain rounded-xl shadow-md"
                 />
               </div>
@@ -162,7 +170,7 @@ export function AlienCaseStudy() {
               <div className="lg:col-span-6 flex justify-center lg:justify-end">
                 <img
                   src="/assets/projects/alien-csi-bioblitz/ALIEN_5_post-event.jpg"
-                  alt="ALIEN post evento"
+                  alt="Pantallas de analítica, reportes finales y exportación de datos del evento"
                   className="w-full h-auto max-h-[420px] object-contain rounded-xl shadow-md"
                 />
               </div>

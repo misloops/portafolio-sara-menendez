@@ -1,7 +1,6 @@
 import { cn } from '../utils/classNames';
 import profilePlaceholderIcon from '../assets/portrait/retrato.png';
 import { useLanguage } from '../context/LanguageContext';
-// Using simple text links for AboutMe (keeps visual weight light and consistent)
 
 /**
  * AboutMe Component
@@ -14,6 +13,9 @@ function AboutMe() {
   // Parse multiline description from translations
   const bioText = t('aboutMe.description');
   const bioparagraphs = bioText.split('\n\n');
+  
+  // SEO de Marca Personal: Un texto alternativo potente e indexable
+  const portraitAltText = `Sara Menéndez - ${t('projectsPage.subtitle') || 'Diseñadora y Desarrolladora Web'}`;
   
   return (
     <section id="sobre-mi" className={cn(
@@ -52,7 +54,8 @@ function AboutMe() {
             )}>
               <img
                 src={profilePlaceholderIcon}
-                alt="Sara Menéndez"
+                // SEO Pulido: Atributo alt optimizado e internacionalizado
+                alt={portraitAltText}
                 className="w-[180px] h-[180px] object-cover rounded-2xl flex-shrink-0"
                 style={{ imageRendering: 'auto' }}
                 loading="lazy"
@@ -85,7 +88,8 @@ function AboutMe() {
           )}>
             <img
               src={profilePlaceholderIcon}
-              alt="Sara Menéndez"
+              // SEO Pulido: Atributo alt optimizado en escritorio
+              alt={portraitAltText}
               className="w-[200px] h-[200px] lg:w-[240px] lg:h-[240px] object-cover rounded-2xl flex-shrink-0"
               style={{ imageRendering: 'auto' }}
               loading="lazy"

@@ -6,6 +6,7 @@ import Footer from '../components/Footer';
 import ProjectCard from '../components/ProjectCard';
 import { projects } from '../data/portfolio';
 import { useLanguage } from '../context/LanguageContext';
+import { Helmet } from 'react-helmet-async'; // 1. Importamos Helmet
 
 /**
  * ProjectsPage Component
@@ -42,6 +43,13 @@ function ProjectsPage() {
         backgroundAttachment: 'fixed',
       }}
     >
+      {/* 2. Configuración de Meta Tags dinámicas */}
+      <Helmet>
+        <title>Proyectos y Casos de Estudio | Sara Menéndez</title>
+        <meta name="description" content="Explora mi portafolio de diseño web y desarrollo técnico. Casos de estudio en React, WordPress, Shopify y soluciones digitales a medida." />
+        <link rel="canonical" href="https://portafolio-sara-menendez.vercel.app/proyectos" />
+      </Helmet>
+
       <Header />
 
       {/* Header Spacer */}
@@ -146,12 +154,13 @@ function ProjectsPage() {
             {t('projectsPage.projectDescription')}
           </p>
           <div className="flex flex-row gap-4 lg:gap-6 justify-center flex-wrap">
-            <a
-              href="/contacto"
+            {/* CORRECCIÓN SEO/UX: Cambiado <a> por <Link> para mantener la SPA sin recargar página completa */}
+            <Link
+              to="/contacto"
               className={getButtonClasses('primary')}
             >
               Conectemos
-            </a>
+            </Link>
           </div>
         </div>
       </section>

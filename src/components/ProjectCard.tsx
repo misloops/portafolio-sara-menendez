@@ -42,23 +42,24 @@ function ProjectCard({
   
   const cardContent = (
     <article className={cn(
-      'flex flex-col h-full p-4 lg:p-4 rounded-2xl',
+      'flex flex-col h-full p-4 rounded-2xl',
       hasInternalLink || hasExternalLink ? 'cursor-pointer' : 'cursor-default',
       getCardClasses(),
       'transition-all duration-300'
     )}>
       {/* Image Container Header - 220-240px height with padding */}
       <div className={cn(
-        'relative mb-6 -mx-4 -mt-4 mb-6 h-56 rounded-t-2xl',
+        'relative mb-6 -mx-4 -mt-4 h-56 rounded-t-2xl',
         'bg-gradient-to-br from-[#f5f3f5] via-[#e8e2e8] to-[#d4e2d2]',
         'flex items-center justify-center',
-        'text-5xl overflow-hidden',
+        'overflow-hidden',
         'border-b border-[#dee2de]'
       )}>
         <div className='absolute inset-0 flex items-center justify-center overflow-hidden rounded-t-2xl bg-white'>
             <img 
               src={imageSrc} 
-              alt={title}
+              // SEO On-Page: Enriquecemos el alt dinámico para darle contexto semántico al bot de imágenes
+              alt={`${t('projectCard.viewProject')} - ${title}`}
               loading="lazy"
               decoding="async"
               className={cn(
@@ -66,7 +67,7 @@ function ProjectCard({
                 imageFitClass,
                 imagePositionClass,
                 imagePaddingClassName,
-                'group-hover:scale-105 transition-transform duration-300'
+                'group-hover:scale-[1.03] transition-transform duration-300'
               )}
               style={{
                 imageRendering: 'auto',
@@ -77,7 +78,7 @@ function ProjectCard({
         </div>
         <div className={cn(
           'absolute inset-0',
-          'bg-black/0 group-hover:bg-black/5',
+          'bg-black/0 group-hover:bg-black/[0.02]',
           'transition-all duration-300'
         )} />
       </div>
@@ -91,13 +92,14 @@ function ProjectCard({
           'text-lg md:text-xl',
           'font-normal leading-tight',
           'text-dark',
-          'group-hover:text-[#c3b7c3] transition-colors duration-200'
+          // UX Pulido: Solo el título cambia de color sutilmente en el hover para guiar el ojo
+          'group-hover:text-[#8f628f] transition-colors duration-200'
         )}>
           {title}
         </h3>
 
         {meta ? (
-          <p className="text-sm md:text-base text-dark/70 leading-relaxed -mt-1 group-hover:text-[#c3b7c3] transition-colors duration-200">
+          <p className="text-sm md:text-base text-dark/70 leading-relaxed -mt-1">
             {meta}
           </p>
         ) : null}
@@ -108,8 +110,7 @@ function ProjectCard({
           'text-dark/70',
           'leading-relaxed',
           'flex-grow',
-          'line-clamp-3',
-          'group-hover:text-[#c3b7c3] transition-colors duration-200'
+          'line-clamp-3'
         )}>
           {displayDescription}
         </p>
@@ -132,21 +133,19 @@ function ProjectCard({
         <div className={cn(
           'mt-4 pt-4 lg:mt-6 lg:pt-6 border-t border-[#dde2dd]',
           'flex items-center justify-between',
-          'group',
-          'hover:border-[#c3b7c3] transition-colors duration-300'
+          'transition-colors duration-300'
         )}>
           <span className={cn(
             'text-xs font-semibold uppercase tracking-widest',
             'text-dark/60',
-            'group-hover:text-[#c3b7c3] transition-colors'
+            'group-hover:text-[#8f628f] transition-colors duration-200'
           )}>
             {slug ? t('projectCard.viewProject') : externalUrl ? t('projectCard.viewOnline') : t('projectCard.comingSoon')}
           </span>
           <svg className={cn(
             'w-4 h-4',
             'text-dark/40',
-            'group-hover:text-[#c3b7c3] transition-colors',
-            'group-hover:translate-x-1'
+            'group-hover:text-[#8f628f] group-hover:translate-x-1 transition-all duration-200'
           )} fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
           </svg>

@@ -4,6 +4,7 @@ import { cn, getChipClasses } from '../../utils/classNames';
 import { CaseStudyPager } from '../../components/case-study/CaseStudyPager';
 import { useLanguage } from '../../context/LanguageContext';
 import { translations } from '../../constants/translations';
+import { Helmet } from 'react-helmet-async'; // 1. Importamos Helmet
 
 export function EAECaseStudy() {
   const { t, language } = useLanguage();
@@ -17,6 +18,13 @@ export function EAECaseStudy() {
         backgroundAttachment: 'fixed'
       }}
     >
+      {/* 2. Inyección de Meta Tags Dinámicas */}
+      <Helmet>
+        <title>Caso de Estudio: EAE Business School | Sara Menéndez</title>
+        <meta name="description" content="Análisis de gestión, optimización de conversión y control de calidad web (QA) mediante Jira para el sitio web corporativo de EAE Business School." />
+        <link rel="canonical" href="https://portafolio-sara-menendez.vercel.app/proyectos/eae-business-school" />
+      </Helmet>
+
       <Header />
 
       {/* Hero Section - Following Home Hero Pattern */}
@@ -127,7 +135,7 @@ export function EAECaseStudy() {
               <div className="w-full max-w-[550px] rounded-2xl border border-dark/15 bg-white/65 shadow-[0_20px_45px_rgba(48,46,46,0.12)] backdrop-blur-sm overflow-hidden">
                 <img
                   src="/assets/projects/eae-business-school/EAE-BUSINESS_COVER.jpg"
-                  alt="EAE Business School"
+                  alt="Rediseño visual de la interfaz de la plataforma académica EAE Business School"
                   className="w-full h-auto object-contain"
                   loading="lazy"
                 />
@@ -210,7 +218,7 @@ export function EAECaseStudy() {
                 <h3 className="mb-4 font-serif text-lg md:text-xl font-bold text-dark">Antes — marzo 2023</h3>
                 <img
                   src="/assets/projects/eae-business-school/EAE_BUSINESS_antes.jpg"
-                  alt="EAE antes"
+                  alt="Captura de la interfaz de la página web de EAE Business School antes del rediseño (marzo 2023)"
                   className="w-[550px] h-auto object-contain rounded-lg"
                   loading="eager"
                 />
@@ -221,8 +229,8 @@ export function EAECaseStudy() {
               <figure className="flex flex-col items-center w-full">
                 <h3 className="mb-4 font-serif text-lg md:text-xl font-bold text-dark">Después — marzo 2024</h3>
                 <img
-                  src="/assets/projects/eae-business-school/EAE_BUSINESS_después.jpg"
-                  alt="EAE después"
+                  src="/assets/projects/eae-business-school/EAE_BUSINESS_despues.jpg"
+                  alt="Captura de la interfaz optimizada de la página web de EAE Business School tras un año de rediseño (marzo 2024)"
                   className="w-[550px] h-auto object-contain rounded-lg"
                   loading="eager"
                 />

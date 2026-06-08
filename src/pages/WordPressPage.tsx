@@ -5,6 +5,7 @@ import { useLanguage } from '../context/LanguageContext';
 import { projects } from '../data/portfolio';
 import { Link } from 'react-router-dom';
 import { ReactNode } from 'react';
+import { Helmet } from 'react-helmet-async'; // 1. Importamos Helmet
 
 const serviceIcons: Record<string, ReactNode> = {
   development: (
@@ -60,6 +61,13 @@ export function WordPressPage() {
         backgroundAttachment: 'fixed'
       }}
     >
+      {/* 2. Configuración de Meta Tags para esta URL */}
+      <Helmet>
+        <title>Diseño y Desarrollo WordPress Profesional | Sara Menéndez</title>
+        <meta name="description" content="Especialista en WordPress. Diseño páginas web corporativas, tiendas online y rediseños a medida. Sitios rápidos, seguros y optimizados para SEO." />
+        <link rel="canonical" href="https://portafolio-sara-menendez.vercel.app/wordpress" />
+      </Helmet>
+
       <Header />
 
       {/* Hero Section */}
@@ -90,28 +98,37 @@ export function WordPressPage() {
               Diseño y Desarrollo WordPress
             </h1>
 
-            {/* Para quién es - Exact copy */}
-            <p className={cn(
+            {/* Para quién es - Exact copy con corrección de etiquetas de lista */}
+            <div className={cn(
               'text-lg md:text-xl',
               'leading-[1.6]',
               'text-dark/75',
-              'max-w-3xl'
+              'max-w-3xl flex flex-col gap-4'
             )}>
-              WordPress es el gestor de contenidos más utilizado del mundo, y no es casualidad. Su flexibilidad, escalabilidad y facilidad de gestión lo convierten en una de las mejores opciones para empresas, marcas y profesionales que necesitan una web sólida y fácil de administrar.
-Como diseñadora web freelance especializada en WordPress, llevo más de seis años creando, rediseñando y optimizando sitios web adaptados a las necesidades de cada cliente. Desde páginas corporativas hasta tiendas online, mi objetivo es que tu web no solo tenga una buena imagen, sino que funcione de forma eficiente y ayude a cumplir tus objetivos de negocio.<br></br>
-
-<strong>¿Por qué contar con una especialista en WordPress?</strong><br></br>
-WordPress es una herramienta accesible, pero detrás de una web profesional hay mucho más que instalar un tema y añadir algunos plugins.
-La optimización, la seguridad, el rendimiento, la compatibilidad y el posicionamiento requieren conocimientos técnicos que marcan la diferencia entre una web que simplemente existe y una web que aporta valor al negocio.
-Trabajar con una profesional especializada ayuda a evitar problemas habituales como:
-    <li>Fallos de seguridad y vulnerabilidades.</li>
-    <li>Pérdida de posicionamiento en buscadores.</li>
-    <li>Lentitud en la carga de la página.</li>
-    <li>Errores tras actualizaciones.</li>
-    <li>Pérdida de información por falta de copias de seguridad.</li>
-    <li>Costes elevados derivados de desarrollos mal ejecutados.</li>
-En la mayoría de los casos, prevenir siempre resulta más económico que reparar.
-            </p>
+              <p>
+                WordPress es el gestor de contenidos más utilizado del mundo, y no es casualidad. Su flexibilidad, escalabilidad y facilidad de gestión lo convierten en una de las mejores opciones para empresas, marcas y profesionales que necesitan una web sólida y fácil de administrar.
+              </p>
+              <p>
+                Como diseñadora web freelance especializada en WordPress, llevo más de seis años creando, rediseñando y optimizando sitios web adaptados a las necesidades de cada cliente. Desde páginas corporativas hasta tiendas online, mi objetivo es que tu web no solo tenga una buena imagen, sino que funcione de forma eficiente y ayude a cumplir tus objetivos de negocio.
+              </p>
+              <div>
+                <strong>¿Por qué contar con una especialista en WordPress?</strong><br />
+                WordPress es una herramienta accesible, pero detrás de una web profesional hay mucho más que instalar un tema y añadir algunos plugins.
+                La optimización, la seguridad, el rendimiento, la compatibilidad y el posicionamiento requieren conocimientos técnicos que marcan la diferencia entre una web que simplemente existe y una web que aporta valor al negocio.
+                Trabajar con una profesional especializada ayuda a evitar problemas habituales como:
+                <ul className="list-disc pl-5 mt-2 space-y-1">
+                  <li>Fallos de seguridad y vulnerabilidades.</li>
+                  <li>Pérdida de posicionamiento en buscadores.</li>
+                  <li>Lentitud en la carga de la página.</li>
+                  <li>Errores tras actualizaciones.</li>
+                  <li>Pérdida de información por falta de copias de seguridad.</li>
+                  <li>Costes elevados derivados de desarrollos mal ejecutados.</li>
+                </ul>
+              </div>
+              <p>
+                En la mayoría de los casos, prevenir siempre resulta más económico que reparar.
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -175,7 +192,7 @@ En la mayoría de los casos, prevenir siempre resulta más económico que repara
               </h3>
               <p className="text-dark/70 leading-relaxed">
                 Una web necesita cuidados constantes para seguir funcionando correctamente. Actualizaciones, seguridad, copias de respaldo y revisiones técnicas forman parte de un mantenimiento preventivo que evita problemas futuros.
-Un sitio web bien mantenido es más seguro, más rápido y mucho menos propenso a sufrir caídas o errores inesperados.
+                Un sitio web bien mantenido es más seguro, más rápido y mucho menos propenso a sufrir caídas o errores inesperados.
               </p>
             </div>
 
@@ -201,7 +218,7 @@ Un sitio web bien mantenido es más seguro, más rápido y mucho menos propenso 
               </h3>
               <p className="text-dark/70 leading-relaxed">
                 Si tu página se ha quedado anticuada, no refleja la calidad de tu empresa o simplemente no está generando resultados, puedo ayudarte a renovarla por completo.
-Trabajo la estructura, la experiencia de usuario, el diseño visual y el rendimiento para crear webs atractivas, intuitivas y preparadas para convertir visitas en oportunidades.
+                Trabajo la estructura, la experiencia de usuario, el diseño visual y el rendimiento para crear webs atractivas, intuitivas y preparadas para convertir visitas en oportunidades.
               </p>
             </div>
           </div>
