@@ -99,18 +99,48 @@ export function WordPressPage() {
             </h1>
 
             {/* Para quién es - Exact copy con corrección de etiquetas de lista */}
-            <div className={cn(
-              'text-lg md:text-xl',
-              'leading-[1.6]',
-              'text-dark/75',
-              'max-w-3xl flex flex-col gap-4'
-            )}>
-              <p>
-                WordPress es el gestor de contenidos más utilizado del mundo, y no es casualidad. Su flexibilidad, escalabilidad y facilidad de gestión lo convierten en una de las mejores opciones para empresas, marcas y profesionales que necesitan una web sólida y fácil de administrar.
-              </p>
-              <p>
-                Como diseñadora web freelance especializada en WordPress, llevo más de seis años creando, rediseñando y optimizando sitios web adaptados a las necesidades de cada cliente. Desde páginas corporativas hasta tiendas online, mi objetivo es que tu web no solo tenga una buena imagen, sino que funcione de forma eficiente y ayude a cumplir tus objetivos de negocio.
-              </p>
+              <div className={cn(
+            'text-lg md:text-xl',
+            'leading-[1.6]',
+            'text-dark/75',
+            'max-w-3xl'
+          )}>
+              <div className="grid max-w-4xl mx-auto grid-cols-1 md:grid-cols-2 gap-10 mb-12 items-stretch justify-items-center">
+                <div className="w-full flex justify-start">
+                  <div className={cn(
+                    'bg-white/40 backdrop-blur-sm rounded-xl',
+                    'p-4 lg:p-6',
+                    'max-w-[520px] w-full',
+                    'h-full flex flex-col',
+                    'box-border',
+                    'border border-[#d8ded8]',
+                    'hover:border-[#c3dcc5] hover:bg-white/60',
+                    'transition-all duration-300'
+                  )}>
+                    <p className="whitespace-normal break-words">
+                      WordPress es el gestor de contenidos más utilizado del mundo, y no es casualidad. Su flexibilidad, escalabilidad y facilidad de gestión lo convierten en una de las mejores opciones para empresas, marcas y profesionales que necesitan una web sólida y fácil de administrar.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="w-full flex justify-end">
+                  <div className={cn(
+                    'bg-white/40 backdrop-blur-sm rounded-xl',
+                    'p-4 lg:p-6',
+                    'max-w-[520px] w-full',
+                    'h-full flex flex-col',
+                    'box-border',
+                    'border border-[#d8ded8]',
+                    'hover:border-[#c3dcc5] hover:bg-white/60',
+                    'transition-all duration-300'
+                  )}>
+                    <p className="whitespace-normal break-words">
+                      Como diseñadora web freelance especializada en WordPress, llevo más de seis años creando, rediseñando y optimizando sitios web adaptados a las necesidades de cada cliente. Desde páginas corporativas hasta tiendas online, mi objetivo es que tu web no solo tenga una buena imagen, sino que funcione de forma eficiente y ayude a cumplir tus objetivos de negocio.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
               <div>
                 <strong>¿Por qué contar con una especialista en WordPress?</strong><br />
                 WordPress es una herramienta accesible, pero detrás de una web profesional hay mucho más que instalar un tema y añadir algunos plugins.
@@ -125,6 +155,7 @@ export function WordPressPage() {
                   <li>Costes elevados derivados de desarrollos mal ejecutados.</li>
                 </ul>
               </div>
+
               <p>
                 En la mayoría de los casos, prevenir siempre resulta más económico que reparar.
               </p>

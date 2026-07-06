@@ -1,9 +1,12 @@
+import { useEffect } from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import { cn } from '../utils/classNames';
 import { projects } from '../data/portfolio';
 import { Link } from 'react-router-dom';
 import { ReactNode } from 'react';
+import { Helmet } from 'react-helmet-async';
+import { useLanguage } from '../context/LanguageContext';
 
 const serviceIcons: Record<string, ReactNode> = {
   development: (
@@ -29,6 +32,12 @@ const serviceIcons: Record<string, ReactNode> = {
 };
 
 export function WordPressPageEn() {
+  const { setLanguage } = useLanguage();
+
+  useEffect(() => {
+    setLanguage('en');
+  }, [setLanguage]);
+
   // Filter WordPress projects - 4 case studies with confirmed service descriptions
   const demoProjects = [
     {
@@ -57,6 +66,15 @@ export function WordPressPageEn() {
         backgroundAttachment: 'fixed'
       }}
     >
+      <Helmet>
+        <title>WordPress Design & Development | Sara Menéndez</title>
+        <meta
+          name="description"
+          content="WordPress specialist for corporate sites, online stores and redesigns. Fast, secure and SEO-friendly websites built for growth."
+        />
+        <link rel="canonical" href="https://portafolio-sara-menendez.vercel.app/wordpress-en" />
+      </Helmet>
+
       <Header />
 
       {/* Hero Section */}
@@ -84,23 +102,43 @@ export function WordPressPageEn() {
               'font-normal leading-[1.02]',
               'text-dark'
             )}>
-              WordPress
+              WordPress Design & Development
             </h1>
 
-            {/* Who is it for */}
-            <p className={cn(
+            <div className={cn(
               'text-lg md:text-xl',
               'leading-[1.6]',
               'text-dark/75',
-              'max-w-3xl'
+              'max-w-3xl flex flex-col gap-4'
             )}>
-              For freelancers and small businesses that have a website but aren't happy with it. For those who built something in a rush and now want to do it right. For those who received a website from a previous provider and don't know what they have. For those who need someone to explain things without jargon and not leave them hanging.
-            </p>
+              <p>
+                WordPress is the most widely used content management system in the world, and it's not by chance. Its flexibility, scalability and ease of management make it a top choice for companies, brands and professionals who need a solid website that is easy to maintain.
+              </p>
+              <p>
+                As a freelance web designer specializing in WordPress, I have more than six years of experience creating, redesigning and optimizing websites tailored to each client's needs. From corporate sites to online stores, my goal is to build a website that not only looks good, but works efficiently and helps you achieve your business objectives.
+              </p>
+              <div>
+                <strong>Why work with a WordPress specialist?</strong><br />
+                WordPress is an accessible tool, but a professional website requires much more than installing a theme and adding a few plugins. Optimization, security, performance, compatibility and search engine positioning demand technical knowledge that makes the difference between a website that merely exists and one that adds value to your business.
+                Working with a specialist helps avoid common issues such as:
+                <ul className="list-disc pl-5 mt-2 space-y-1">
+                  <li>Security vulnerabilities and weak configurations.</li>
+                  <li>Loss of search engine visibility.</li>
+                  <li>Slow loading times.</li>
+                  <li>Errors after updates.</li>
+                  <li>Data loss due to missing backups.</li>
+                  <li>High costs from poorly executed development.</li>
+                </ul>
+              </div>
+              <p>
+                In most cases, preventing problems is more cost-effective than repairing them.
+              </p>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Servicios Section - Cards */}
+      {/* Services Section - Cards */}
       <section className="py-10 lg:py-20 px-4 lg:px-6 bg-transparent">
         <div className="max-w-7xl mx-auto">
           <h2 className={cn(
@@ -237,7 +275,7 @@ export function WordPressPageEn() {
                       'text-3xl md:text-4xl',
                       'font-bold text-dark leading-tight'
                     )}>
-                      {project.title}
+                      {project.title_en ?? project.title}
                     </h3>
 
                     <p className={cn(
@@ -257,7 +295,7 @@ export function WordPressPageEn() {
                     <p className={cn(
                       'text-lg text-dark/75 leading-relaxed pt-2'
                     )}>
-                      {project.description}
+                      {project.description_en ?? project.description}
                     </p>
 
                     {project.externalUrl && (
@@ -305,7 +343,7 @@ export function WordPressPageEn() {
               Tell me what's happening.
             </p>
             <Link
-              to="/contacto"
+              to="/contacto-en"
               className={cn(
                 'inline-flex items-center justify-center rounded-xl border',
                 'px-6 py-3 lg:px-8 lg:py-4 min-h-12',

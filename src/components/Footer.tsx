@@ -4,7 +4,7 @@ import { useLanguage } from '../context/LanguageContext';
 
 function Footer() {
   const currentYear = new Date().getFullYear();
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
 
   return (
     <footer className={cn(
@@ -53,7 +53,7 @@ function Footer() {
                 </a>
               </li>
               <li>
-                <a href="/contacto" className={cn(
+                <a href={language === 'en' ? '/contacto-en' : '/contacto'} className={cn(
                   'text-link',
                   'transition-colors font-medium'
                 )}>
@@ -142,7 +142,7 @@ function Footer() {
             )}>
               {t('footer.viewProjects')}
             </a>
-            <a href="/contacto" className={cn(
+            <a href={language === 'en' ? '/contacto-en' : '/contacto'} className={cn(
               'text-link',
               'transition-colors font-medium'
             )}>
