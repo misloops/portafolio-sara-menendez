@@ -10,8 +10,12 @@ export type Project = {
   title: string;
   meta?: string;
   description: string;
+  title_en?: string;
+  meta_en?: string;
+  description_en?: string;
   image: string;
   tags: string[];
+  tags_en?: string[];
   category: string;
   slug?: string;
   externalUrl?: string;

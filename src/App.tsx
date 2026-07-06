@@ -3,11 +3,15 @@ import { Route, Routes } from 'react-router-dom';
 import { Analytics } from '@vercel/analytics/react';
 import { LanguageProvider } from './context/LanguageContext';
 import HomePage from './pages/HomePage';
+import HomePageEn from './pages/HomePageEn';
 import ProjectsPage from './pages/ProjectsPage';
+import ProjectsPageEn from './pages/ProjectsPageEn';
 import CaseStudyPage from './pages/CaseStudyPage';
+import CaseStudyPageEn from './pages/CaseStudyPageEn';
 import ContactPage from './pages/ContactPage';
 import ContactPageEn from './pages/ContactPageEn';
 import AboutPage from './pages/AboutPage';
+import AboutPageEn from './pages/AboutPageEn';
 import WordPressPage from './pages/WordPressPage';
 import WordPressPageEn from './pages/WordPressPageEn';
 import InfoNote from './components/InfoNote';
@@ -52,14 +56,21 @@ function App() {
   return (
     <LanguageProvider>
       <Routes>
+        {/* Spanish Routes */}
         <Route path="/" element={<HomePage />} />
         <Route path="/wordpress" element={<WordPressPage />} />
-        <Route path="/wordpress-en" element={<WordPressPageEn />} />
         <Route path="/proyectos" element={<ProjectsPage />} />
-        <Route path="/contacto" element={<ContactPage />} />
-        <Route path="/contacto-en" element={<ContactPageEn />} />
         <Route path="/proyectos/:slug" element={<CaseStudyPage />} />
+        <Route path="/contacto" element={<ContactPage />} />
         <Route path="/sobre-mi" element={<AboutPage />} />
+        
+        {/* English Routes */}
+        <Route path="/home-en" element={<HomePageEn />} />
+        <Route path="/wordpress-en" element={<WordPressPageEn />} />
+        <Route path="/proyectos-en" element={<ProjectsPageEn />} />
+        <Route path="/proyectos-en/:slug" element={<CaseStudyPageEn />} />
+        <Route path="/contacto-en" element={<ContactPageEn />} />
+        <Route path="/sobre-mi-en" element={<AboutPageEn />} />
       </Routes>
       <InfoNote />
       <Analytics />
