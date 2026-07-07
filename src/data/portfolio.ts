@@ -164,11 +164,38 @@ export const projects: Project[] = [
     meta: '2026',
     description: 'Web portfolio para psicóloga especializada en trauma, apego y género.',
     image: '/assets/projects/beatriz-galindo/BEATRIZ-GALINDO_COVER.jpg',
-    tags: ['WordPress', 'Diseño Web', 'Accesibilidad'],
+    tags: ['Diseño Web', 'WordPress', 'Accesibilidad'],
+    tags_en: ['WordPress', 'Web Design', 'Accessibility'],
     category: 'Portafolio',
     externalUrl: 'https://beatrizgalindonavarro.com/',
     status: 'Live',
     translationKey: 'beatrizGalindo'
+  },
+  {
+    title: 'Isabel Felip',
+    meta: '2026',
+    description: 'Web para psicóloga y psicoterapeuta especializada en terapia familiar sistémica y trauma.',
+    description_en: 'Website for a psychologist and psychotherapist specialising in systemic family therapy and trauma.',
+    image: '/assets/projects/isabel-felip/ISABEL_FELIP_cover.jpg',
+    tags: ['Diseño Web', 'WordPress'],
+    tags_en: ['Web Design', 'WordPress'],
+    category: 'Portafolio',
+    externalUrl: 'https://isabelfelip.com/',
+    status: 'Live',
+    translationKey: 'isabelFelip'
+  },
+  {
+    title: 'Aty Beauty',
+    meta: '2025',
+    description: 'Web corporativa para academia de belleza especializada en formación profesional.',
+    description_en: 'Corporate website for a beauty academy specialising in professional training.',
+    image: '/assets/projects/aty-beauty/ATY_cover.jpg',
+    tags: ['Diseño Web', 'WordPress'],
+    tags_en: ['Web Design', 'WordPress'],
+    category: 'Corporativa',
+    externalUrl: 'https://atybeautyacademia.com/',
+    status: 'Live',
+    translationKey: 'atyBeauty'
   }
 ];
 

@@ -130,6 +130,8 @@ export const translations = {
       arbola: 'Diseño web en WordPress para un estudio de arquitectura.',
       miseEnScene: 'Tienda online de moda de diseño de segunda mano.',
       beatrizGalindo: 'Web portfolio para psicóloga especializada en trauma, apego y género.',
+      isabelFelip: 'Web para psicóloga y psicoterapeuta especializada en terapia familiar sistémica y trauma.',
+      atyBeauty: 'Web corporativa para academia de belleza especializada en formación profesional.',
     },
     infoNote: {
       title: '¡Bienvenid@s a mi portafolio!',
@@ -443,6 +445,8 @@ export const translations = {
       arbola: 'WordPress web design for an architecture studio.',
       miseEnScene: 'Online store for second-hand designer fashion.',
       beatrizGalindo: 'Web portfolio for a psychologist specialising in trauma, attachment, and gender.',
+      isabelFelip: 'Website for a psychologist and psychotherapist specialising in systemic family therapy and trauma.',
+      atyBeauty: 'Corporate website for a beauty academy specialising in professional training.',
     },
     infoNote: {
       title: 'Welcome to my portfolio!',

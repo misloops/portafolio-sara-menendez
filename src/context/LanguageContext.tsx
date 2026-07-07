@@ -1,4 +1,5 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import { Language, translations } from '../constants/translations';
 
 interface LanguageContextType {
@@ -10,20 +11,22 @@ interface LanguageContextType {
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
 export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  const [language, setLanguageState] = useState<Language>(() => {
-    try {
-      const saved = typeof window !== 'undefined' ? localStorage.getItem('language') : null;
-      if (saved === 'es' || saved === 'en') return saved as Language;
-      if (typeof window !== 'undefined' && window.location.pathname.includes('-en')) return 'en';
-    } catch (e) {
-      // ignore
-    }
-    return 'es';
-  });
+  const location = useLocation();
+
+  const getLangFromPath = (pathname: string): Language =>
+    pathname.includes('-en') ? 'en' : 'es';
+
+  const [language, setLanguageState] = useState<Language>(() =>
+    getLangFromPath(typeof window !== 'undefined' ? window.location.pathname : '')
+  );
+
+  // Sync language whenever the route changes
+  useEffect(() => {
+    setLanguageState(getLangFromPath(location.pathname));
+  }, [location.pathname]);
 
   const setLanguage = (lang: Language) => {
     setLanguageState(lang);
-    localStorage.setItem('language', lang);
   };
 
   const t = (path: string, fallback = ''): string => {

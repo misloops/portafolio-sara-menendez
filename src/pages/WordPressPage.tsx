@@ -1,11 +1,12 @@
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import { cn, getChipClasses } from '../utils/classNames';
+import { cn } from '../utils/classNames';
 import { useLanguage } from '../context/LanguageContext';
 import { projects } from '../data/portfolio';
 import { Link } from 'react-router-dom';
 import { ReactNode } from 'react';
-import { Helmet } from 'react-helmet-async'; // 1. Importamos Helmet
+import { Helmet } from 'react-helmet-async';
+import { UpdateDisclaimer } from '../components/UpdateDisclaimer';
 
 const serviceIcons: Record<string, ReactNode> = {
   development: (
@@ -17,9 +18,7 @@ const serviceIcons: Record<string, ReactNode> = {
   ),
   maintenance: (
     <svg className="w-10 h-10 text-primary-400 stroke-current" fill="none" viewBox="0 0 24 24">
-      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 8v4m0 4v.01" />
-      <circle cx="12" cy="12" r="9" />
-      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 6c-.5.5-1 1.5-1 3 0 3 1 5 3 5s3-2 3-5c0-1.5-.5-2.5-1-3" />
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" />
     </svg>
   ),
   redesign: (
@@ -70,94 +69,63 @@ export function WordPressPage() {
 
       <Header />
 
+      <UpdateDisclaimer />
+      <div className="h-16 lg:h-20" />
+
       {/* Hero Section */}
       <section className={cn(
-        'relative',
-        'pt-32 pb-16 lg:pt-40 lg:pb-24',
+        'py-4 lg:py-10',
         'px-4 lg:px-6',
-        'bg-transparent',
-        'overflow-hidden'
+        'bg-transparent'
       )}>
-        <div className={cn(
-          'relative z-10',
-          'max-w-7xl mx-auto',
-          'px-4 lg:px-6'
-        )}>
-          <div className={cn(
-            'flex flex-col gap-4 lg:gap-8',
-            'text-left',
-            'max-w-4xl'
-          )}>
-            {/* Main Title */}
+        <div className="max-w-7xl mx-auto">
+          <div className="max-w-3xl">
             <h1 className={cn(
               'font-serif',
               'text-4xl md:text-5xl lg:text-6xl',
-              'font-normal leading-[1.02]',
-              'text-dark'
+              'font-normal text-dark mb-4 lg:mb-8',
+              'leading-tight'
             )}>
-              Diseño y Desarrollo WordPress
+              Diseño y desarrollo WordPress
             </h1>
+            <p className="heading-subtitle mb-4 lg:mb-8">
+              WordPress es el gestor de contenidos más utilizado del mundo, y no es casualidad.
+            </p>
+            <p className="text-dark/80 font-semibold leading-relaxed max-w-2xl">
+              Su flexibilidad, escalabilidad y facilidad de gestión lo convierten en una de las mejores opciones para empresas, marcas y profesionales que necesitan una web sólida y fácil de administrar.
+            </p>
+          </div>
+        </div>
+      </section>
 
-            {/* Para quién es - Exact copy con corrección de etiquetas de lista */}
-              <div className={cn(
-            'text-lg md:text-xl',
-            'leading-[1.6]',
-            'text-dark/75',
-            'max-w-3xl'
-          )}>
-              <div className="grid max-w-4xl mx-auto grid-cols-1 md:grid-cols-2 gap-10 mb-12 items-stretch justify-items-center">
-                <div className="w-full flex justify-start">
-                  <div className={cn(
-                    'bg-white/40 backdrop-blur-sm rounded-xl',
-                    'p-4 lg:p-6',
-                    'max-w-[520px] w-full',
-                    'h-full flex flex-col',
-                    'box-border',
-                    'border border-[#d8ded8]',
-                    'hover:border-[#c3dcc5] hover:bg-white/60',
-                    'transition-all duration-300'
-                  )}>
-                    <p className="whitespace-normal break-words">
-                      WordPress es el gestor de contenidos más utilizado del mundo, y no es casualidad. Su flexibilidad, escalabilidad y facilidad de gestión lo convierten en una de las mejores opciones para empresas, marcas y profesionales que necesitan una web sólida y fácil de administrar.
-                    </p>
-                  </div>
-                </div>
-
-                <div className="w-full flex justify-end">
-                  <div className={cn(
-                    'bg-white/40 backdrop-blur-sm rounded-xl',
-                    'p-4 lg:p-6',
-                    'max-w-[520px] w-full',
-                    'h-full flex flex-col',
-                    'box-border',
-                    'border border-[#d8ded8]',
-                    'hover:border-[#c3dcc5] hover:bg-white/60',
-                    'transition-all duration-300'
-                  )}>
-                    <p className="whitespace-normal break-words">
-                      Como diseñadora web freelance especializada en WordPress, llevo más de seis años creando, rediseñando y optimizando sitios web adaptados a las necesidades de cada cliente. Desde páginas corporativas hasta tiendas online, mi objetivo es que tu web no solo tenga una buena imagen, sino que funcione de forma eficiente y ayude a cumplir tus objetivos de negocio.
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <div>
-                <strong>¿Por qué contar con una especialista en WordPress?</strong><br />
-                WordPress es una herramienta accesible, pero detrás de una web profesional hay mucho más que instalar un tema y añadir algunos plugins.
-                La optimización, la seguridad, el rendimiento, la compatibilidad y el posicionamiento requieren conocimientos técnicos que marcan la diferencia entre una web que simplemente existe y una web que aporta valor al negocio.
-                Trabajar con una profesional especializada ayuda a evitar problemas habituales como:
-                <ul className="list-disc pl-5 mt-2 space-y-1">
-                  <li>Fallos de seguridad y vulnerabilidades.</li>
-                  <li>Pérdida de posicionamiento en buscadores.</li>
-                  <li>Lentitud en la carga de la página.</li>
-                  <li>Errores tras actualizaciones.</li>
-                  <li>Pérdida de información por falta de copias de seguridad.</li>
-                  <li>Costes elevados derivados de desarrollos mal ejecutados.</li>
-                </ul>
-              </div>
-
-              <p>
-                En la mayoría de los casos, prevenir siempre resulta más económico que reparar.
+      {/* 2 columnas informativas */}
+      <section className="py-10 lg:py-16 px-4 lg:px-6 bg-transparent">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
+            <div className={cn(
+              'flex flex-col gap-3',
+              'rounded-xl p-6 lg:p-8',
+              'bg-[#e8e0eb]/70 backdrop-blur-sm',
+              'border border-[#c3b7c3]/40'
+            )}>
+              <h3 className="text-xl font-serif font-bold text-dark">
+                ¿Qué te puedo ofrecer?
+              </h3>
+              <p className="text-dark/70 leading-relaxed">
+                Como diseñadora web freelance especializada en WordPress, llevo más de seis años creando, rediseñando y optimizando sitios web adaptados a las necesidades de cada cliente. Desde páginas corporativas hasta tiendas online, mi objetivo es que tu web no solo tenga una buena imagen, sino que funcione de forma eficiente y ayude a cumplir tus objetivos de negocio.
+              </p>
+            </div>
+            <div className={cn(
+              'flex flex-col gap-3',
+              'rounded-xl p-6 lg:p-8',
+              'bg-[#e8e0eb]/70 backdrop-blur-sm',
+              'border border-[#c3b7c3]/40'
+            )}>
+              <h3 className="text-xl font-serif font-bold text-dark">
+                ¿Por qué contar con una especialista en WordPress?
+              </h3>
+              <p className="text-dark/70 leading-relaxed">
+                WordPress es una herramienta accesible, pero detrás de una web profesional hay mucho más que instalar un tema y añadir algunos plugins. La optimización, la seguridad, el rendimiento, la compatibilidad y el posicionamiento requieren conocimientos técnicos que marcan la diferencia entre una web que simplemente existe y una web que aporta valor al negocio.
               </p>
             </div>
           </div>
@@ -256,99 +224,73 @@ export function WordPressPage() {
         </div>
       </section>
 
-      {/* Casos Reales - Alternating Layout */}
+      {/* Casos Reales - 2 column grid */}
       <section className="py-10 lg:py-20 px-4 lg:px-6 bg-transparent">
         <div className="max-w-7xl mx-auto">
           <h2 className={cn(
             'font-serif',
             'text-3xl md:text-4xl',
-            'font-bold text-dark mb-16'
+            'font-bold text-dark mb-12 lg:mb-16'
           )}>
             Casos reales
           </h2>
 
-          <div className="space-y-16 lg:space-y-24">
-            {demoProjects.map((project, index) => {
-              const isEven = index % 2 === 0;
-              
-              return (
-                <div 
-                  key={project.slug || project.title}
-                  className={cn(
-                    'grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-6 items-center'
-                  )}
-                >
-                  {/* Image Container */}
-                  <div className={cn(
-                    'flex items-center justify-center',
-                    !isEven && 'lg:order-2'
-                  )}>
-                    <div className="w-full p-4 lg:p-6">
-                      <img
-                        src={project.image}
-                        alt={project.title}
-                        className="w-full h-auto object-contain rounded-lg shadow-lg"
-                      />
-                    </div>
-                  </div>
+          {/* Fila 1: Isabel Felip + Beatriz Galindo */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-12 mb-10 lg:mb-12">
+            {/* Textos fila 1 */}
+            <div className="flex flex-col gap-2">
+              <h3 className="font-serif text-2xl md:text-3xl font-bold text-dark leading-tight">Isabel Felip</h3>
+              <p className="text-base font-semibold text-dark/70">Diseño y desarrollo web</p>
+              <p className="text-sm italic text-dark/50">2026</p>
+              <p className="text-base text-dark/70 leading-relaxed">Web para psicóloga y psicoterapeuta especializada en terapia familiar sistémica y trauma. Diseño cálido y accesible orientado a generar confianza y facilitar el primer contacto.</p>
+              <a href="https://isabelfelip.com/" target="_blank" rel="noopener noreferrer" className={cn('self-start inline-flex items-center justify-center rounded-xl border mt-2', 'px-4 py-2 text-base font-semibold', 'bg-[#c3dcc5] text-[#302e2e] border-[#c3dcc5]', 'hover:bg-[#a8d0ab] transition-all duration-200')}>Ver online</a>
+            </div>
+            <div className="flex flex-col gap-2">
+              <h3 className="font-serif text-2xl md:text-3xl font-bold text-dark leading-tight">Beatriz Galindo Psicóloga</h3>
+              <p className="text-base font-semibold text-dark/70">Diseño y desarrollo web</p>
+              <p className="text-sm italic text-dark/50">2026</p>
+              <p className="text-base text-dark/70 leading-relaxed">Web portfolio para psicóloga especializada en trauma, apego y género. Diseño limpio y profesional que transmite calma y rigor clínico.</p>
+              <a href="https://beatrizgalindonavarro.com/" target="_blank" rel="noopener noreferrer" className={cn('self-start inline-flex items-center justify-center rounded-xl border mt-2', 'px-4 py-2 text-base font-semibold', 'bg-[#c3dcc5] text-[#302e2e] border-[#c3dcc5]', 'hover:bg-[#a8d0ab] transition-all duration-200')}>Ver online</a>
+            </div>
+            {/* Imágenes fila 1 — alineadas */}
+            <img src="/assets/projects/isabel-felip/ISABEL_FELIP_entera.jpg" alt="Isabel Felip" className="w-full h-auto rounded-lg shadow-lg" />
+            <img src="/assets/projects/beatriz-galindo/B_GALINDO_entera.jpg" alt="Beatriz Galindo Psicóloga" className="w-full h-auto rounded-lg shadow-lg" />
+          </div>
 
-                  {/* Text Container */}
-                  <div className={cn(
-                    'flex flex-col gap-2 lg:gap-3 p-4 lg:p-6',
-                    !isEven && 'lg:order-1',
-                    'text-left'
-                  )}>
-                    <h3 className={cn(
-                      'font-serif',
-                      'text-3xl md:text-4xl',
-                      'font-bold text-dark leading-tight'
-                    )}>
-                      {project.title}
-                    </h3>
+          {/* Fila 2: Aty Beauty + Menlo */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-12 mb-10 lg:mb-12">
+            {/* Textos fila 2 */}
+            <div className="flex flex-col gap-2">
+              <h3 className="font-serif text-2xl md:text-3xl font-bold text-dark leading-tight">Aty Beauty</h3>
+              <p className="text-base font-semibold text-dark/70">Diseño y desarrollo web</p>
+              <p className="text-sm italic text-dark/50">2025</p>
+              <p className="text-base text-dark/70 leading-relaxed">Web corporativa para academia de belleza especializada en formación profesional. Diseño moderno y orientado a captación de alumnos.</p>
+              <a href="https://atybeautyacademia.com/" target="_blank" rel="noopener noreferrer" className={cn('self-start inline-flex items-center justify-center rounded-xl border mt-2', 'px-4 py-2 text-base font-semibold', 'bg-[#c3dcc5] text-[#302e2e] border-[#c3dcc5]', 'hover:bg-[#a8d0ab] transition-all duration-200')}>Ver online</a>
+            </div>
+            <div className="flex flex-col gap-2">
+              <h3 className="font-serif text-2xl md:text-3xl font-bold text-dark leading-tight">Menlo Artist</h3>
+              <p className="text-base font-semibold text-dark/70">Diseño y desarrollo web</p>
+              <p className="text-sm italic text-dark/50">2025</p>
+              <p className="text-base text-dark/70 leading-relaxed">Portfolio WordPress para artista especializada en retratos de mascotas. Diseño minimalista centrado en galería de obra y captación de encargos.</p>
+              <a href="https://menloartist.com" target="_blank" rel="noopener noreferrer" className={cn('self-start inline-flex items-center justify-center rounded-xl border mt-2', 'px-4 py-2 text-base font-semibold', 'bg-[#c3dcc5] text-[#302e2e] border-[#c3dcc5]', 'hover:bg-[#a8d0ab] transition-all duration-200')}>Ver online</a>
+            </div>
+            {/* Imágenes fila 2 — alineadas */}
+            <img src="/assets/projects/aty-beauty/ATY_entera.jpg" alt="Aty Beauty" className="w-full h-auto rounded-lg shadow-lg" />
+            <img src="/assets/projects/menlo-artist/MENLO_entera.jpg" alt="Menlo Artist" className="w-full h-auto rounded-lg shadow-lg" />
+          </div>
 
-                    <p className={cn(
-                      'font-serif text-base font-bold',
-                      'text-dark/70'
-                    )}>
-                      {project.service}
-                    </p>
-
-                    <p className={cn(
-                      'font-serif text-sm italic',
-                      'text-dark/60'
-                    )}>
-                      {project.meta}
-                    </p>
-
-                    <p className={cn(
-                      'text-lg text-dark/75 leading-relaxed pt-2'
-                    )}>
-                      {project.description}
-                    </p>
-
-                    {project.externalUrl && (
-                      <div className="pt-3">
-                        <a
-                          href={project.externalUrl}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className={cn(
-                            'inline-flex items-center justify-center rounded-xl border',
-                            'px-4 py-2 lg:px-6 lg:py-3 min-h-10',
-                            'text-base font-semibold',
-                            'bg-[#c3dcc5] text-[#302e2e] border-[#c3dcc5]',
-                            'hover:bg-[#a8d0ab] hover:text-[#302e2e]',
-                            'transition-all duration-200 ease-out'
-                          )}
-                        >
-                          Ver proyecto
-                        </a>
-                      </div>
-                    )}
-                  </div>
-                </div>
-              );
-            })}
+          {/* Fila 3: Ohmios — columna completa */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-12 mt-10 lg:mt-12">
+            <div className="flex flex-col gap-2">
+              <h3 className="font-serif text-2xl md:text-3xl font-bold text-dark leading-tight">Ohmios Records</h3>
+              <p className="text-base font-semibold text-dark/70">Diseño y desarrollo · Tienda online · Mantenimiento</p>
+              <p className="text-sm italic text-dark/50">Asturias 2023–2026</p>
+              <p className="text-base text-dark/70 leading-relaxed">Tienda online para sello de discos en vinilo de música electrónica. Desarrollo completo en WordPress + WooCommerce con diseño orientado a conversión.</p>
+              <a href="https://ohmiosrecords.com/" target="_blank" rel="noopener noreferrer" className={cn('self-start inline-flex items-center justify-center rounded-xl border mt-2', 'px-4 py-2 text-base font-semibold', 'bg-[#c3dcc5] text-[#302e2e] border-[#c3dcc5]', 'hover:bg-[#a8d0ab] transition-all duration-200')}>Ver online</a>
+            </div>
+            <div className="hidden md:block" />
+            <img src="/assets/projects/ohmios-records/OHMIOS_cover.png" alt="Ohmios Records" className="w-full h-auto rounded-lg shadow-lg" />
+            <div className="hidden md:block" />
           </div>
         </div>
       </section>
