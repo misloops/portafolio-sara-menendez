@@ -115,6 +115,40 @@ export function WordPressPageEn() {
         <div className="max-w-7xl mx-auto">
           <h2 className={cn('font-serif', 'text-3xl md:text-4xl', 'font-bold text-dark mb-12 lg:mb-16')}>Case studies</h2>
 
+          {/* Featured Project: Ohmios Records */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10 lg:gap-12 mb-16 lg:mb-20">
+            {/* Left column: Title + Home image */}
+            <div className="flex flex-col gap-4 md:gap-5">
+              <div className="flex flex-col gap-2 md:min-h-[132px]">
+                <h3 className="font-serif text-3xl md:text-4xl font-bold text-dark leading-tight">Ohmios Records</h3>
+                <p className="text-base font-semibold text-dark/70">Design & development · Online store · Maintenance</p>
+                <p className="text-sm italic text-dark/50">Asturias 2023–2026</p>
+              </div>
+              <img src="/src/assets/projects/ohmios-records/Ohmios_cover.jpg" alt="Ohmios Records - Home" className="w-full h-auto rounded-lg shadow-lg" />
+            </div>
+
+            {/* Right column: Intro + Mobile screenshots */}
+            <div className="flex flex-col gap-4 md:gap-5 md:pt-[132px]">
+              <h3 className="text-sm md:text-base font-semibold italic text-dark/80 leading-relaxed" style={{ fontFamily: 'Gilroy, DM Sans, sans-serif' }}>
+                Online store for an electronic music vinyl record label.
+              </h3>
+
+              <a href="https://ohmiosrecords.com/" target="_blank" rel="noopener noreferrer" className={cn('self-stretch sm:self-start inline-flex items-center justify-center rounded-xl border', 'px-4 py-2 text-base font-semibold', 'bg-[#c3dcc5] text-[#302e2e] border-[#c3dcc5]', 'hover:bg-[#a8d0ab] transition-all duration-200')}>View online</a>
+
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-5 items-start">
+                <div className="flex flex-col gap-2 items-center lg:items-start">
+                  <p className="text-sm font-semibold text-dark/70 text-center lg:text-left">Product page</p>
+                  <img src="/src/assets/projects/ohmios-records/Ohmios_movil_producto 1.jpg" alt="Ohmios Records - Product Page Mobile" className="w-full max-w-[250px] sm:max-w-[300px] lg:max-w-none h-auto max-h-[460px] lg:max-h-[520px] object-contain rounded-lg shadow-lg mx-auto lg:mx-0" />
+                </div>
+
+                <div className="flex flex-col gap-2 items-center lg:items-start">
+                  <p className="text-sm font-semibold text-dark/70 text-center lg:text-left">Player</p>
+                  <img src="/src/assets/projects/ohmios-records/ohmios_movil_reproductor 2.jpg" alt="Ohmios Records - Player Mobile" className="w-full max-w-[250px] sm:max-w-[300px] lg:max-w-none h-auto max-h-[460px] lg:max-h-[520px] object-contain rounded-lg shadow-lg mx-auto lg:mx-0" />
+                </div>
+              </div>
+            </div>
+          </div>
+
           {/* Row 1: Isabel Felip + Beatriz Galindo */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-12 mb-10 lg:mb-12">
             <div className="flex flex-col gap-2">
@@ -153,20 +187,6 @@ export function WordPressPageEn() {
             </div>
             <img src="/assets/projects/aty-beauty/ATY_entera.jpg" alt="Aty Beauty" className="w-full h-auto rounded-lg shadow-lg" />
             <img src="/assets/projects/menlo-artist/MENLO_entera.jpg" alt="Menlo Artist" className="w-full h-auto rounded-lg shadow-lg" />
-          </div>
-
-          {/* Row 3: Ohmios */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-12 mt-10 lg:mt-12">
-            <div className="flex flex-col gap-2">
-              <h3 className="font-serif text-2xl md:text-3xl font-bold text-dark leading-tight">Ohmios Records</h3>
-              <p className="text-base font-semibold text-dark/70">Design & development · Online store · Maintenance</p>
-              <p className="text-sm italic text-dark/50">Asturias 2023–2026</p>
-              <p className="text-base text-dark/70 leading-relaxed">Online store for an electronic music vinyl record label. Full development in WordPress + WooCommerce with conversion-focused design.</p>
-              <a href="https://ohmiosrecords.com/" target="_blank" rel="noopener noreferrer" className={cn('self-start inline-flex items-center justify-center rounded-xl border mt-2', 'px-4 py-2 text-base font-semibold', 'bg-[#c3dcc5] text-[#302e2e] border-[#c3dcc5]', 'hover:bg-[#a8d0ab] transition-all duration-200')}>View online</a>
-            </div>
-            <div className="hidden md:block" />
-            <img src="/assets/projects/ohmios-records/OHMIOS_cover.png" alt="Ohmios Records" className="w-full h-auto rounded-lg shadow-lg" />
-            <div className="hidden md:block" />
           </div>
         </div>
       </section>
