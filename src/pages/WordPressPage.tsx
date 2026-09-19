@@ -7,6 +7,9 @@ import { Link } from 'react-router-dom';
 import { ReactNode } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { UpdateDisclaimer } from '../components/UpdateDisclaimer';
+import ohmiosCoverImage from '../assets/projects/ohmios-records/Ohmios_cover.jpg';
+import ohmiosProductMobileImage from '../assets/projects/ohmios-records/Ohmios_movil_producto 1.jpg';
+import ohmiosPlayerMobileImage from '../assets/projects/ohmios-records/ohmios_movil_reproductor 2.jpg';
 
 const serviceIcons: Record<string, ReactNode> = {
   development: (
@@ -245,7 +248,7 @@ export function WordPressPage() {
                 <p className="text-sm italic text-dark/50">Asturias 2023–2026</p>
               </div>
               {/* Imagen 1: Home completa */}
-              <img src="/src/assets/projects/ohmios-records/Ohmios_cover.jpg" alt="Ohmios Records - Home" className="w-full h-auto rounded-lg shadow-lg" />
+              <img src={ohmiosCoverImage} alt="Ohmios Records - Home" className="w-full h-auto rounded-lg shadow-lg" />
             </div>
 
             {/* Columna derecha: Introducción + Imágenes 2 y 3 */}
@@ -260,13 +263,13 @@ export function WordPressPage() {
                 {/* Imagen 2: Ficha producto móvil */}
                 <div className="flex flex-col gap-2 items-center lg:items-start">
                   <p className="text-sm font-semibold text-dark/70 text-center lg:text-left">Ficha producto</p>
-                  <img src="/src/assets/projects/ohmios-records/Ohmios_movil_producto 1.jpg" alt="Ohmios Records - Ficha Producto Móvil" className="w-full max-w-[250px] sm:max-w-[300px] lg:max-w-none h-auto max-h-[460px] lg:max-h-[520px] object-contain rounded-lg shadow-lg mx-auto lg:mx-0" />
+                  <img src={ohmiosProductMobileImage} alt="Ohmios Records - Ficha Producto Móvil" className="w-full max-w-[250px] sm:max-w-[300px] lg:max-w-none h-auto max-h-[460px] lg:max-h-[520px] object-contain rounded-lg shadow-lg mx-auto lg:mx-0" />
                 </div>
 
                 {/* Imagen 3: Reproductor */}
                 <div className="flex flex-col gap-2 items-center lg:items-start">
                   <p className="text-sm font-semibold text-dark/70 text-center lg:text-left">Reproductor</p>
-                  <img src="/src/assets/projects/ohmios-records/ohmios_movil_reproductor 2.jpg" alt="Ohmios Records - Reproductor" className="w-full max-w-[250px] sm:max-w-[300px] lg:max-w-none h-auto max-h-[460px] lg:max-h-[520px] object-contain rounded-lg shadow-lg mx-auto lg:mx-0" />
+                  <img src={ohmiosPlayerMobileImage} alt="Ohmios Records - Reproductor" className="w-full max-w-[250px] sm:max-w-[300px] lg:max-w-none h-auto max-h-[460px] lg:max-h-[520px] object-contain rounded-lg shadow-lg mx-auto lg:mx-0" />
                 </div>
               </div>
             </div>

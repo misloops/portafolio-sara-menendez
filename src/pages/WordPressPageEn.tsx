@@ -5,6 +5,9 @@ import { Link } from 'react-router-dom';
 import { ReactNode } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { UpdateDisclaimer } from '../components/UpdateDisclaimer';
+import ohmiosCoverImage from '../assets/projects/ohmios-records/Ohmios_cover.jpg';
+import ohmiosProductMobileImage from '../assets/projects/ohmios-records/Ohmios_movil_producto 1.jpg';
+import ohmiosPlayerMobileImage from '../assets/projects/ohmios-records/ohmios_movil_reproductor 2.jpg';
 
 const serviceIcons: Record<string, ReactNode> = {
   development: (
@@ -124,7 +127,7 @@ export function WordPressPageEn() {
                 <p className="text-base font-semibold text-dark/70">Design & development · Online store · Maintenance</p>
                 <p className="text-sm italic text-dark/50">Asturias 2023–2026</p>
               </div>
-              <img src="/src/assets/projects/ohmios-records/Ohmios_cover.jpg" alt="Ohmios Records - Home" className="w-full h-auto rounded-lg shadow-lg" />
+              <img src={ohmiosCoverImage} alt="Ohmios Records - Home" className="w-full h-auto rounded-lg shadow-lg" />
             </div>
 
             {/* Right column: Intro + Mobile screenshots */}
@@ -138,12 +141,12 @@ export function WordPressPageEn() {
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-5 items-start">
                 <div className="flex flex-col gap-2 items-center lg:items-start">
                   <p className="text-sm font-semibold text-dark/70 text-center lg:text-left">Product page</p>
-                  <img src="/src/assets/projects/ohmios-records/Ohmios_movil_producto 1.jpg" alt="Ohmios Records - Product Page Mobile" className="w-full max-w-[250px] sm:max-w-[300px] lg:max-w-none h-auto max-h-[460px] lg:max-h-[520px] object-contain rounded-lg shadow-lg mx-auto lg:mx-0" />
+                  <img src={ohmiosProductMobileImage} alt="Ohmios Records - Product Page Mobile" className="w-full max-w-[250px] sm:max-w-[300px] lg:max-w-none h-auto max-h-[460px] lg:max-h-[520px] object-contain rounded-lg shadow-lg mx-auto lg:mx-0" />
                 </div>
 
                 <div className="flex flex-col gap-2 items-center lg:items-start">
                   <p className="text-sm font-semibold text-dark/70 text-center lg:text-left">Player</p>
-                  <img src="/src/assets/projects/ohmios-records/ohmios_movil_reproductor 2.jpg" alt="Ohmios Records - Player Mobile" className="w-full max-w-[250px] sm:max-w-[300px] lg:max-w-none h-auto max-h-[460px] lg:max-h-[520px] object-contain rounded-lg shadow-lg mx-auto lg:mx-0" />
+                  <img src={ohmiosPlayerMobileImage} alt="Ohmios Records - Player Mobile" className="w-full max-w-[250px] sm:max-w-[300px] lg:max-w-none h-auto max-h-[460px] lg:max-h-[520px] object-contain rounded-lg shadow-lg mx-auto lg:mx-0" />
                 </div>
               </div>
             </div>
