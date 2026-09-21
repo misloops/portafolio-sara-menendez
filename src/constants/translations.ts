@@ -16,9 +16,9 @@ export const translations = {
     },
     hero: {
       title: 'Hola, soy Sara',
-      mainTitle: 'Diseño Web',
-      mainSubtitle: 'Tu web debería trabajar para ti, no darte problemas.',
-      subtitle: 'Porque una web no solo tiene que verse bien. Tiene que funcionar bien. Diseño, desarrollo y optimizo sitios WordPress funcionales, intuitivos y fáciles de mantener, que combinan diseño, usabilidad y rendimiento para ayudarte a transmitir confianza y centrarte en lo importante: tu negocio.',
+      mainTitle: 'Diseñadora web freelance',
+      mainSubtitle: 'Porque una web no solo tiene que verse bien. Tiene que funcionar bien.',
+      subtitle: 'Diseño, desarrollo y gestión de sitios web, combinando visión de diseño, experiencia con diferentes gestores de contenido y capacidad para resolver proyectos de forma autónoma.',
 
       skills: ['Web Manager', 'Diseño UX/UI', 'WordPress', 'Drupal',],
       cta1: '¿Hablamos?',
@@ -326,9 +326,9 @@ export const translations = {
     },
     hero: {
       title: 'Hi, I\'m Sara',
-      mainTitle: 'Web Design',
-      mainSubtitle: 'I\'m Sara and I design, develop, and optimize websites with a focus on user experience.',
-      subtitle: 'I create web experiences with identity, usability, and aesthetic criteria',
+      mainTitle: 'Freelance web designer',
+      mainSubtitle: 'Because a website has to do more than just look good. It has to work well.',
+      subtitle: 'Design, development and management of websites, combining design vision, experience with different content managers and the ability to solve projects autonomously.',
       skills: ['Web Manager', 'UX/UI Design', 'WordPress', 'Drupal', 'Figma'],
       cta1: 'Write to me',
       cta2: 'Projects',

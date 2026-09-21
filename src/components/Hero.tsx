@@ -38,7 +38,8 @@ function Hero({ onActionClick }: HeroProps) {
             'font-serif',
             'text-4xl md:text-5xl lg:text-6xl',
             'font-normal leading-[1.02]',
-            'text-dark'
+            'text-dark',
+            'max-w-6xl'
           )}>
             <span className="text-gradient-hero font-bold">{t('hero.mainTitle')}</span>
             <br />
