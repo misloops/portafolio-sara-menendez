@@ -2,11 +2,11 @@ import { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import Header from '../components/Header';
 import Hero from '../components/Hero';
+import Services from '../components/Services';
 import Projects from '../components/Projects';
 import AboutMe from '../components/AboutMe';
 
 import Footer from '../components/Footer';
-import WebAuditBanner from '../components/WebAuditBanner';
 
 function HomePage() {
   const location = useLocation();
@@ -41,7 +41,7 @@ function HomePage() {
   }, [location.hash]);
 
   useEffect(() => {
-    const sectionIds = ['inicio', 'proyectos'];
+    const sectionIds = ['inicio', 'servicios', 'proyectos'];
     const sections = sectionIds
       .map((id) => document.getElementById(id))
       .filter(Boolean) as HTMLElement[];
@@ -81,9 +81,9 @@ function HomePage() {
 
       <main id="inicio" className="w-full">
         <Hero onActionClick={handleHeroAction} />
+        <Services />
         <Projects />
         <AboutMe />
-        <WebAuditBanner />
       </main>
 
       <Footer />
