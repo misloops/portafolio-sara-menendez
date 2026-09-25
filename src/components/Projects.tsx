@@ -67,8 +67,8 @@ function Projects() {
               'inline-flex items-center justify-center rounded-xl border',
               'px-4 py-2 lg:px-6 lg:py-3 min-h-10',
               'text-base font-semibold',
-              'bg-[#c3dcc5] text-[#302e2e] border-[#c3dcc5]',
-              'hover:bg-[#a8d0ab] hover:text-[#302e2e]',
+              'bg-[#e3e6e3] text-[#4d4d4d] border-[#e3e6e3]',
+              'hover:bg-[#e3e6e3] hover:text-[#4d4d4d]',
               'transition-all duration-200 ease-out'
             )}
           >

@@ -10,7 +10,7 @@ function Footer() {
     <footer className={cn(
       'py-10 md:py-16 lg:py-24',
       'px-6 md:px-12 lg:px-16',
-        'bg-gradient-to-br from-[#faf8fa] via-[#e8dce8] to-[#b8d4c0]',
+        'bg-gradient-to-br from-[#fdf6f5] via-[#f6d3cb] to-[#eaecea]',
       'border-t border-neutral-200'
     )}>
       <div className={cn(

@@ -5,23 +5,23 @@
 
 // ========== COLORS ==========
 export const COLORS = {
-  primary: '#98c29b',
-  primaryDark: '#5e8a6d',
-  secondary: '#c3b7c3',
-  secondaryDark: '#9b8a9b',
-  dark: '#302e2e', // Sara's brand black for text
+  primary: '#dee2de',
+  primaryDark: '#a4a7a4',
+  secondary: '#e8927c',
+  secondaryDark: '#b57261',
+  dark: '#4d4d4d', // Sara's brand black for text
   neutral: {
     bg: '#dee2de',
     bgLight: '#eff0f3',
     bgDark: '#1f2937',
-    text: '#302e2e', // Updated to Sara's black
+    text: '#4d4d4d', // Updated to Sara's black
     textMuted: '#4a5568',
   },
   gradients: {
-    portfolioBg: 'linear-gradient(120deg, #f2e8f0 0%, #ede6eb 8%, #e8dce8 10%, #d4c4d4 24%, #b8d4c0 45%, #a8d8b0 70%, #b0deb8 85%, #f0e8f0 100%)',
-    heroBg: 'linear-gradient(120deg, #f2e8f0 0%, #ede6eb 8%, #e8dce8 10%, #d4c4d4 24%, #b8d4c0 45%, #a8d8b0 70%, #b0deb8 85%, #f0e8f0 100%)',
-    contactBg: 'linear-gradient(120deg, #e8dce8 0%, #b8d4c0 45%, #a8d8b0 70%, #f2e8f0 100%)',
-    caseStudyBg: 'linear-gradient(120deg, #f2e8f0 0%, #ede6eb 8%, #e8dce8 10%, #d4c4d4 24%, #b8d4c0 45%, #a8d8b0 70%, #b0deb8 85%, #f0e8f0 100%)',
+    portfolioBg: 'linear-gradient(180deg, #d99a8a 0%, #e8927c 20%, #efb5a6 40%, #e7ccc2 55%, #e3e6e3 70%, #c3c7c3 85%, #dee2de 100%)',
+    heroBg: 'linear-gradient(180deg, #d99a8a 0%, #e8927c 20%, #efb5a6 40%, #e7ccc2 55%, #e3e6e3 70%, #c3c7c3 85%, #dee2de 100%)',
+    contactBg: 'linear-gradient(180deg, #d99a8a 0%, #e7ccc2 40%, #c3c7c3 70%, #dee2de 100%)',
+    caseStudyBg: 'linear-gradient(180deg, #d99a8a 0%, #e8927c 20%, #efb5a6 40%, #e7ccc2 55%, #e3e6e3 70%, #c3c7c3 85%, #dee2de 100%)',
   },
 } as const;
 

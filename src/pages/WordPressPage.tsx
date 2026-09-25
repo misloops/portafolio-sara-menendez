@@ -59,7 +59,7 @@ export function WordPressPage() {
     <div 
       className="min-h-screen" 
       style={{ 
-        background: 'linear-gradient(120deg, #f2e8f0 0%, #ede6eb 8%, #e8dce8 10%, #d4c4d4 24%, #b8d4c0 45%, #a8d8b0 70%, #b0deb8 85%, #f0e8f0 100%)',
+        background: 'linear-gradient(180deg, #d99a8a 0%, #e8927c 20%, #efb5a6 40%, #e7ccc2 55%, #e3e6e3 70%, #c3c7c3 85%, #dee2de 100%)',
         backgroundAttachment: 'fixed'
       }}
     >
@@ -108,8 +108,8 @@ export function WordPressPage() {
             <div className={cn(
               'flex flex-col gap-3',
               'rounded-xl p-6 lg:p-8',
-              'bg-[#e8e0eb]/70 backdrop-blur-sm',
-              'border border-[#c3b7c3]/40'
+              'bg-[#fbebe7]/70 backdrop-blur-sm',
+              'border border-[#e8927c]/40'
             )}>
               <h3 className="text-xl font-serif font-bold text-dark">
                 ¿Qué te puedo ofrecer?
@@ -121,8 +121,8 @@ export function WordPressPage() {
             <div className={cn(
               'flex flex-col gap-3',
               'rounded-xl p-6 lg:p-8',
-              'bg-[#e8e0eb]/70 backdrop-blur-sm',
-              'border border-[#c3b7c3]/40'
+              'bg-[#fbebe7]/70 backdrop-blur-sm',
+              'border border-[#e8927c]/40'
             )}>
               <h3 className="text-xl font-serif font-bold text-dark">
                 ¿Por qué contar con una especialista en WordPress?
@@ -151,15 +151,15 @@ export function WordPressPage() {
             <div className={cn(
               'bg-white/40 backdrop-blur-sm rounded-xl',
               'p-6 lg:p-8',
-              'border border-[#d8ded8]',
-              'hover:border-[#c3dcc5] hover:bg-white/60',
+              'border border-[#c3c7c3]',
+              'hover:border-[#e3e6e3] hover:bg-white/60',
               'transition-all duration-300',
               'group'
             )}>
               <div className={cn(
                 'mb-6 p-4 rounded-lg w-fit',
-                'bg-[#f0f5f0]',
-                'group-hover:bg-[#e8f0e8]',
+                'bg-[#f3f5f3]',
+                'group-hover:bg-[#eaecea]',
                 'transition-colors duration-300'
               )}>
                 {serviceIcons.development}
@@ -176,15 +176,15 @@ export function WordPressPage() {
             <div className={cn(
               'bg-white/40 backdrop-blur-sm rounded-xl',
               'p-6 lg:p-8',
-              'border border-[#d8ded8]',
-              'hover:border-[#c3dcc5] hover:bg-white/60',
+              'border border-[#c3c7c3]',
+              'hover:border-[#e3e6e3] hover:bg-white/60',
               'transition-all duration-300',
               'group'
             )}>
               <div className={cn(
                 'mb-6 p-4 rounded-lg w-fit',
-                'bg-[#f0f5f0]',
-                'group-hover:bg-[#e8f0e8]',
+                'bg-[#f3f5f3]',
+                'group-hover:bg-[#eaecea]',
                 'transition-colors duration-300'
               )}>
                 {serviceIcons.maintenance}
@@ -202,15 +202,15 @@ export function WordPressPage() {
             <div className={cn(
               'bg-white/40 backdrop-blur-sm rounded-xl',
               'p-6 lg:p-8',
-              'border border-[#d8ded8]',
-              'hover:border-[#c3dcc5] hover:bg-white/60',
+              'border border-[#c3c7c3]',
+              'hover:border-[#e3e6e3] hover:bg-white/60',
               'transition-all duration-300',
               'group'
             )}>
               <div className={cn(
                 'mb-6 p-4 rounded-lg w-fit',
-                'bg-[#f0f5f0]',
-                'group-hover:bg-[#e8f0e8]',
+                'bg-[#f3f5f3]',
+                'group-hover:bg-[#eaecea]',
                 'transition-colors duration-300'
               )}>
                 {serviceIcons.redesign}
@@ -257,7 +257,7 @@ export function WordPressPage() {
                 Tienda online para sello de discos en vinilo de música electrónica.
               </h3>
 
-              <a href="https://ohmiosrecords.com/" target="_blank" rel="noopener noreferrer" className={cn('self-stretch sm:self-start inline-flex items-center justify-center rounded-xl border', 'px-4 py-2 text-base font-semibold', 'bg-[#c3dcc5] text-[#302e2e] border-[#c3dcc5]', 'hover:bg-[#a8d0ab] transition-all duration-200')}>Ver online</a>
+              <a href="https://ohmiosrecords.com/" target="_blank" rel="noopener noreferrer" className={cn('self-stretch sm:self-start inline-flex items-center justify-center rounded-xl border', 'px-4 py-2 text-base font-semibold', 'bg-[#e3e6e3] text-[#4d4d4d] border-[#e3e6e3]', 'hover:bg-[#e3e6e3] transition-all duration-200')}>Ver online</a>
               
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-5 items-start">
                 {/* Imagen 2: Ficha producto móvil */}
@@ -283,14 +283,14 @@ export function WordPressPage() {
               <p className="text-base font-semibold text-dark/70">Diseño y desarrollo web</p>
               <p className="text-sm italic text-dark/50">2026</p>
               <p className="text-base text-dark/70 leading-relaxed">Web para psicóloga y psicoterapeuta especializada en terapia familiar sistémica y trauma. Diseño cálido y accesible orientado a generar confianza y facilitar el primer contacto.</p>
-              <a href="https://isabelfelip.com/" target="_blank" rel="noopener noreferrer" className={cn('self-start inline-flex items-center justify-center rounded-xl border mt-2', 'px-4 py-2 text-base font-semibold', 'bg-[#c3dcc5] text-[#302e2e] border-[#c3dcc5]', 'hover:bg-[#a8d0ab] transition-all duration-200')}>Ver online</a>
+              <a href="https://isabelfelip.com/" target="_blank" rel="noopener noreferrer" className={cn('self-start inline-flex items-center justify-center rounded-xl border mt-2', 'px-4 py-2 text-base font-semibold', 'bg-[#e3e6e3] text-[#4d4d4d] border-[#e3e6e3]', 'hover:bg-[#e3e6e3] transition-all duration-200')}>Ver online</a>
             </div>
             <div className="flex flex-col gap-2">
               <h3 className="font-serif text-2xl md:text-3xl font-bold text-dark leading-tight">Beatriz Galindo Psicóloga</h3>
               <p className="text-base font-semibold text-dark/70">Diseño y desarrollo web</p>
               <p className="text-sm italic text-dark/50">2026</p>
               <p className="text-base text-dark/70 leading-relaxed">Web portfolio para psicóloga especializada en trauma, apego y género. Diseño limpio y profesional que transmite calma y rigor clínico.</p>
-              <a href="https://beatrizgalindonavarro.com/" target="_blank" rel="noopener noreferrer" className={cn('self-start inline-flex items-center justify-center rounded-xl border mt-2', 'px-4 py-2 text-base font-semibold', 'bg-[#c3dcc5] text-[#302e2e] border-[#c3dcc5]', 'hover:bg-[#a8d0ab] transition-all duration-200')}>Ver online</a>
+              <a href="https://beatrizgalindonavarro.com/" target="_blank" rel="noopener noreferrer" className={cn('self-start inline-flex items-center justify-center rounded-xl border mt-2', 'px-4 py-2 text-base font-semibold', 'bg-[#e3e6e3] text-[#4d4d4d] border-[#e3e6e3]', 'hover:bg-[#e3e6e3] transition-all duration-200')}>Ver online</a>
             </div>
             {/* Imágenes fila 1 — alineadas */}
             <img src="/assets/projects/isabel-felip/ISABEL_FELIP_entera.jpg" alt="Isabel Felip" className="w-full h-auto rounded-lg shadow-lg" />
@@ -305,14 +305,14 @@ export function WordPressPage() {
               <p className="text-base font-semibold text-dark/70">Diseño y desarrollo web</p>
               <p className="text-sm italic text-dark/50">2025</p>
               <p className="text-base text-dark/70 leading-relaxed">Web corporativa para academia de belleza especializada en formación profesional. Diseño moderno y orientado a captación de alumnos.</p>
-              <a href="https://atybeautyacademia.com/" target="_blank" rel="noopener noreferrer" className={cn('self-start inline-flex items-center justify-center rounded-xl border mt-2', 'px-4 py-2 text-base font-semibold', 'bg-[#c3dcc5] text-[#302e2e] border-[#c3dcc5]', 'hover:bg-[#a8d0ab] transition-all duration-200')}>Ver online</a>
+              <a href="https://atybeautyacademia.com/" target="_blank" rel="noopener noreferrer" className={cn('self-start inline-flex items-center justify-center rounded-xl border mt-2', 'px-4 py-2 text-base font-semibold', 'bg-[#e3e6e3] text-[#4d4d4d] border-[#e3e6e3]', 'hover:bg-[#e3e6e3] transition-all duration-200')}>Ver online</a>
             </div>
             <div className="flex flex-col gap-2">
               <h3 className="font-serif text-2xl md:text-3xl font-bold text-dark leading-tight">Menlo Artist</h3>
               <p className="text-base font-semibold text-dark/70">Diseño y desarrollo web</p>
               <p className="text-sm italic text-dark/50">2025</p>
               <p className="text-base text-dark/70 leading-relaxed">Portfolio WordPress para artista especializada en retratos de mascotas. Diseño minimalista centrado en galería de obra y captación de encargos.</p>
-              <a href="https://menloartist.com" target="_blank" rel="noopener noreferrer" className={cn('self-start inline-flex items-center justify-center rounded-xl border mt-2', 'px-4 py-2 text-base font-semibold', 'bg-[#c3dcc5] text-[#302e2e] border-[#c3dcc5]', 'hover:bg-[#a8d0ab] transition-all duration-200')}>Ver online</a>
+              <a href="https://menloartist.com" target="_blank" rel="noopener noreferrer" className={cn('self-start inline-flex items-center justify-center rounded-xl border mt-2', 'px-4 py-2 text-base font-semibold', 'bg-[#e3e6e3] text-[#4d4d4d] border-[#e3e6e3]', 'hover:bg-[#e3e6e3] transition-all duration-200')}>Ver online</a>
             </div>
             {/* Imágenes fila 2 — alineadas */}
             <img src="/assets/projects/aty-beauty/ATY_entera.jpg" alt="Aty Beauty" className="w-full h-auto rounded-lg shadow-lg" />
@@ -346,8 +346,8 @@ export function WordPressPage() {
                 'inline-flex items-center justify-center rounded-xl border',
                 'px-6 py-3 lg:px-8 lg:py-4 min-h-12',
                 'text-base lg:text-lg font-semibold',
-                'bg-[#c3dcc5] text-[#302e2e] border-[#c3dcc5]',
-                'hover:bg-[#a8d0ab] hover:text-[#302e2e]',
+                'bg-[#e3e6e3] text-[#4d4d4d] border-[#e3e6e3]',
+                'hover:bg-[#e3e6e3] hover:text-[#4d4d4d]',
                 'transition-all duration-200 ease-out'
               )}
             >

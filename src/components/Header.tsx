@@ -43,10 +43,9 @@ function Header({ onNavigate, activeSection }: HeaderProps) {
   return (
     <header className={cn(
       'fixed top-0 left-0 right-0 z-50',
-      'bg-transparent',
       isScrolled
-        ? 'shadow-[0_12px_32px_rgba(48,46,46,0.15)] backdrop-blur-sm'
-        : ''
+        ? 'bg-[#f3f5f3]/90 shadow-[0_12px_32px_rgba(77, 77, 77,0.15)] backdrop-blur-sm'
+        : 'bg-transparent'
     )}>
       <div className={cn(
         'flex items-center justify-between',
@@ -73,7 +72,7 @@ function Header({ onNavigate, activeSection }: HeaderProps) {
               'bg-transparent text-dark',
               'inline-flex items-center justify-center',
               'border border-transparent',
-              'hover:bg-[#e3e8e3] transition-all duration-200'
+              'hover:bg-[#e3e6e3] transition-all duration-200'
             )}
             aria-label="Abrir WhatsApp"
             title="WhatsApp"
@@ -90,7 +89,7 @@ function Header({ onNavigate, activeSection }: HeaderProps) {
           className={cn(
             'md:hidden',
             'w-10 h-10 rounded-full inline-flex items-center justify-center',
-            'hover:bg-[#e3e8e3] transition-colors duration-200',
+            'hover:bg-[#e3e6e3] transition-colors duration-200',
             'text-neutral-800'
           )}
           aria-label={isMenuOpen ? 'Cerrar menú' : 'Abrir menú'}
@@ -114,13 +113,13 @@ function Header({ onNavigate, activeSection }: HeaderProps) {
 
       {/* Mobile Menu - Animated */}
       {isMenuOpen && (
-        <div className="md:hidden bg-[#edf2ec] border-t border-[#d8ded8] shadow-[0_8px_24px_rgba(48,46,46,0.10)]">
+        <div className="md:hidden bg-[#edf2ec] border-t border-[#c3c7c3] shadow-[0_8px_24px_rgba(77, 77, 77,0.10)]">
           <div className="px-4 py-4 space-y-2">
             <Navigation
               onNavigate={handleNavigate}
               activeSection={activeSection}
             />
-            <div className="pt-4 border-t border-[#d8ded8] flex flex-col items-center gap-4">
+            <div className="pt-4 border-t border-[#c3c7c3] flex flex-col items-center gap-4">
               <a
                 href="https://wa.me/34625977711"
                 target="_blank"
@@ -130,7 +129,7 @@ function Header({ onNavigate, activeSection }: HeaderProps) {
                   'bg-[#eef2ee] text-dark',
                   'inline-flex items-center justify-center',
                   'border border-transparent',
-                  'hover:bg-[#e3e8e3] transition-all duration-200'
+                  'hover:bg-[#e3e6e3] transition-all duration-200'
                 )}
                 aria-label="Abrir WhatsApp"
                 title="WhatsApp"

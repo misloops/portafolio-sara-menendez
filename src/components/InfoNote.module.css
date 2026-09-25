@@ -42,7 +42,7 @@
 }
 
 .iconText {
-  color: #c3b7c3;
+  color: #e8927c;
   font-family: 'DM Serif Display', serif;
   font-weight: 400;
   font-size: 32px;
@@ -79,7 +79,7 @@
 }
 
 .heading {
-  color: #302e2e;
+  color: #4d4d4d;
   font-family: 'DM Serif Display', serif;
   font-size: 1.5rem;
   font-weight: 400;
@@ -88,7 +88,7 @@
 }
 
 .text {
-  color: #302e2e;
+  color: #4d4d4d;
   line-height: 1.7;
   font-size: 0.9rem;
   white-space: normal;
@@ -97,7 +97,7 @@
 
 .text strong {
   font-weight: 600;
-  color: #302e2e;
+  color: #4d4d4d;
 }
 
 
@@ -156,7 +156,7 @@
 
 /* subtle hover interactions */
 .note:hover {
-  background-color: #e4e8e3;
+  background-color: #dee2de;
   transform: translateX(-6px) scale(1.01);
   box-shadow: 0 14px 40px rgba(16,24,40,0.16);
 }

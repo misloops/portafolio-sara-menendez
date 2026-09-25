@@ -28,7 +28,7 @@ export function UpdateDisclaimer({ message = '¡Estoy actualizando la página y 
           'bg-white/90 backdrop-blur-md',
           'rounded-2xl shadow-xl',
           'px-8 py-8 max-w-sm w-full',
-          'border border-[#d8ded8]',
+          'border border-[#c3c7c3]',
           'flex flex-col gap-3 items-center text-center'
         )}
         onClick={(e) => e.stopPropagation()}

@@ -44,7 +44,7 @@ function Contact() {
             {/* Email */}
             <a
               href="mailto:sara.m.pumariega@gmail.com"
-              className="w-full min-h-[72px] sm:min-h-[96px] px-2 sm:px-4 py-3 sm:py-4 rounded-2xl border border-[#dbe3db] bg-[#ffffff66] shadow-[0_8px_24px_rgba(48,46,46,0.08)] flex flex-col items-center justify-center gap-1.5 sm:gap-2 text-dark transition-all duration-200 hover:bg-[#e8eee8] hover:shadow-[0_10px_28px_rgba(48,46,46,0.12)]"
+              className="w-full min-h-[72px] sm:min-h-[96px] px-2 sm:px-4 py-3 sm:py-4 rounded-2xl border border-[#e3e6e3] bg-[#ffffff66] shadow-[0_8px_24px_rgba(77, 77, 77,0.08)] flex flex-col items-center justify-center gap-1.5 sm:gap-2 text-dark transition-all duration-200 hover:bg-[#eaecea] hover:shadow-[0_10px_28px_rgba(77, 77, 77,0.12)]"
               aria-label={t('contact.email')}
               title={t('contact.email')}
             >
@@ -60,7 +60,7 @@ function Contact() {
             {/* Teléfono */}
             <a
               href="tel:+34625977711"
-              className="w-full min-h-[72px] sm:min-h-[96px] px-2 sm:px-4 py-3 sm:py-4 rounded-2xl border border-[#dbe3db] bg-[#ffffff66] shadow-[0_8px_24px_rgba(48,46,46,0.08)] flex flex-col items-center justify-center gap-1.5 sm:gap-2 text-dark transition-all duration-200 hover:bg-[#e8eee8] hover:shadow-[0_10px_28px_rgba(48,46,46,0.12)]"
+              className="w-full min-h-[72px] sm:min-h-[96px] px-2 sm:px-4 py-3 sm:py-4 rounded-2xl border border-[#e3e6e3] bg-[#ffffff66] shadow-[0_8px_24px_rgba(77, 77, 77,0.08)] flex flex-col items-center justify-center gap-1.5 sm:gap-2 text-dark transition-all duration-200 hover:bg-[#eaecea] hover:shadow-[0_10px_28px_rgba(77, 77, 77,0.12)]"
               aria-label={t('contact.phone')}
               title={t('contact.phone')}
             >
@@ -77,7 +77,7 @@ function Contact() {
               href="https://wa.me/34625977711"
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full min-h-[72px] sm:min-h-[96px] px-2 sm:px-4 py-3 sm:py-4 rounded-2xl border border-[#dbe3db] bg-[#ffffff66] shadow-[0_8px_24px_rgba(48,46,46,0.08)] flex flex-col items-center justify-center gap-1.5 sm:gap-2 text-dark transition-all duration-200 hover:bg-[#e8eee8] hover:shadow-[0_10px_28px_rgba(48,46,46,0.12)]"
+              className="w-full min-h-[72px] sm:min-h-[96px] px-2 sm:px-4 py-3 sm:py-4 rounded-2xl border border-[#e3e6e3] bg-[#ffffff66] shadow-[0_8px_24px_rgba(77, 77, 77,0.08)] flex flex-col items-center justify-center gap-1.5 sm:gap-2 text-dark transition-all duration-200 hover:bg-[#eaecea] hover:shadow-[0_10px_28px_rgba(77, 77, 77,0.12)]"
               aria-label={t('contact.whatsapp')}
               title={t('contact.whatsapp')}
             >
@@ -95,7 +95,7 @@ function Contact() {
               href="https://www.linkedin.com/in/sara-men%C3%A9ndez/"
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full min-h-[72px] sm:min-h-[96px] px-2 sm:px-4 py-3 sm:py-4 rounded-2xl border border-[#dbe3db] bg-[#ffffff66] shadow-[0_8px_24px_rgba(48,46,46,0.08)] flex flex-col items-center justify-center gap-1.5 sm:gap-2 text-dark transition-all duration-200 hover:bg-[#e8eee8] hover:shadow-[0_10px_28px_rgba(48,46,46,0.12)]"
+              className="w-full min-h-[72px] sm:min-h-[96px] px-2 sm:px-4 py-3 sm:py-4 rounded-2xl border border-[#e3e6e3] bg-[#ffffff66] shadow-[0_8px_24px_rgba(77, 77, 77,0.08)] flex flex-col items-center justify-center gap-1.5 sm:gap-2 text-dark transition-all duration-200 hover:bg-[#eaecea] hover:shadow-[0_10px_28px_rgba(77, 77, 77,0.12)]"
               aria-label={t('contact.linkedin')}
               title={t('contact.linkedin')}
             >
@@ -115,7 +115,7 @@ function Contact() {
               href="/docs/CV_SARA_MENENDEZ_WEB_ES.pdf"
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full min-h-[72px] sm:min-h-[96px] px-2 sm:px-4 py-3 sm:py-4 rounded-2xl border border-[#dbe3db] bg-[#ffffff66] shadow-[0_8px_24px_rgba(48,46,46,0.08)] flex flex-col items-center justify-center gap-1.5 sm:gap-2 text-dark transition-all duration-200 hover:bg-[#e8eee8] hover:shadow-[0_10px_28px_rgba(48,46,46,0.12)]"
+              className="w-full min-h-[72px] sm:min-h-[96px] px-2 sm:px-4 py-3 sm:py-4 rounded-2xl border border-[#e3e6e3] bg-[#ffffff66] shadow-[0_8px_24px_rgba(77, 77, 77,0.08)] flex flex-col items-center justify-center gap-1.5 sm:gap-2 text-dark transition-all duration-200 hover:bg-[#eaecea] hover:shadow-[0_10px_28px_rgba(77, 77, 77,0.12)]"
               aria-label={t('contact.cv')}
               title={t('contact.cv')}
             >

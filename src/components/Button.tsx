@@ -18,7 +18,7 @@ function Button({
   const baseClasses = 'font-semibold rounded-lg transition-colors duration-200 flex items-center gap-2 justify-center';
   
   const variantClasses = {
-    primary: 'bg-green-500 text-white hover:bg-green-600',
+    primary: 'bg-[#dee2de] text-[#4d4d4d] hover:bg-[#c3c7c3]',
     secondary: 'bg-gray-200 text-gray-900 hover:bg-gray-300',
     outline: 'border-2 border-gray-700 text-gray-700 hover:bg-gray-100'
   };

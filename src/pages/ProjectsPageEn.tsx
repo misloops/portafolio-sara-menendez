@@ -43,7 +43,7 @@ function ProjectsPageEn() {
     <div 
       className="min-h-screen"
       style={{
-        background: 'linear-gradient(120deg, #f2e8f0 0%, #ede6eb 8%, #e8dce8 10%, #d4c4d4 24%, #b8d4c0 45%, #a8d8b0 70%, #b0deb8 85%, #f0e8f0 100%)',
+        background: 'linear-gradient(180deg, #d99a8a 0%, #e8927c 20%, #efb5a6 40%, #e7ccc2 55%, #e3e6e3 70%, #c3c7c3 85%, #dee2de 100%)',
         backgroundAttachment: 'fixed',
       }}
     >
@@ -100,7 +100,7 @@ function ProjectsPageEn() {
               className={cn(
                 getChipClasses(),
                 selectedTag === null 
-                  ? 'bg-[#8f628f] text-[#1f1a1f] border-[#8f628f] hover:bg-[#c3dcc5] hover:border-[#7fab86] focus:bg-[#c3dcc5] focus:border-[#7fab86] active:bg-[#c3dcc5] active:border-[#7fab86]' 
+                  ? 'bg-[#b57261] text-[#4d4d4d] border-[#b57261] hover:bg-[#e3e6e3] hover:border-[#a4a7a4] focus:bg-[#e3e6e3] focus:border-[#a4a7a4] active:bg-[#e3e6e3] active:border-[#a4a7a4]' 
                   : ''
               )}
             >
@@ -113,7 +113,7 @@ function ProjectsPageEn() {
                 className={cn(
                   getChipClasses(),
                   selectedTag === tag 
-                    ? 'bg-[#8f628f] text-[#1f1a1f] border-[#8f628f] hover:bg-[#c3dcc5] hover:border-[#7fab86] focus:bg-[#c3dcc5] focus:border-[#7fab86] active:bg-[#c3dcc5] active:border-[#7fab86]' 
+                    ? 'bg-[#b57261] text-[#4d4d4d] border-[#b57261] hover:bg-[#e3e6e3] hover:border-[#a4a7a4] focus:bg-[#e3e6e3] focus:border-[#a4a7a4] active:bg-[#e3e6e3] active:border-[#a4a7a4]' 
                     : ''
                 )}
               >

@@ -95,8 +95,8 @@ function Hero({ onActionClick }: HeroProps) {
                 'inline-flex items-center justify-center rounded-xl border',
                 'px-4 py-2 text-base min-h-10 lg:px-6 lg:py-3',
                 'font-semibold',
-                'bg-[#c3dcc5] text-[#302e2e] border-[#c3dcc5]',
-                'hover:bg-[#a8d0ab] hover:text-[#302e2e]',
+                'bg-[#e3e6e3] text-[#4d4d4d] border-[#e3e6e3]',
+                'hover:bg-[#e3e6e3] hover:text-[#4d4d4d]',
                 'transition-all duration-200 ease-out'
               )}
             >
@@ -108,7 +108,7 @@ function Hero({ onActionClick }: HeroProps) {
               className={cn(
                 'inline-flex items-center justify-center gap-2',
                 'text-base font-semibold',
-                'text-dark hover:text-[#9C7C9C]',
+                'text-dark hover:text-[#B57261]',
                 'bg-transparent border-none',
                 'transition-colors duration-200',
                 'cursor-pointer hover:underline'
@@ -131,13 +131,13 @@ function Hero({ onActionClick }: HeroProps) {
         <div className={cn(
           'absolute right-0 top-1/4',
           'w-96 h-96 rounded-full',
-          'bg-gradient-to-br from-[#b3d2b7] to-[#dbe8dd]',
+          'bg-gradient-to-br from-[#c3c7c3] to-[#e3e6e3]',
           'opacity-50 blur-3xl'
         )} />
         <div className={cn(
           'absolute -left-20 bottom-0',
           'w-80 h-80 rounded-full',
-          'bg-gradient-to-tr from-[#bfd7c3] to-[#ecefe7]',
+          'bg-gradient-to-tr from-[#c3c7c3] to-[#eaecea]',
           'opacity-45 blur-3xl'
         )} />
       </div>
@@ -150,10 +150,10 @@ function getCvLinkClasses() {
     'inline-flex items-center justify-center',
     'px-4 py-2 lg:px-6 lg:py-3 min-h-10',
     'text-base font-semibold rounded-xl border',
-    'bg-[#f2f4f1] text-[#302e2e] border-[#d5dbd4]',
-    'shadow-[0_4px_12px_rgba(48,46,46,0.08)]',
-    'hover:bg-[#e8ece7] hover:border-[#c8d0c7] hover:shadow-[0_8px_20px_rgba(48,46,46,0.12)]',
-    'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[#98c29b]/60',
+    'bg-[#f3f5f3] text-[#4d4d4d] border-[#e3e6e3]',
+    'shadow-[0_4px_12px_rgba(77, 77, 77,0.08)]',
+    'hover:bg-[#eaecea] hover:border-[#a4a7a4] hover:shadow-[0_8px_20px_rgba(77, 77, 77,0.12)]',
+    'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[#dee2de]/60',
     'active:translate-y-[1px] transition-all duration-200 ease-out'
   ].join(' ');
 }

@@ -15,7 +15,7 @@ export function AlienCaseStudy() {
       className="min-h-screen"
       style={{
         background:
-          'linear-gradient(120deg, #f2e8f0 0%, #ede6eb 8%, #e8dce8 10%, #d4c4d4 24%, #b8d4c0 45%, #a8d8b0 70%, #b0deb8 85%, #f0e8f0 100%)',
+          'linear-gradient(180deg, #d99a8a 0%, #e8927c 20%, #efb5a6 40%, #e7ccc2 55%, #e3e6e3 70%, #c3c7c3 85%, #dee2de 100%)',
         backgroundAttachment: 'fixed'
       }}
     >
@@ -128,7 +128,7 @@ export function AlienCaseStudy() {
           <p className="text-lg text-dark/75 mb-8">{t('caseStudiesContent.alien.phasesTitle')}</p>
 
           <div className="space-y-8">
-            <article className="grid grid-cols-1 lg:grid-cols-10 gap-8 items-center rounded-2xl border border-gray-200/60 bg-[#ffffff5c] backdrop-blur-sm shadow-[0_8px_24px_rgba(48,46,46,0.08)] p-6 md:p-8">
+            <article className="grid grid-cols-1 lg:grid-cols-10 gap-8 items-center rounded-2xl border border-gray-200/60 bg-[#ffffff5c] backdrop-blur-sm shadow-[0_8px_24px_rgba(77, 77, 77,0.08)] p-6 md:p-8">
               <div className="lg:col-span-4">
                 <h3 className="text-2xl font-bold text-dark mb-3">{alienContent.phaseTitles.preEvent}</h3>
                 <p className="text-dark/75 leading-relaxed">
@@ -144,7 +144,7 @@ export function AlienCaseStudy() {
               </div>
             </article>
 
-            <article className="grid grid-cols-1 lg:grid-cols-10 gap-8 items-center rounded-2xl border border-gray-200/60 bg-[#ffffff5c] backdrop-blur-sm shadow-[0_8px_24px_rgba(48,46,46,0.08)] p-6 md:p-8">
+            <article className="grid grid-cols-1 lg:grid-cols-10 gap-8 items-center rounded-2xl border border-gray-200/60 bg-[#ffffff5c] backdrop-blur-sm shadow-[0_8px_24px_rgba(77, 77, 77,0.08)] p-6 md:p-8">
               <div className="lg:col-span-4">
                 <h3 className="text-2xl font-bold text-dark mb-3">{alienContent.phaseTitles.duringEvent}</h3>
                 <p className="text-dark/75 leading-relaxed">
@@ -160,7 +160,7 @@ export function AlienCaseStudy() {
               </div>
             </article>
 
-            <article className="grid grid-cols-1 lg:grid-cols-10 gap-8 items-center rounded-2xl border border-gray-200/60 bg-[#ffffff5c] backdrop-blur-sm shadow-[0_8px_24px_rgba(48,46,46,0.08)] p-6 md:p-8">
+            <article className="grid grid-cols-1 lg:grid-cols-10 gap-8 items-center rounded-2xl border border-gray-200/60 bg-[#ffffff5c] backdrop-blur-sm shadow-[0_8px_24px_rgba(77, 77, 77,0.08)] p-6 md:p-8">
               <div className="lg:col-span-4">
                 <h3 className="text-2xl font-bold text-dark mb-3">{alienContent.phaseTitles.postEvent}</h3>
                 <p className="text-dark/75 leading-relaxed">

@@ -9,32 +9,32 @@ export default {
     extend: {
       // ========== COLOR PALETTE ==========
       colors: {
-        // Primary: Green (Sara's brand)
+        // Primary: Gray (Sara's brand)
         primary: {
-          50: "#f2f7f4",
-          100: "#e0ebe5",
-          200: "#b8d4c9",
-          300: "#90bead",
-          400: "#98c29b",  // Main green
-          500: "#7ba984",
-          600: "#5e8a6d",
-          700: "#457056",
-          800: "#2d563f",
-          900: "#1a3c28",
+          50: "#fafbfa",
+          100: "#f3f5f3",
+          200: "#eaecea",
+          300: "#e3e6e3",
+          400: "#dee2de",  // Main gray
+          500: "#c3c7c3",
+          600: "#a4a7a4",
+          700: "#858885",
+          800: "#646664",
+          900: "#434443",
         },
         
-        // Secondary: Lavender (Header accent)
+        // Secondary: Coral (Header accent)
         secondary: {
-          50: "#faf8fb",
-          100: "#f3eff6",
-          200: "#e8e0f0",
-          300: "#d8cde3",
-          400: "#c3b7c3",  // Main lavender
-          500: "#b5a4b5",
-          600: "#9b8a9b",
-          700: "#816f81",
-          800: "#685568",
-          900: "#4a3a4a",
+          50: "#fdf6f5",
+          100: "#fbebe7",
+          200: "#f6d3cb",
+          300: "#efb5a6",
+          400: "#e8927c",  // Main coral
+          500: "#d18370",
+          600: "#b57261",
+          700: "#945d4f",
+          800: "#74493e",
+          900: "#51332b",
         },
         
         // Neutral: Grays & Surface colors
@@ -54,7 +54,7 @@ export default {
         },
         
         // Sara's Brand Black for text
-        dark: "#302e2e",
+        dark: "#4d4d4d",
         
         // Semantic colors
         success: "#16a34a",
@@ -129,19 +129,19 @@ export default {
       // ========== GRADIENTS (for sections and overlays) ==========
       backgroundImage: {
         // Full page gradient - Linear subtle blend similar to Christina Day
-        "gradient-page": "linear-gradient(135deg, #f5f3f5 0%, #e8dfe8 15%, #dee2de 35%, #d5e5d1 60%, #c9dfd0 85%, #b8d4c9 100%)",
+        "gradient-page": "linear-gradient(135deg, #fdf6f5 0%, #fbebe7 15%, #dee2de 35%, #e3e6e3 60%, #c3c7c3 85%, #eaecea 100%)",
         
-        // Section gradients - Green palette focus
-        "gradient-hero": "linear-gradient(135deg, #eff7f1 0%, #d7ebdd 48%, #b8d4c9 100%)",
-        "gradient-services": "linear-gradient(135deg, #f2f8f3 0%, #deeee3 100%)",
-        "gradient-projects": "linear-gradient(135deg, #edf5ef 0%, #d2e4d8 100%)",
-        "gradient-casestudy": "linear-gradient(135deg, #e4f0e7 0%, #c6dccd 100%)",
-        "gradient-contact": "linear-gradient(135deg, #e8f2ea 0%, #c9dfd0 100%)",
+        // Section gradients - Gray/Coral palette focus
+        "gradient-hero": "linear-gradient(135deg, #f3f5f3 0%, #e3e6e3 48%, #eaecea 100%)",
+        "gradient-services": "linear-gradient(135deg, #f3f5f3 0%, #eaecea 100%)",
+        "gradient-projects": "linear-gradient(135deg, #f3f5f3 0%, #e3e6e3 100%)",
+        "gradient-casestudy": "linear-gradient(135deg, #eaecea 0%, #c3c7c3 100%)",
+        "gradient-contact": "linear-gradient(135deg, #f3f5f3 0%, #c3c7c3 100%)",
         
         // Component gradients
-        "gradient-primary": "linear-gradient(135deg, #98c29b 0%, #5e8a6d 100%)",
-        "gradient-secondary": "linear-gradient(135deg, #c3b7c3 0%, #9b8a9b 100%)",
-        "gradient-light": "linear-gradient(135deg, #e8f0e6 0%, #f2f5fa 100%)",
+        "gradient-primary": "linear-gradient(135deg, #dee2de 0%, #a4a7a4 100%)",
+        "gradient-secondary": "linear-gradient(135deg, #e8927c 0%, #b57261 100%)",
+        "gradient-light": "linear-gradient(135deg, #eaecea 0%, #f2f5fa 100%)",
       },
     },
   },

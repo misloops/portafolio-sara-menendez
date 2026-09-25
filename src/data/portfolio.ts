@@ -1,3 +1,5 @@
+import ohmiosCardImage from '../assets/projects/ohmios-records/Ohmios_card.jpg';
+
 export type ServiceIconKey = 'design' | 'development' | 'optimization' | 'consulting';
 
 export type Service = {
@@ -100,7 +102,10 @@ export const projects: Project[] = [
     meta: 'Asturias 2023-2026',
     description: 'Tienda online  de discos en vinilo de música electrónica.',
     description_en: 'Online vinyl record store for electronic music.',
-    image: '/assets/projects/ohmios-records/OHMIOS_cover.png',
+    image: ohmiosCardImage,
+    imageFit: 'cover',
+    imagePosition: 'top',
+    imagePaddingClassName: 'p-0',
     tags: ['Diseño Web', 'WordPress', 'Woocommerce'],
     tags_en: ['Web Design', 'WordPress', 'WooCommerce'],
     category: 'Tienda Online',

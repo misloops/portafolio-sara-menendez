@@ -50,7 +50,7 @@ function ProjectCard({
       {/* Image Container Header - 220-240px height with padding */}
       <div className={cn(
         'relative mb-6 -mx-4 -mt-4 h-56 rounded-t-2xl',
-        'bg-gradient-to-br from-[#f5f3f5] via-[#e8e2e8] to-[#d4e2d2]',
+        'bg-gradient-to-br from-[#fdf6f5] via-[#fbebe7] to-[#eaecea]',
         'flex items-center justify-center',
         'overflow-hidden',
         'border-b border-[#dee2de]'
@@ -93,7 +93,7 @@ function ProjectCard({
           'font-normal leading-tight',
           'text-dark',
           // UX Pulido: Solo el título cambia de color sutilmente en el hover para guiar el ojo
-          'group-hover:text-[#8f628f] transition-colors duration-200'
+          'group-hover:text-[#b57261] transition-colors duration-200'
         )}>
           {title}
         </h3>
@@ -138,14 +138,14 @@ function ProjectCard({
           <span className={cn(
             'text-xs font-semibold uppercase tracking-widest',
             'text-dark/60',
-            'group-hover:text-[#8f628f] transition-colors duration-200'
+            'group-hover:text-[#b57261] transition-colors duration-200'
           )}>
             {slug ? t('projectCard.viewProject') : externalUrl ? t('projectCard.viewOnline') : t('projectCard.comingSoon')}
           </span>
           <svg className={cn(
             'w-4 h-4',
             'text-dark/40',
-            'group-hover:text-[#8f628f] group-hover:translate-x-1 transition-all duration-200'
+            'group-hover:text-[#b57261] group-hover:translate-x-1 transition-all duration-200'
           )} fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
           </svg>

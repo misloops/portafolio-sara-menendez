@@ -47,7 +47,7 @@ function ContactIcon({
       className={cn(
         sizeClasses[size],
         'flex items-center justify-center text-dark',
-        'transition-all duration-200 hover:bg-[#e3e8e3] rounded-full',
+        'transition-all duration-200 hover:bg-[#e3e6e3] rounded-full',
         'overflow-visible'
       )}
       title={title}

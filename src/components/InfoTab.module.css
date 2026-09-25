@@ -14,7 +14,7 @@
   align-items: center;
   justify-content: center;
   background: #ffffff;
-  color: #302e2e;
+  color: #4d4d4d;
   border-radius: 9999px;
   padding: 10px 12px;
   box-shadow: 0 6px 18px rgba(16,24,40,0.06);
@@ -27,13 +27,13 @@
 }
 
 .tab:focus {
-  outline: 2px solid rgba(152,194,155,0.18);
+  outline: 2px solid rgba(228,232,227,0.18);
   outline-offset: 2px;
 }
 
 .panel {
   margin-left: 14px;
-  background: rgba(195,183,195,0.95); /* malva casi transparente */
+  background: rgba(232,146,124,0.95); /* malva casi transparente */
   color: #1a1a1a;
   border-radius: 12px;
   box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -2px rgba(0,0,0,0.05);

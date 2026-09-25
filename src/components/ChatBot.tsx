@@ -102,17 +102,17 @@ export default function ChatBot() {
           {/* Header */}
           <div className="flex items-center justify-between px-4 py-3 bg-white border-b border-[#dee2de]/60">
             <div className="flex items-center gap-2.5">
-              <div className="w-8 h-8 rounded-full bg-[#98c29b] flex items-center justify-center text-white text-sm font-semibold">
+              <div className="w-8 h-8 rounded-full bg-[#dee2de] flex items-center justify-center text-white text-sm font-semibold">
                 L
               </div>
               <div>
-                <p className="text-sm font-semibold text-[#302e2e]">Luma</p>
-                <p className="text-xs text-[#302e2e]/50">Asistente de Sara</p>
+                <p className="text-sm font-semibold text-[#4d4d4d]">Luma</p>
+                <p className="text-xs text-[#4d4d4d]/50">Asistente de Sara</p>
               </div>
             </div>
             <button
               onClick={() => setOpen(false)}
-              className="w-7 h-7 rounded-full flex items-center justify-center text-[#302e2e]/40 hover:text-[#302e2e] hover:bg-[#f5f5f5] transition-colors"
+              className="w-7 h-7 rounded-full flex items-center justify-center text-[#4d4d4d]/40 hover:text-[#4d4d4d] hover:bg-[#f5f5f5] transition-colors"
               aria-label="Cerrar chat"
             >
               <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
@@ -129,8 +129,8 @@ export default function ChatBot() {
                 className={cn(
                   'max-w-[85%] px-3.5 py-2.5 rounded-2xl text-sm leading-relaxed',
                   msg.role === 'user'
-                    ? 'ml-auto bg-[#98c29b] text-white rounded-tr-sm'
-                    : 'mr-auto bg-[#f5f5f5] text-[#302e2e] rounded-tl-sm'
+                    ? 'ml-auto bg-[#dee2de] text-white rounded-tr-sm'
+                    : 'mr-auto bg-[#f5f5f5] text-[#4d4d4d] rounded-tl-sm'
                 )}
               >
                 {msg.content}
@@ -139,9 +139,9 @@ export default function ChatBot() {
             {loading && (
               <div className="mr-auto bg-[#f5f5f5] px-3.5 py-2.5 rounded-2xl rounded-tl-sm">
                 <span className="flex gap-1 items-center h-4">
-                  <span className="w-1.5 h-1.5 rounded-full bg-[#302e2e]/30 animate-bounce [animation-delay:0ms]" />
-                  <span className="w-1.5 h-1.5 rounded-full bg-[#302e2e]/30 animate-bounce [animation-delay:150ms]" />
-                  <span className="w-1.5 h-1.5 rounded-full bg-[#302e2e]/30 animate-bounce [animation-delay:300ms]" />
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#4d4d4d]/30 animate-bounce [animation-delay:0ms]" />
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#4d4d4d]/30 animate-bounce [animation-delay:150ms]" />
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#4d4d4d]/30 animate-bounce [animation-delay:300ms]" />
                 </span>
               </div>
             )}
@@ -160,8 +160,8 @@ export default function ChatBot() {
               maxLength={500}
               className={cn(
                 'flex-1 text-sm px-3.5 py-2.5 rounded-xl',
-                'bg-[#f5f5f5] text-[#302e2e] placeholder-[#302e2e]/30',
-                'outline-none focus:ring-2 focus:ring-[#98c29b]/40',
+                'bg-[#f5f5f5] text-[#4d4d4d] placeholder-[#4d4d4d]/30',
+                'outline-none focus:ring-2 focus:ring-[#dee2de]/40',
                 'transition-all'
               )}
               disabled={loading}
@@ -171,8 +171,8 @@ export default function ChatBot() {
               disabled={!input.trim() || loading}
               className={cn(
                 'w-9 h-9 rounded-xl flex items-center justify-center flex-shrink-0',
-                'bg-[#98c29b] text-white',
-                'hover:bg-[#7aa871] transition-colors',
+                'bg-[#dee2de] text-white',
+                'hover:bg-[#858885] transition-colors',
                 'disabled:opacity-40 disabled:cursor-not-allowed'
               )}
               aria-label="Enviar mensaje"
@@ -192,7 +192,7 @@ export default function ChatBot() {
           'fixed bottom-6 right-4 sm:right-6 z-50',
           'w-14 h-14 rounded-full shadow-lg',
           'flex items-center justify-center',
-          'bg-[#98c29b] hover:bg-[#7aa871]',
+          'bg-[#dee2de] hover:bg-[#858885]',
           'transition-all duration-200',
           open ? 'rotate-0' : 'rotate-0'
         )}

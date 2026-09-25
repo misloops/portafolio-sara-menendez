@@ -14,7 +14,7 @@ export function PortfolioCaseStudy() {
     <div 
       className="min-h-screen"
       style={{
-        backgroundColor: '#f2f7f4',
+        backgroundColor: '#fafbfa',
       }}
     >
       {/* Meta Tags Dinámicas */}
@@ -127,7 +127,7 @@ export function PortfolioCaseStudy() {
                 alt="Caso de estudio de la interfaz del portafolio profesional de Sara Menéndez"
                 className="w-full h-auto object-contain rounded-lg"
                 onError={(e) => {
-                  e.currentTarget.src = 'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400"%3E%3Crect fill="%23e8dce8" width="600" height="400"/%3E%3Ctext x="50%25" y="50%25" dominant-baseline="middle" text-anchor="middle" font-family="system-ui" font-size="24" fill="%23888"%3EPortfolio Interface%3C/text%3E%3C/svg%3E';
+                  e.currentTarget.src = 'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400"%3E%3Crect fill="%23f6d3cb" width="600" height="400"/%3E%3Ctext x="50%25" y="50%25" dominant-baseline="middle" text-anchor="middle" font-family="system-ui" font-size="24" fill="%23888"%3EPortfolio Interface%3C/text%3E%3C/svg%3E';
                 }}
               />
             </div>
@@ -264,24 +264,24 @@ export function PortfolioCaseStudy() {
             <h3 className="text-xl font-serif font-bold text-dark mb-6">{portfolioContent.colorsTitle}</h3>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
               <div>
-                <div className="w-full h-24 rounded-lg bg-[#98c29b] mb-2"></div>
+                <div className="w-full h-24 rounded-lg bg-[#dee2de] mb-2"></div>
                 <p className="text-sm font-mono text-dark">Primary Green</p>
-                <p className="text-xs text-dark/60">#98c29b</p>
+                <p className="text-xs text-dark/60">#dee2de</p>
               </div>
               <div>
-                <div className="w-full h-24 rounded-lg bg-[#c3b7c3] mb-2"></div>
+                <div className="w-full h-24 rounded-lg bg-[#e8927c] mb-2"></div>
                 <p className="text-sm font-mono text-dark">Secondary</p>
-                <p className="text-xs text-dark/60">#c3b7c3</p>
+                <p className="text-xs text-dark/60">#e8927c</p>
               </div>
               <div>
-                <div className="w-full h-24 rounded-lg bg-[#302e2e] mb-2"></div>
+                <div className="w-full h-24 rounded-lg bg-[#4d4d4d] mb-2"></div>
                 <p className="text-sm font-mono text-dark">Dark Text</p>
-                <p className="text-xs text-dark/60">#302e2e</p>
+                <p className="text-xs text-dark/60">#4d4d4d</p>
               </div>
               <div>
-                <div className="w-full h-24 rounded-lg bg-[#faf8fa] border border-dark/10 mb-2"></div>
+                <div className="w-full h-24 rounded-lg bg-[#fdf6f5] border border-dark/10 mb-2"></div>
                 <p className="text-sm font-mono text-dark">Light BG</p>
-                <p className="text-xs text-dark/60">#faf8fa</p>
+                <p className="text-xs text-dark/60">#fdf6f5</p>
               </div>
             </div>
           </div>

@@ -55,7 +55,7 @@ export function BeforeAfterImageCompare({
     <div className={cn('w-full', className)}>
       <div
         ref={containerRef}
-        className="relative h-[280px] md:h-[360px] lg:h-[420px] overflow-hidden rounded-2xl border border-dark/15 bg-white/65 shadow-[0_20px_45px_rgba(48,46,46,0.12)] backdrop-blur-sm cursor-col-resize"
+        className="relative h-[280px] md:h-[360px] lg:h-[420px] overflow-hidden rounded-2xl border border-dark/15 bg-white/65 shadow-[0_20px_45px_rgba(77, 77, 77,0.12)] backdrop-blur-sm cursor-col-resize"
         onMouseMove={handleMouseMove}
         onMouseLeave={() => setIsDragging(false)}
         onMouseUp={handleMouseUp}
@@ -87,7 +87,7 @@ export function BeforeAfterImageCompare({
 
         {/* Divider Line */}
         <div
-          className="absolute top-0 bottom-0 w-0.5 bg-white shadow-[0_0_0_1px_rgba(48,46,46,0.25)]"
+          className="absolute top-0 bottom-0 w-0.5 bg-white shadow-[0_0_0_1px_rgba(77, 77, 77,0.25)]"
           style={{ left: `${position}%` }}
           aria-hidden="true"
         />

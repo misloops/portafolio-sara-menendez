@@ -85,10 +85,10 @@ function Services() {
             <div
               key={service.title}
               className={cn(
-                'group flex h-full flex-col rounded-xl border border-[#d8ded8] bg-white/40 p-6 backdrop-blur-sm transition-all duration-300 hover:border-[#c3dcc5] hover:bg-white/60 lg:p-8'
+                'group flex h-full flex-col rounded-xl border border-[#c3c7c3] bg-white/40 p-6 backdrop-blur-sm transition-all duration-300 hover:border-[#e3e6e3] hover:bg-white/60 lg:p-8'
               )}
             >
-              <div className="mb-6 w-fit rounded-lg bg-[#f0f5f0] p-4 transition-colors duration-300 group-hover:bg-[#e8f0e8]">
+              <div className="mb-6 w-fit rounded-lg bg-[#f3f5f3] p-4 transition-colors duration-300 group-hover:bg-[#eaecea]">
                 {service.icon}
               </div>
 
@@ -103,26 +103,26 @@ function Services() {
           ))}
         </div>
 
-        <p className="mx-auto mt-12 max-w-4xl rounded-xl border border-[#d8ded8]/80 bg-white/30 px-6 py-6 text-center font-serif text-xl italic leading-relaxed text-dark shadow-sm backdrop-blur-sm md:px-10 md:py-8 md:text-2xl">
+        <p className="mx-auto mt-12 max-w-4xl rounded-xl border border-[#c3c7c3]/80 bg-white/30 px-6 py-6 text-center font-serif text-xl italic leading-relaxed text-dark shadow-sm backdrop-blur-sm md:px-10 md:py-8 md:text-2xl">
           {language === 'es' ? (
             <>
               ¿No encuentras lo que buscas o necesitas más información? Cualquier duda que tengas te la resolveré escribiéndome a mi{' '}
-              <a className="font-semibold underline decoration-[#9c7c9c] underline-offset-4 transition-colors hover:text-[#9c7c9c]" href="mailto:sara.m.pumariega@gmail.com">
+              <a className="font-semibold underline decoration-[#b57261] underline-offset-4 transition-colors hover:text-[#b57261]" href="mailto:sara.m.pumariega@gmail.com">
                 email
               </a>{' '}
               o por{' '}
-              <a className="font-semibold underline decoration-[#9c7c9c] underline-offset-4 transition-colors hover:text-[#9c7c9c]" href="https://wa.me/34625977711" target="_blank" rel="noopener noreferrer">
+              <a className="font-semibold underline decoration-[#b57261] underline-offset-4 transition-colors hover:text-[#b57261]" href="https://wa.me/34625977711" target="_blank" rel="noopener noreferrer">
                 WhatsApp
               </a>.
             </>
           ) : (
             <>
               Can&apos;t find what you&apos;re looking for or need more information? I&apos;ll be happy to answer any questions by{' '}
-              <a className="font-semibold underline decoration-[#9c7c9c] underline-offset-4 transition-colors hover:text-[#9c7c9c]" href="mailto:sara.m.pumariega@gmail.com">
+              <a className="font-semibold underline decoration-[#b57261] underline-offset-4 transition-colors hover:text-[#b57261]" href="mailto:sara.m.pumariega@gmail.com">
                 email
               </a>{' '}
               or{' '}
-              <a className="font-semibold underline decoration-[#9c7c9c] underline-offset-4 transition-colors hover:text-[#9c7c9c]" href="https://wa.me/34625977711" target="_blank" rel="noopener noreferrer">
+              <a className="font-semibold underline decoration-[#b57261] underline-offset-4 transition-colors hover:text-[#b57261]" href="https://wa.me/34625977711" target="_blank" rel="noopener noreferrer">
                 WhatsApp
               </a>.
             </>

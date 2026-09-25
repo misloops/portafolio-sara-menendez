@@ -24,9 +24,9 @@ function Card({
   );
 
   const variantStyles = {
-    default: 'bg-[#98c29b] border border-[#c3b7c3]', // Verde con borde malva
-    elevated: 'bg-[#c3b7c3] shadow-md border border-[#98c29b]', // Malva con borde verde
-    outline: 'bg-transparent border-2 border-[#98c29b]' // Borde verde
+    default: 'bg-[#dee2de] border border-[#e8927c]', // Verde con borde malva
+    elevated: 'bg-[#e8927c] shadow-md border border-[#dee2de]', // Malva con borde verde
+    outline: 'bg-transparent border-2 border-[#dee2de]' // Borde verde
   };
 
   const hoverStyles = hover && cn(

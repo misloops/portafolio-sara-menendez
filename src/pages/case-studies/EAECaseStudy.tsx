@@ -14,7 +14,7 @@ export function EAECaseStudy() {
     <div 
       className="min-h-screen"
       style={{
-        background: 'linear-gradient(120deg, #f2e8f0 0%, #ede6eb 8%, #e8dce8 10%, #d4c4d4 24%, #b8d4c0 45%, #a8d8b0 70%, #b0deb8 85%, #f0e8f0 100%)',
+        background: 'linear-gradient(180deg, #d99a8a 0%, #e8927c 20%, #efb5a6 40%, #e7ccc2 55%, #e3e6e3 70%, #c3c7c3 85%, #dee2de 100%)',
         backgroundAttachment: 'fixed'
       }}
     >
@@ -101,7 +101,7 @@ export function EAECaseStudy() {
                 href="https://www.eaebarcelona.com/es/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-[#f2f4f1] text-[#302e2e] border border-[#e8e8e6] font-semibold rounded-xl hover:bg-[#c3b7c3] transition-all duration-200 shadow-[0_4px_12px_rgba(0,0,0,0.08)] hover:shadow-[0_6px_16px_rgba(195,183,195,0.2)]"
+                className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-[#f3f5f3] text-[#4d4d4d] border border-[#e8e8e6] font-semibold rounded-xl hover:bg-[#e8927c] transition-all duration-200 shadow-[0_4px_12px_rgba(0,0,0,0.08)] hover:shadow-[0_6px_16px_rgba(232,146,124,0.2)]"
               >
                 {t('caseStudyLabels.viewOnlineButton')}
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -132,7 +132,7 @@ export function EAECaseStudy() {
 
             {/* Right Column - Image (60%) */}
             <div className="lg:col-span-6 flex items-center justify-center">
-              <div className="w-full max-w-[550px] rounded-2xl border border-dark/15 bg-white/65 shadow-[0_20px_45px_rgba(48,46,46,0.12)] backdrop-blur-sm overflow-hidden">
+              <div className="w-full max-w-[550px] rounded-2xl border border-dark/15 bg-white/65 shadow-[0_20px_45px_rgba(77, 77, 77,0.12)] backdrop-blur-sm overflow-hidden">
                 <img
                   src="/assets/projects/eae-business-school/EAE-BUSINESS_COVER.jpg"
                   alt="Rediseño visual de la interfaz de la plataforma académica EAE Business School"
@@ -179,7 +179,7 @@ export function EAECaseStudy() {
               </ul>
 
               {/* Info Card - Below Mi Rol */}
-              <div className="rounded-2xl border border-neutral-300/40 bg-[#dee2de]/25 backdrop-blur-sm shadow-[0_8px_24px_rgba(48,46,46,0.08)] p-8 md:p-12">
+              <div className="rounded-2xl border border-neutral-300/40 bg-[#dee2de]/25 backdrop-blur-sm shadow-[0_8px_24px_rgba(77, 77, 77,0.08)] p-8 md:p-12">
                 <p className="text-base md:text-lg text-dark/75 leading-relaxed">
                   Además de gestionar y supervisar con diferentes departamentos y ser la intermediadora entre ellos. Una de mis principales tareas era velar por la seguridad y reportar incidencias directamente con el equipo de desarrolladores mediante la herramienta <span className="font-bold">Jira</span>, con un seguimiento de las <span className="font-bold">incidencias</span> y su validación.
                 </p>
@@ -203,7 +203,7 @@ export function EAECaseStudy() {
               </ul>
 
               {/* Info Card - Below Reto */}
-              <div className="rounded-2xl border border-neutral-300/40 bg-[#dee2de]/25 backdrop-blur-sm shadow-[0_8px_24px_rgba(48,46,46,0.08)] p-8 md:p-12">
+              <div className="rounded-2xl border border-neutral-300/40 bg-[#dee2de]/25 backdrop-blur-sm shadow-[0_8px_24px_rgba(77, 77, 77,0.08)] p-8 md:p-12">
                 <p className="text-base md:text-lg text-dark/75 leading-relaxed">
                   Abajo se muestra cómo estaba la web cuando empecé en el proyecto y en la imagen de la derecha se puede ver un año después un cambio notable, no solo a nivel de diseño, sino a nivel de conversión de leads. Este cambio vino acompañado del lanzamiento de la <span className="font-bold">nueva campaña de comunicación</span>, culminación del trabajo de diferentes equipos de profesionales.
                 </p>

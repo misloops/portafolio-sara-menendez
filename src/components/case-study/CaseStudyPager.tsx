@@ -28,9 +28,9 @@ export function CaseStudyPager({
           <button
             onClick={() => handleNavigate(previousHref)}
             className={cn(
-              'rounded-2xl border border-[#d8ded8] px-6 py-5',
+              'rounded-2xl border border-[#c3c7c3] px-6 py-5',
               'bg-[#ffffff5c] backdrop-blur-sm',
-              'hover:bg-[#e3e8e3] transition-colors duration-200',
+              'hover:bg-[#e3e6e3] transition-colors duration-200',
               'text-left cursor-pointer'
             )}
           >
@@ -41,9 +41,9 @@ export function CaseStudyPager({
           <button
             onClick={() => handleNavigate(nextHref)}
             className={cn(
-              'rounded-2xl border border-[#d8ded8] px-6 py-5 text-left md:text-right',
+              'rounded-2xl border border-[#c3c7c3] px-6 py-5 text-left md:text-right',
               'bg-[#ffffff5c] backdrop-blur-sm',
-              'hover:bg-[#e3e8e3] transition-colors duration-200',
+              'hover:bg-[#e3e6e3] transition-colors duration-200',
               'cursor-pointer'
             )}
           >

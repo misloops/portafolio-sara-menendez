@@ -18,7 +18,7 @@ function Navigation({ onNavigate, activeSection }: NavigationProps) {
   ];
 
   return (
-    <nav className="flex flex-col md:flex-row gap-2 md:gap-6 lg:gap-8 justify-center">
+    <nav className="flex flex-col md:flex-row gap-2 md:gap-3 lg:gap-4 justify-center">
       {NAV_ITEMS.map((item) => (
         <NavLink
           key={item.href}

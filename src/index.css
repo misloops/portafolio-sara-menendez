@@ -10,18 +10,18 @@
   --space-32: 32px;
   --space-40: 40px;
 
-  --ui-text: #302e2e;
-  --ui-line-soft: #d8ded8;
-  --ui-hover-soft: #e3e8e3;
+  --ui-text: #4d4d4d;
+  --ui-line-soft: #c3c7c3;
+  --ui-hover-soft: #e3e6e3;
 
-  --chip-bg: #eef1ee;
-  --chip-border: #d5dbd4;
+  --chip-bg: #eaecea;
+  --chip-border: #e3e6e3;
 
-  --btn-primary-bg: #98c29b;
-  --btn-primary-bg-hover: #8bb58e;
-  --btn-primary-border: #7fab86;
+  --btn-primary-bg: #dee2de;
+  --btn-primary-bg-hover: #a4a7a4;
+  --btn-primary-border: #a4a7a4;
 
-  --canvas-gradient-home: linear-gradient(120deg, #f2e8f0 0%, #ede6eb 8%, #e8dce8 10%, #d4c4d4 24%, #b8d4c0 45%, #a8d8b0 70%, #b0deb8 85%, #f0e8f0 100%);
+  --canvas-gradient-home: linear-gradient(180deg, #d99a8a 0%, #e8927c 20%, #efb5a6 40%, #e7ccc2 55%, #e3e6e3 70%, #c3c7c3 85%, #dee2de 100%);
 }
 
 /* ===== Image Optimization ===== */
@@ -45,7 +45,7 @@ body {
   line-height: 1.6;
   background: var(--canvas-gradient-home);
   background-attachment: fixed;
-  color: #302e2e;
+  color: #4d4d4d;
 }
 
 h1 {
@@ -83,7 +83,7 @@ h4, h5, h6 {
 
 p {
   font-size: 1.0625rem;
-  color: #302e2e;
+  color: #4d4d4d;
   line-height: 1.7;
 }
 
@@ -92,7 +92,7 @@ p {
 .text-dark\/65,
 .text-dark\/70,
 .text-dark\/80 {
-  color: #302e2e !important;
+  color: #4d4d4d !important;
 }
 
 .text-neutral-600,
@@ -101,28 +101,28 @@ p {
 .text-gray-700,
 .text-gray-800,
 .text-gray-900 {
-  color: #302e2e !important;
+  color: #4d4d4d !important;
 }
 
 /* Fallback gradients so they always render even if theme tokens fail to hot-reload */
 .bg-gradient-hero {
-  background-image: linear-gradient(135deg, #eff7f1 0%, #d7ebdd 48%, #b8d4c9 100%);
+  background-image: linear-gradient(135deg, #f3f5f3 0%, #e3e6e3 48%, #eaecea 100%);
 }
 
 .bg-gradient-services {
-  background-image: linear-gradient(135deg, #f2f8f3 0%, #deeee3 100%);
+  background-image: linear-gradient(135deg, #f3f5f3 0%, #eaecea 100%);
 }
 
 .bg-gradient-projects {
-  background-image: linear-gradient(135deg, #edf5ef 0%, #d2e4d8 100%);
+  background-image: linear-gradient(135deg, #f3f5f3 0%, #e3e6e3 100%);
 }
 
 .bg-gradient-casestudy {
-  background-image: linear-gradient(135deg, #e4f0e7 0%, #c6dccd 100%);
+  background-image: linear-gradient(135deg, #eaecea 0%, #c3c7c3 100%);
 }
 
 .bg-gradient-contact {
-  background-image: linear-gradient(135deg, #e8f2ea 0%, #c9dfd0 100%);
+  background-image: linear-gradient(135deg, #f3f5f3 0%, #c3c7c3 100%);
 }
 
 @keyframes fadeIn {
@@ -223,13 +223,13 @@ p {
   /* Unified text link style used across the site for inline text links */
   .text-link {
     font-size: 1rem; /* matches text-base */
-    color: rgba(48,46,46,0.7); /* text-dark/70 */
+    color: rgba(77, 77, 77,0.7); /* text-dark/70 */
     text-decoration: none;
     transition: color 0.2s ease;
   }
 
   .text-link:hover {
-    color: #9C7C9C; /* malva hover */
+    color: #B57261; /* malva hover */
     text-decoration: none;
   }
 }
@@ -274,23 +274,29 @@ html {
   align-items: center;
   justify-content: center;
   font-size: 16px;
-  font-weight: 500;
-  color: var(--ui-text);
+  font-weight: 600;
+  color: #4d4d4d;
   text-decoration: none;
-  transition: color 0.2s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  transition: color 0.2s ease, border-color 0.2s ease;
   position: relative;
+  padding-bottom: 4px;
+  border-bottom: 2px solid transparent;
 }
 
 .nav-link:hover {
-  color: #9C7C9C;
+  color: #4d4d4d;
+  border-bottom: 2px solid #4d4d4d;
 }
 
 .nav-link.active {
-  color: #9C7C9C;
+  color: #4d4d4d;
+  border-bottom: 2px solid #4d4d4d;
 }
 
 .nav-link:focus-visible {
-  outline: 2px solid #98c29b;
+  outline: 2px solid #dee2de;
   outline-offset: 2px;
 }
 
@@ -313,7 +319,7 @@ html {
 
 /* Hero Title Gradient */
 .text-gradient-hero {
-  background: linear-gradient(135deg, #9a7b9a 0%, #8a8a8a 35%, #7a9a7a 60%, #6a8a6a 100%);
+  background: linear-gradient(135deg, #858885 0%, #a4a7a4 35%, #ae877c 60%, #b57261 100%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -326,7 +332,7 @@ html {
   font-style: italic;
   font-weight: 400;
   line-height: 2.75rem;  /* 44px */
-  color: rgb(48, 46, 46);  /* #302e2e sin transparencia */
+  color: rgb(48, 46, 46);  /* #4d4d4d sin transparencia */
 }
 
 /* Mobile guardrails: typography + spacing */

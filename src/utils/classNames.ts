@@ -52,28 +52,28 @@ export function getButtonClasses(
     'inline-flex items-center justify-center gap-2',
     'font-semibold rounded-xl border',
     'transition-all duration-200 ease-out',
-    'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[#98c29b]/60',
+    'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[#dee2de]/60',
     'active:translate-y-[1px]',
     'disabled:opacity-50 disabled:cursor-not-allowed disabled:shadow-none'
   ].join(' ');
 
   const variants = {
     primary: [
-      'bg-[#f2f4f1] text-[#302e2e] border-[#e8e8e6]',
+      'bg-[#f3f5f3] text-[#4d4d4d] border-[#e8e8e6]',
       'shadow-[0_4px_12px_rgba(0,0,0,0.08)]',
-      'hover:bg-[#c3b7c3] hover:text-[#302e2e] hover:border-[#b0a4b0] hover:shadow-[0_6px_16px_rgba(195,183,195,0.2)]',
-      'active:bg-[#b0a4b0]'
+      'hover:bg-[#e8927c] hover:text-[#4d4d4d] hover:border-[#d18370] hover:shadow-[0_6px_16px_rgba(232,146,124,0.2)]',
+      'active:bg-[#d18370]'
     ].join(' '),
     secondary: [
-      'bg-[#98c29b] text-[#302e2e] border-[#7fab86]',
-      'shadow-[0_4px_12px_rgba(83,130,93,0.12)]',
-      'hover:bg-[#7aa871] hover:text-[#302e2e] hover:border-[#6a9860] hover:shadow-[0_8px_20px_rgba(83,130,93,0.18)]',
-      'active:bg-[#6a9860]'
+      'bg-[#dee2de] text-[#4d4d4d] border-[#a4a7a4]',
+      'shadow-[0_4px_12px_rgba(146,148,145,0.12)]',
+      'hover:bg-[#858885] hover:text-[#4d4d4d] hover:border-[#858885] hover:shadow-[0_8px_20px_rgba(146,148,145,0.18)]',
+      'active:bg-[#858885]'
     ].join(' '),
     outline: [
-      'bg-transparent text-[#302e2e] border-[#b9c3ba]',
-      'hover:bg-[#ecf2ec] hover:border-[#9eaca0] hover:shadow-[0_6px_18px_rgba(48,46,46,0.10)]',
-      'active:bg-[#e2e9e2]'
+      'bg-transparent text-[#4d4d4d] border-[#c3c7c3]',
+      'hover:bg-[#eaecea] hover:border-[#858885] hover:shadow-[0_6px_18px_rgba(77, 77, 77,0.10)]',
+      'active:bg-[#e3e6e3]'
     ].join(' '),
   };
 
@@ -94,11 +94,11 @@ export function getChipClasses(): string {
   return cn(
     'inline-flex items-center rounded-full border',
     'px-2.5 py-1 text-xs lg:px-3 lg:py-1.5',
-    'font-medium text-[#3d6d3d]',
+    'font-medium text-[#646664]',
     'lg:text-sm lg:leading-[24px]',
-    'bg-[#98c29b]/70 border-[#98c29b]',
+    'bg-[#dee2de]/70 border-[#dee2de]',
     'transition-colors duration-200',
-    'hover:bg-[#c3dcc5] hover:border-[#7fab86] focus:bg-[#c3dcc5] focus:border-[#7fab86] active:bg-[#c3dcc5] active:border-[#7fab86]'
+    'hover:bg-[#e3e6e3] hover:border-[#a4a7a4] focus:bg-[#e3e6e3] focus:border-[#a4a7a4] active:bg-[#e3e6e3] active:border-[#a4a7a4]'
   );
 }
 
@@ -107,9 +107,9 @@ export function getChipClasses(): string {
  */
 export function getCardClasses(): string {
   return cn(
-    'rounded-2xl border border-[#98c29b]/50 bg-gradient-to-br from-[#98c29b]/30 to-[#f0f8f2]',
+    'rounded-2xl border border-[#dee2de]/50 bg-gradient-to-br from-[#dee2de]/30 to-[#f3f5f3]',
     'transition-all duration-200 ease-out',
-    'hover:border-[#98c29b]/70 hover:shadow-[0_20px_48px_rgba(152,194,155,0.20)]'
+    'hover:border-[#dee2de]/70 hover:shadow-[0_20px_48px_rgba(228,232,227,0.20)]'
   );
 }
 

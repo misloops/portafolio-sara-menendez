@@ -53,11 +53,11 @@ function ContactCard({ href, title, icon, ariaLabel, isExternal = false, size = 
       href={href}
       className={cn(
         'w-full min-h-[120px] px-3 py-4',
-        'rounded-2xl border border-[#dbe3db]',
-        'bg-[#ffffff66] shadow-[0_8px_24px_rgba(48,46,46,0.08)]',
+        'rounded-2xl border border-[#e3e6e3]',
+        'bg-[#ffffff66] shadow-[0_8px_24px_rgba(77, 77, 77,0.08)]',
         `flex flex-col items-center justify-center ${gapClasses[size]}`,
         'text-dark transition-all duration-200',
-        'hover:bg-[#e8eee8] hover:shadow-[0_10px_28px_rgba(48,46,46,0.12)]'
+        'hover:bg-[#eaecea] hover:shadow-[0_10px_28px_rgba(77, 77, 77,0.12)]'
       )}
       aria-label={ariaLabel}
       title={title}
